@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<!-- Set default language -->
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8"> <!-- Updated charset -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title will be set by JS -->
+    <title id="page-title">Wishplace - Stop Searching. Start Wishing.</title>
+
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Load Lato Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        /* Style for the active language in the dropdown */
+        .lang-option.active {
+            font-weight: 700;
+            background-color: #f3f4f6; /* bg-gray-100 */
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 antialiased">
+
+<!-- Header -->
+<header class="sticky top-0 left-0 right-0 z-20 p-4 bg-white shadow-sm">
+    <div class="container mx-auto max-w-7xl px-4 flex justify-between items-center">
+        <!-- Replaced text with image logo -->
+        <h1 class="text-3xl font-bold text-blue-600">
+            <img width="300" height="100" src="assets/wishplace-logo-text.png" alt="Wishplace Logo" data-key="logoAlt">
+        </h1>
+
+        <!-- Right side controls -->
+        <div class="flex items-center space-x-4">
+            <a href="#notify"
+               class="bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-colors"
+               data-key="headerGetNotified">
+                Get Notified
+            </a>
+
+            <!-- NEW: Language Switcher -->
+            <div class="relative" id="lang-switcher">
+                <button id="lang-button" class="flex items-center text-gray-600 hover:text-blue-600 p-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C13.18 6.062 14.11 6.5 15 7.003m-6 0v-2.63m0 2.63c-.31.148-.63.292-.956.43A48.22 48.22 0 003 9.75m6-4.5v-2.63m0 2.63c.31.148.63.292-.956.43A48.22 48.22 0 0115 9.75m-6-4.5v-2.63m0 2.63c.62.355 1.254.668 1.91.921m-1.91-.921v-2.63" />
+                    </svg>
+                    <span id="lang-current" class="text-sm font-medium">English</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </button>
+                <div id="lang-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-xl hidden z-30 border border-gray-100">
+                    <a href="#" data-lang="en" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">English</a>
+                    <a href="#" data-lang="it" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Italiano</a>
+                    <a href="#" data-lang="es" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Español</a>
+                    <a href="#" data-lang="fr" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Français</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section (NEW Two-Column Layout) -->
+<section class="bg-white py-20 md:py-32">
+    <div class="container mx-auto max-w-7xl px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <!-- Left Column: Text -->
+        <div class="text-left">
+            <h2 class="text-5xl sm:text-6xl font-extrabold mb-6 text-gray-900 leading-tight" data-key="heroTitle">
+                Stop Searching.
+                Start Wishing.
+            </h2>
+            <p class="text-xl sm:text-2xl mb-10 text-gray-600" data-key="heroSubtitle">
+                Pin the <strong>exact</strong> buildings you love. Let sellers contact <strong>you</strong>.
+            </p>
+            <a href="#notify"
+               class="inline-block bg-blue-600 text-white font-bold text-lg px-10 py-4 rounded-lg shadow-lg hover:bg-blue-700 transition-all transform hover:scale-105"
+               data-key="heroButton">
+                Join the Waitlist
+            </a>
+        </div>
+
+        <!-- Right Column: Image (UPDATED) -->
+        <div class="flex items-center justify-center max-h-[500px]">
+            <!-- Updated image path -->
+            <img src="assets/wished-place.png"
+                 alt="A modern apartment building, the 'dream building'"
+                 class="rounded-xl shadow-2xl w-full h-full object-cover"
+                 data-key="heroImageAlt">
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<main>
+
+    <!-- Pain Points Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto max-w-6xl px-6 text-center">
+            <h3 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900" data-key="sectionBrokenTitle">
+                The Old Way is Broken
+            </h3>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-16" data-key="sectionBrokenSubtitle">
+                Finding the perfect home feels like a full-time job. You're stuck in a loop of searching, waiting, and
+                missing out.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+                <!-- Card 1 (REPLACED) -->
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-100 flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600 mr-4 flex-shrink-0 mt-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25H7.5m1.5 0v-4.5m0 4.5h.75m-1.5 0H5.625c-.621 0-1.125-.504-1.125-1.125v-6c0-.621.504-1.125 1.125-1.125h12.75c.621 0 1.125.504 1.125 1.125v6c0 .621-.504 1.125-1.125 1.125h-1.5m-1.5 0v4.5m0-4.5h.75m-1.5 0h.75M9 17.25v-4.5m0 4.5h1.5m-1.5 0H7.5m-1.5 0h.008v.008H7.5V17.25zm.375 0H9.375m-1.5 0v-4.5m0 4.5h.75m0 0h.75m-1.5 0v-4.5m0 4.5h1.5m0 0h.75m-1.5 0H7.5m6 4.5H9m3.75 0h3.75M9 17.25v1.5a.75.75 0 01-.75.75h-3a.75.75 0 01-.75-.75v-1.5m6 0v1.5a.75.75 0 00.75.75h3a.75.75 0 00.75-.75v-1.5" />
+                    </svg>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2 text-gray-900" data-key="brokenCard1Title">Endless Monitoring</h4>
+                        <p class="text-gray-600" data-key="brokenCard1Text">Dozens of websites, constant refreshing, hoping to be first.</p>
+                    </div>
+                </div>
+                <!-- Card 2 (REPLACED) -->
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-100 flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600 mr-4 flex-shrink-0 mt-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                    </svg>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2 text-gray-900" data-key="brokenCard2Title">Constant Wondering</h4>
+                        <p class="text-gray-600" data-key="brokenCard2Text">"Will a place in that *one* building ever be available at my price?"</p>
+                    </div>
+                </div>
+                <!-- Card 3 (REPLACED) -->
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-100 flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600 mr-4 flex-shrink-0 mt-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2 text-gray-900" data-key="brokenCard3Title">Missed Opportunities</h4>
+                        <p class="text-gray-600" data-key="brokenCard3Text">Missing out on private deals sold before they're ever advertised.</p>
+                    </div>
+                </div>
+                <!-- Card 4 (REPLACED) -->
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-100 flex items-start">
+                    <!-- NEW ICON -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600 mr-4 flex-shrink-0 mt-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2 text-gray-900" data-key="brokenCard4Title">Wasted Ad Spend</h4>
+                        <p class="text-gray-600" data-key="brokenCard4Text">Sellers wait and pay, hoping a qualified buyer eventually appears.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto max-w-6xl px-6">
+            <h3 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900" data-key="sectionHowTitle">
+                Welcome to the Reverse Marketplace
+            </h3>
+            <div
+                    class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative before:hidden md:before:block before:absolute before:top-1/2 before:left-0 before:w-full before:h-0.5 before:bg-gray-200 before:-translate-y-1/2">
+
+                <!-- Step 1 -->
+                <div class="text-center p-4 relative z-10 bg-white">
+                    <div
+                            class="w-24 h-24 bg-blue-50 border-2 border-blue-200 text-blue-600 text-4xl rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
+                        <!-- Icon: Pin -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" class="w-12 h-12">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-900" data-key="howStep1Title">1. Pin Your Wishlist</h4>
+                    <p class="text-gray-600 text-lg" data-key="howStep1Text">
+                        Find and pin the specific buildings you want to live in.
+                    </p>
+                </div>
+                <!-- Step 2 -->
+                <div class="text-center p-4 relative z-10 bg-white">
+                    <div
+                            class="w-24 h-24 bg-blue-50 border-2 border-blue-200 text-blue-600 text-4xl rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
+                        <!-- Icon: Sliders -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" class="w-12 h-12">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0M3.75 18H7.5m3-6h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0M3.75 12H7.5" />
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-900" data-key="howStep2Title">2. Set Your Terms</h4>
+                    <p class="text-gray-600 text-lg" data-key="howStep2Text">
+                        Define your budget, rooms, and other must-haves.
+                    </p>
+                </div>
+                <!-- Step 3 -->
+                <div class="text-center p-4 relative z-10 bg-white">
+                    <div
+                            class="w-24 h-24 bg-blue-50 border-2 border-blue-200 text-blue-600 text-4xl rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
+                        <!-- Icon: Bell (REPLACED) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" class="w-12 h-12">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-900" data-key="howStep3Title">3. Get Noticed</h4>
+                    <p class="text-gray-600 text-lg" data-key="howStep3Text">
+                        Owners see your wish and contact <em>you</em> via secure chat.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Mockup Section (UPDATED) -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto max-w-6xl px-6 text-center">
+            <h3 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900" data-key="sectionAppTitle">
+                Coming Soon to Your Phone
+            </h3>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-16" data-key="sectionAppSubtitle">
+                A beautiful, simple app to manage your wishlist on the go.
+            </p>
+            <!-- Changed to 3 columns -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto">
+                <!-- Mockup 1 -->
+                <div class="flex flex-col items-center">
+                    <!-- Updated image path -->
+                    <img src="assets/iphone-screen-wish-places.png"
+                         alt="App screen showing 'Wish Places' list and map"
+                         class="w-full max-w-[250px]"
+                         data-key="appScreen1Alt">
+                    <h4 class="text-xl font-semibold text-gray-800 mt-6" data-key="appScreen1Title">For Buyers: Pin Your Wishlist</h4>
+                    <p class="text-gray-600" data-key="appScreen1Text">Browse a map and add your dream buildings.</p>
+                </div>
+                <!-- Mockup 2 -->
+                <div class="flex flex-col items-center">
+                    <!-- Updated image path -->
+                    <img src="assets/iphone-screen-your-properties.png"
+                         alt="App screen showing 'Your Properties' for sellers"
+                         class="w-full max-w-[250px]"
+                         data-key="appScreen2Alt">
+                    <h4 class="text-xl font-semibold text-gray-800 mt-6" data-key="appScreen2Title">For Sellers: List Your Property</h4>
+                    <p class="text-gray-600" data-key="appScreen2Text">Easily add your properties to the marketplace.</p>
+                </div>
+                <!-- Mockup 3 (NEW) -->
+                <div class="flex flex-col items-center">
+                    <!-- Updated image path -->
+                    <img src="assets/iphone-screen-interested-users.png"
+                         alt="App screen showing 'Interested Users' for a property"
+                         class="w-full max-w-[250px]"
+                         data-key="appScreen3Alt">
+                    <h4 class="text-xl font-semibold text-gray-800 mt-6" data-key="appScreen3Title">For Sellers: View Leads</h4>
+                    <p class="text-gray-600" data-key="appScreen3Text">Instantly see all interested buyers and renters.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto max-w-7xl px-6">
+            <h3 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900" data-key="sectionPowerTitle">
+                The Power is in Your Hands
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                <!-- For Buyers -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                    <h4 class="text-3xl font-bold mb-6 text-blue-600" data-key="powerBuyersTitle">
+                        For Buyers & Renters
+                    </h4>
+                    <p class="text-xl font-semibold mb-6 text-gray-900" data-key="powerBuyersSubtitle">Your Dream Home, Delivered.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <h5 class="font-semibold text-gray-900" data-key="powerBuyersLi1Title">Stop Searching, Start Living</h5>
+                                <p class="text-gray-600" data-key="powerBuyersLi1Text">Set your wishes and wait for the perfect match to find you.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <h5 class="font-semibold text-gray-900" data-key="powerBuyersLi2Title">Discover Hidden Gems</h5>
+                                <p class="text-gray-600" data-key="powerBuyersLi2Text">Get access to off-market properties and private, unlisted deals.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <h5 class="font-semibold text-gray-900" data-key="powerBuyersLi3Title">Get the Price You Want</h5>
+                                <p class="text-gray-600" data-key="powerBuyersLi3Text">Sellers see your budget and can contact you for a fast, fair deal.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <h5 class="font-semibold text-gray-900" data-key="powerBuyersLi4Title">Total Privacy</h5>
+                                <p class="text-gray-600" data-key="powerBuyersLi4Text">Your details are hidden. All contact is via secure chat.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- For Sellers -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                    <h4 class="text-3xl font-bold mb-6 text-indigo-600" data-key="powerSellersTitle">
+                        For Sellers & Agencies
+                    </h4>
+                    <p class="text-xl font-semibold mb-6 text-gray-900" data-key="powerSellersSubtitle">A Qualified Audience is Waiting.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <h5 class="font-semibold text-gray-900" data-key="powerSellersLi1Title">Sell & Rent Faster</h5>
+                                <p class="text-gray-600" data-key="powerSellersLi1Text">Instantly see a list of people who *already* want your exact property.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <h5 class="font-semibold text-gray-900" data-key="powerSellersLi2Title">Pre-Qualified Leads</h5>
+                                <p class="text-gray-600" data-key="powerSellersLi2Text">Everyone has specified their budget and requirements. No more wasted time.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <h5 class="font-semibold text-gray-900" data-key="powerSellersLi3Title">Understand Real Demand</h5>
+                                <p class="text-gray-600" data-key="powerSellersLi3Text">See what people are *really* willing to pay in your building.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <h5 class="font-semibold text-gray-900" data-key="powerSellersLi4Title">Targeted & Efficient</h5>
+                                <p class="text-gray-600" data-key="powerSellersLi4Text">Contact only the best matches. No spam, just high-intent negotiations.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="notify" class="py-20 md:py-32 bg-blue-50 text-gray-800">
+        <div class="container mx-auto max-w-2xl px-6 text-center">
+            <h3 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900" data-key="sectionCtaTitle">
+                A Revolution in Real Estate is Coming.
+            </h3>
+            <p class="text-xl text-gray-700 mb-8" data-key="sectionCtaSubtitle1">
+                You decide where to live. And you will live there.
+            </p>
+            <p class="text-lg text-gray-700 mb-10" data-key="sectionCtaSubtitle2">
+                Wishplace is launching soon. Be the first to know when you can build your wishlist or find your first
+                pre-qualified buyer.
+            </p>
+
+            <!-- Email Form -->
+            <form id="notify-form" class="max-w-lg mx-auto space-y-4">
+                <div>
+                    <label for="email-input" class="sr-only">Email Address</label>
+                    <input id="email-input" type="email" placeholder="Your Email Address" required
+                           class="flex-grow p-4 rounded-lg text-gray-900 placeholder-gray-500 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 w-full border border-gray-300"
+                           data-key="formEmailPlaceholder">
+                </div>
+                <div>
+                    <label for="country-select" class="sr-only">Country</label>
+                    <!-- UPDATED: Added text-gray-500 class to act as a placeholder -->
+                    <select id="country-select" required
+                            class="flex-grow p-4 rounded-lg text-gray-500 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 w-full border border-gray-300">
+                        <option value="" disabled selected data-key="formCountryDefault">Select your country</option>
+                        <!-- ALPHABETICALLY SORTED LIST -->
+                        <option value="AF">Afghanistan</option>
+                        <option value="AL">Albania</option>
+                        <option value="DZ">Algeria</option>
+                        <option value="AD">Andorra</option>
+                        <option value="AO">Angola</option>
+                        <option value="AG">Antigua and Barbuda</option>
+                        <option value="AR">Argentina</option>
+                        <option value="AM">Armenia</option>
+                        <option value="AU">Australia</option>
+                        <option value="AT">Austria</option>
+                        <option value="AZ">Azerbaijan</option>
+                        <option value="BS">Bahamas</option>
+                        <option value="BH">Bahrain</option>
+                        <option value="BD">Bangladesh</option>
+                        <option value="BB">Barbados</option>
+                        <option value="BY">Belarus</option>
+                        <option value="BE">Belgium</option>
+                        <option value="BZ">Belize</option>
+                        <option value="BJ">Benin</option>
+                        <option value="BT">Bhutan</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="BA">Bosnia and Herzegovina</option>
+                        <option value="BW">Botswana</option>
+                        <option value="BR">Brazil</option>
+                        <option value="BN">Brunei</option>
+                        <option value="BG">Bulgaria</option>
+                        <option value="BF">Burkina Faso</option>
+                        <option value="BI">Burundi</option>
+                        <option value="CV">Cabo Verde</option>
+                        <option value="KH">Cambodia</option>
+                        <option value="CM">Cameroon</option>
+                        <option value="CA">Canada</option>
+                        <option value="CF">Central African Republic</option>
+                        <option value="TD">Chad</option>
+                        <option value="CL">Chile</option>
+                        <option value="CN">China</option>
+                        <option value="CO">Colombia</option>
+                        <option value="KM">Comoros</option>
+                        <option value="CG">Congo (Congo-Brazzaville)</option>
+                        <option value="CD">Congo (Democratic Republic of the)</option>
+                        <option value="CR">Costa Rica</option>
+                        <option value="CI">Cote d'Ivoire</option>
+                        <option value="HR">Croatia</option>
+                        <option value="CU">Cuba</option>
+                        <option value="CY">Cyprus</option>
+                        <option value="CZ">Czechia (Czech Republic)</option>
+                        <option value="DK">Denmark</option>
+                        <option value="DJ">Djibouti</option>
+                        <option value="DM">Dominica</option>
+                        <option value="DO">Dominican Republic</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="EG">Egypt</option>
+                        <option value="SV">El Salvador</option>
+                        <option value="GQ">Equatorial Guinea</option>
+                        <option value="ER">Eritrea</option>
+                        <option value="EE">Estonia</option>
+                        <option value="SZ">Eswatini (fmr. "Swaziland")</option>
+                        <option value="ET">Ethiopia</option>
+                        <option value="FJ">Fiji</option>
+                        <option value="FI">Finland</option>
+                        <option value="FR">France</option>
+                        <option value="GA">Gabon</option>
+                        <option value="GM">Gambia</option>
+                        <option value="GE">Georgia</option>
+                        <option value="DE">Germany</option>
+                        <option value="GH">Ghana</option>
+                        <option value="GR">Greece</option>
+                        <option value="GD">Grenada</option>
+                        <option value="GT">Guatemala</option>
+                        <option value="GN">Guinea</option>
+                        <option value="GW">Guinea-Bissau</option>
+                        <option value="GY">Guyana</option>
+                        <option value="HT">Haiti</option>
+                        <option value="HN">Honduras</option>
+                        <option value="HU">Hungary</option>
+                        <option value="IS">Iceland</option>
+                        <option value="IN">India</option>
+                        <option value="ID">Indonesia</option>
+                        <option value="IR">Iran</option>
+                        <option value="IQ">Iraq</option>
+                        <option value="IE">Ireland</option>
+                        <option value="IL">Israel</option>
+                        <option value="IT">Italy</option>
+                        <option value="JM">Jamaica</option>
+                        <option value="JP">Japan</option>
+                        <option value="JO">Jordan</option>
+                        <option value="KZ">Kazakhstan</option>
+                        <option value="KE">Kenya</option>
+                        <option value="KI">Kiribati</option>
+                        <option value="KW">Kuwait</option>
+                        <option value="KG">Kyrgyzstan</option>
+                        <option value="LA">Laos</option>
+                        <option value="LV">Latvia</option>
+                        <option value="LB">Lebanon</option>
+                        <option value="LS">Lesotho</option>
+                        <option value="LR">Liberia</option>
+                        <option value="LY">Libya</option>
+                        <option value="LI">Liechtenstein</option>
+                        <option value="LT">Lithuania</option>
+                        <option value="LU">Luxembourg</option>
+                        <option value="MG">Madagascar</option>
+                        <option value="MW">Malawi</option>
+                        <option value="MY">Malaysia</option>
+                        <option value="MV">Maldives</option>
+                        <option value="ML">Mali</option>
+                        <option value="MT">Malta</option>
+                        <option value="MH">Marshall Islands</option>
+                        <option value="MR">Mauritania</option>
+                        <option value="MU">Mauritius</option>
+                        <option value="MX">Mexico</option>
+                        <option value="FM">Micronesia</option>
+                        <option value="MD">Moldova</option>
+                        <option value="MC">Monaco</option>
+                        <option value="MN">Mongolia</option>
+                        <option value="ME">Montenegro</option>
+                        <option value="MA">Morocco</option>
+                        <option value="MZ">Mozambique</option>
+                        <option value="MM">Myanmar (formerly Burma)</option>
+                        <option value="NA">Namibia</option>
+                        <option value="NR">Nauru</option>
+                        <option value="NP">Nepal</option>
+                        <option value="NL">Netherlands</option>
+                        <option value="NZ">New Zealand</option>
+                        <option value="NI">Nicaragua</option>
+                        <option value="NE">Niger</option>
+                        <option value="NG">Nigeria</option>
+                        <option value="KP">North Korea</option>
+                        <option value="MK">North Macedonia</option>
+                        <option value="NO">Norway</option>
+                        <option value="OM">Oman</option>
+                        <option value="PK">Pakistan</option>
+                        <option value="PW">Palau</option>
+                        <option value="PS">Palestine State</option>
+                        <option value="PA">Panama</option>
+                        <option value="PG">Papua New Guinea</option>
+                        <option value="PY">Paraguay</option>
+                        <option value="PE">Peru</option>
+                        <option value="PH">Philippines</option>
+                        <option value="PL">Poland</option>
+                        <option value="PT">Portugal</option>
+                        <option value="QA">Qatar</option>
+                        <option value="RO">Romania</option>
+                        <option value="RU">Russia</option>
+                        <option value="RW">Rwanda</option>
+                        <option value="KN">Saint Kitts and Nevis</option>
+                        <option value="LC">Saint Lucia</option>
+                        <option value="VC">Saint Vincent and the Grenadines</option>
+                        <option value="WS">Samoa</option>
+                        <option value="SM">San Marino</option>
+                        <option value="ST">Sao Tome and Principe</option>
+                        <option value="SA">Saudi Arabia</option>
+                        <option value="SN">Senegal</option>
+                        <option value="RS">Serbia</option>
+                        <option value="SC">Seychelles</option>
+                        <option value="SL">Sierra Leone</option>
+                        <option value="SG">Singapore</option>
+                        <option value="SK">Slovakia</option>
+                        <option value="SI">Slovenia</option>
+                        <option value="SB">Solomon Islands</option>
+                        <option value="SO">Somalia</option>
+                        <option value="ZA">South Africa</option>
+                        <option value="KR">South Korea</option>
+                        <option value="SS">South Sudan</option>
+                        <option value="ES">Spain</option>
+                        <option value="LK">Sri Lanka</option>
+                        <option value="SD">Sudan</option>
+                        <option value="SR">Suriname</option>
+                        <option value="SE">Sweden</option>
+                        <option value="CH">Switzerland</option>
+                        <option value="SY">Syria</option>
+                        <option value="TJ">Tajikistan</option>
+                        <option value="TZ">Tanzania</option>
+                        <option value="TH">Thailand</option>
+                        <option value="TL">Timor-Leste</option>
+                        <option value="TG">Togo</option>
+                        <option value="TO">Tonga</option>
+                        <option value="TT">Trinidad and Tobago</option>
+                        <option value="TN">Tunisia</option>
+                        <option value="TR">Turkey</option>
+                        <option value="TM">Turkmenistan</option>
+                        <option value="TV">Tuvalu</option>
+                        <option value="UG">Uganda</option>
+                        <option value="UA">Ukraine</option>
+                        <option value="AE">United Arab Emirates</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="US">United States</option>
+                        <option value="UY">Uruguay</option>
+                        <option value="UZ">Uzbekistan</option>
+                        <option value="VU">Vanuatu</option>
+                        <option value="VE">Venezuela</option>
+                        <option value="VN">Vietnam</option>
+                        <option value="YE">Yemen</option>
+                        <option value="ZM">Zambia</option>
+                        <option value="ZW">Zimbabwe</option>
+                    </select>
+                </div>
+                <button type="submit"
+                        class="bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-blue-700 transition-all w-full transform hover:scale-105"
+                        data-key="formButton">
+                    Notify Me!
+                </button>
+            </form>
+
+            <p class="mt-6 text-gray-500 text-sm" data-key="formPromise">
+                We promise: No spam. Just one email to let you know we're ready.
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="py-8 bg-white text-gray-500 border-t border-gray-200">
+    <div class="container mx-auto px-6 text-center">
+        <p data-key="footerText">&copy; 2025 Wishplace. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Message Box (Modal) -->
+<div id="message-box"
+     class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 hidden z-50">
+    <div class="bg-white p-10 rounded-lg shadow-2xl text-center max-w-sm w-full border border-gray-200">
+        <h3 class="text-2xl font-semibold mb-4 text-gray-900" data-key="modalTitle">Thank You!</h3>
+        <p class="text-gray-600 mb-6" data-key="modalText">
+            You're on the list! We'll email you the moment Wishplace is live.
+        </p>
+        <button id="close-button"
+                class="bg-blue-600 text-white font-bold px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                data-key="modalButton">
+            Close
+        </button>
+    </div>
+</div>
+
+<!-- NEW: i18n and Form Logic -->
+<script>
+    // --- START TRANSLATIONS ---
+    const translations = {
+        'en': {
+            pageTitle: "Wishplace - Stop Searching. Start Wishing.",
+            headerGetNotified: "Get Notified",
+            heroTitle: "Stop Searching.<br>Start Wishing.",
+            heroSubtitle: "Pin the <strong>exact</strong> buildings you love. Let sellers contact <strong>you</strong>.",
+            heroButton: "Join the Waitlist",
+            logoAlt: "Wishplace Logo",
+            heroImageAlt: "A modern apartment building, the 'dream building'",
+            sectionBrokenTitle: "The Old Way is Broken",
+            sectionBrokenSubtitle: "Finding the perfect home feels like a full-time job. You're stuck in a loop of searching, waiting, and missing out.",
+            brokenCard1Title: "Endless Monitoring",
+            brokenCard1Text: "Dozens of websites, constant refreshing, hoping to be first.",
+            brokenCard2Title: "Constant Wondering",
+            brokenCard2Text: `"Will a place in that *one* building ever be available at my price?"`,
+            brokenCard3Title: "Missed Opportunities",
+            brokenCard3Text: "Missing out on private deals sold before they're ever advertised.",
+            brokenCard4Title: "Wasted Ad Spend",
+            brokenCard4Text: "Sellers wait and pay, hoping a qualified buyer eventually appears.",
+            sectionHowTitle: "Welcome to the Reverse Marketplace",
+            howStep1Title: "1. Pin Your Wishlist",
+            howStep1Text: "Find and pin the specific buildings you want to live in.",
+            howStep2Title: "2. Set Your Terms",
+            howStep2Text: "Define your budget, rooms, and other must-haves.",
+            howStep3Title: "3. Get Noticed",
+            howStep3Text: "Owners see your wish and contact <em>you</em> via secure chat.",
+            sectionAppTitle: "Coming Soon to Your Phone",
+            sectionAppSubtitle: "A beautiful, simple app to manage your wishlist on the go.",
+            appScreen1Alt: "App screen showing 'Wish Places' list and map",
+            appScreen1Title: "For Buyers: Pin Your Wishlist",
+            appScreen1Text: "Browse a map and add your dream buildings.",
+            appScreen2Alt: "App screen showing 'Your Properties' for sellers",
+            appScreen2Title: "For Sellers: List Your Property",
+            appScreen2Text: "Easily add your properties to the marketplace.",
+            appScreen3Alt: "App screen showing 'Interested Users' for a property",
+            appScreen3Title: "For Sellers: View Leads",
+            appScreen3Text: "Instantly see all interested buyers and renters.",
+            sectionPowerTitle: "The Power is in Your Hands",
+            powerBuyersTitle: "For Buyers & Renters",
+            powerBuyersSubtitle: "Your Dream Home, Delivered.",
+            powerBuyersLi1Title: "Stop Searching, Start Living",
+            powerBuyersLi1Text: "Set your wishes and wait for the perfect match to find you.",
+            powerBuyersLi2Title: "Discover Hidden Gems",
+            powerBuyersLi2Text: "Get access to off-market properties and private, unlisted deals.",
+            powerBuyersLi3Title: "Get the Price You Want",
+            powerBuyersLi3Text: "Sellers see your budget and can contact you for a fast, fair deal.",
+            powerBuyersLi4Title: "Total Privacy",
+            powerBuyersLi4Text: "Your details are hidden. All contact is via secure chat.",
+            powerSellersTitle: "For Sellers & Agencies",
+            powerSellersSubtitle: "A Qualified Audience is Waiting.",
+            powerSellersLi1Title: "Sell & Rent Faster",
+            powerSellersLi1Text: "Instantly see a list of people who *already* want your exact property.",
+            powerSellersLi2Title: "Pre-Qualified Leads",
+            powerSellersLi2Text: "Everyone has specified their budget and requirements. No more wasted time.",
+            powerSellersLi3Title: "Understand Real Demand",
+            powerSellersLi3Text: "See what people are *really* willing to pay in your building.",
+            powerSellersLi4Title: "Targeted & Efficient",
+            powerSellersLi4Text: "Contact only the best matches. No spam, just high-intent negotiations.",
+            sectionCtaTitle: "A Revolution in Real Estate is Coming.",
+            sectionCtaSubtitle1: "You decide where to live. And you will live there.",
+            sectionCtaSubtitle2: "Wishplace is launching soon. Be the first to know when you can build your wishlist or find your first pre-qualified buyer.",
+            formEmailPlaceholder: "Your Email Address",
+            formCountryDefault: "Select your country",
+            formButton: "Notify Me!",
+            formPromise: "We promise: No spam. Just one email to let you know we're ready.",
+            footerText: "&copy; 2025 Wishplace. All rights reserved.",
+            modalTitle: "Thank You!",
+            modalText: "You're on the list! We'll email you the moment Wishplace is live.",
+            modalButton: "Close"
+        },
+        'it': {
+            pageTitle: "Wishplace - Smetti di Cercare. Inizia a Desiderare.",
+            headerGetNotified: "Ricevi Notifiche",
+            heroTitle: "Smetti di Cercare.<br>Inizia a Desiderare.",
+            heroSubtitle: "Seleziona gli <strong>edifici esatti</strong> che ami. Lascia che i venditori contattino <strong>te</strong>.",
+            heroButton: "Unisciti alla Lista d'Attesa",
+            logoAlt: "Logo Wishplace",
+            heroImageAlt: "Un moderno edificio di appartamenti, l'edificio dei sogni'",
+            sectionBrokenTitle: "Il Vecchio Metodo è Superato",
+            sectionBrokenSubtitle: "Trovare la casa perfetta sembra un lavoro a tempo pieno. Sei bloccato in un ciclo di ricerca, attesa e occasioni mancate.",
+            brokenCard1Title: "Monitoraggio Infinito",
+            brokenCard1Text: "Decine di siti web, aggiornamenti costanti, sperando di essere il primo.",
+            brokenCard2Title: "Dubbio Costante",
+            brokenCard2Text: `"Ci sarà mai un posto in *quel* palazzo disponibile al mio prezzo?"`,
+            brokenCard3Title: "Opportunità Perse",
+            brokenCard3Text: "Perdere occasioni private vendute prima ancora che vengano pubblicizzate.",
+            brokenCard4Title: "Spreco in Annunci",
+            brokenCard4Text: "I venditori aspettano e pagano, sperando che un acquirente qualificato prima o poi appaia.",
+            sectionHowTitle: "Benvenuto nel Mercato Inverso",
+            howStep1Title: "1. Fissa la Tua Wishlist",
+            howStep1Text: "Trova e fissa gli edifici specifici in cui vuoi vivere.",
+            howStep2Title: "2. Stabilisci le Tue Condizioni",
+            howStep2Text: "Definisci il tuo budget, stanze e altri requisiti.",
+            howStep3Title: "3. Fatti Notare",
+            howStep3Text: "I proprietari vedono il tuo desiderio e contattano <em>te</em> tramite chat sicura.",
+            sectionAppTitle: "Prossimamente sul Tuo Telefono",
+            sectionAppSubtitle: "Un'app bella e semplice per gestire la tua wishlist ovunque tu sia.",
+            appScreen1Alt: "Schermata dell'app che mostra la lista 'Wish Places' e la mappa",
+            appScreen1Title: "Per Acquirenti: Fissa la Tua Wishlist",
+            appScreen1Text: "Sfoglia una mappa e aggiungi gli edifici dei tuoi sogni.",
+            appScreen2Alt: "Schermata dell'app che mostra 'Le Tue Proprietà' per i venditori",
+            appScreen2Title: "Per Venditori: Inserisci la Tua Proprietà",
+            appScreen2Text: "Aggiungi facilmente le tue proprietà al marketplace.",
+            appScreen3Alt: "Schermata dell'app che mostra 'Utenti Interessati' per una proprietà",
+            appScreen3Title: "Per Venditori: Vedi i Contatti",
+            appScreen3Text: "Vedi immediatamente tutti gli acquirenti e affittuari interessati.",
+            sectionPowerTitle: "Il Potere è nelle Tue Mani",
+            powerBuyersTitle: "Per Acquirenti e Affittuari",
+            powerBuyersSubtitle: "La Tua Casa dei Sogni, Consegnata.",
+            powerBuyersLi1Title: "Smetti di Cercare, Inizia a Vivere",
+            powerBuyersLi1Text: "Imposta i tuoi desideri e aspetta che l'abbinamento perfetto trovi te.",
+            powerBuyersLi2Title: "Scopri Gemme Nascoste",
+            powerBuyersLi2Text: "Accedi a proprietà fuori mercato e accordi privati non pubblicizzati.",
+            powerBuyersLi3Title: "Ottieni il Prezzo che Vuoi",
+            powerBuyersLi3Text: "I venditori vedono il tuo budget e possono contattarti per un accordo rapido ed equo.",
+            powerBuyersLi4Title: "Privacy Totale",
+            powerBuyersLi4Text: "I tuoi dati sono nascosti. Ogni contatto avviene tramite chat sicura.",
+            powerSellersTitle: "Per Venditori e Agenzie",
+            powerSellersSubtitle: "Un Pubblico Qualificato ti Aspetta.",
+            powerSellersLi1Title: "Vendi e Affitta Più Velocemente",
+            powerSellersLi1Text: "Vedi subito un elenco di persone che *già* desiderano la tua esatta proprietà.",
+            powerSellersLi2Title: "Contatti Pre-Qualificati",
+            powerSellersLi2Text: "Tutti hanno specificato budget e requisiti. Niente più perdite di tempo.",
+            powerSellersLi3Title: "Comprendi la Domanda Reale",
+            powerSellersLi3Text: "Guarda cosa le persone sono *realmente* disposte a pagare nel tuo edificio.",
+            powerSellersLi4Title: "Mirato ed Efficiente",
+            powerSellersLi4Text: "Contatta solo i migliori abbinamenti. Niente spam, solo negoziazioni ad alta intenzione.",
+            sectionCtaTitle: "Una Rivoluzione Immobiliare è in Arrivo.",
+            sectionCtaSubtitle1: "Decidi tu dove vivere. E vivrai lì.",
+            sectionCtaSubtitle2: "Wishplace è in arrivo. Sii il primo a sapere quando potrai creare la tua wishlist o trovare il tuo primo acquirente pre-qualificato.",
+            formEmailPlaceholder: "Il Tuo Indirizzo Email",
+            formCountryDefault: "Seleziona il tuo paese",
+            formButton: "Avvisami!",
+            formPromise: "Promesso: Niente spam. Solo un'email per farti sapere quando siamo pronti.",
+            footerText: "&copy; 2025 Wishplace. Tutti i diritti riservati.",
+            modalTitle: "Grazie!",
+            modalText: "Sei in lista! Ti invieremo un'email non appena Wishplace sarà live.",
+            modalButton: "Chiudi"
+        },
+        'es': {
+            pageTitle: "Wishplace - Deja de Buscar. Empieza a Desear.",
+            headerGetNotified: "Recibir Notificaciones",
+            heroTitle: "Deja de Buscar.<br>Empieza a Desear.",
+            heroSubtitle: "Fija los edificios <strong>exactos</strong> que te encantan. Deja que los vendedores te contacten <strong>a ti</strong>.",
+            heroButton: "Unirse a la Lista de Espera",
+            logoAlt: "Logo de Wishplace",
+            heroImageAlt: "Un moderno edificio de apartamentos, el 'edificio soñado'",
+            sectionBrokenTitle: "El Método Antiguo No Funciona",
+            sectionBrokenSubtitle: "Encontrar la casa perfecta parece un trabajo a tiempo completo. Estás atrapado en un bucle de búsqueda, espera y oportunidades perdidas.",
+            brokenCard1Title: "Monitorización Interminable",
+            brokenCard1Text: "Docenas de sitios web, actualizando constantemente, esperando ser el primero.",
+            brokenCard2Title: "Duda Constante",
+            brokenCard2Text: `"¿Habrá alguna vez un lugar en *ese* edificio disponible a mi precio?"`,
+            brokenCard3Title: "Oportunidades Perdidas",
+            brokenCard3Text: "Perderse tratos privados vendidos incluso antes de ser anunciados.",
+            brokenCard4Title: "Gasto Inútil en Anuncios",
+            brokenCard4Text: "Los vendedores esperan y pagan, esperando que un comprador cualificado aparezca.",
+            sectionHowTitle: "Bienvenido al Mercado Inverso",
+            howStep1Title: "1. Fija tu Lista de Deseos",
+            howStep1Text: "Encuentra y fija los edificios específicos en los que quieres vivir.",
+            howStep2Title: "2. Define tus Condiciones",
+            howStep2Text: "Define tu presupuesto, habitaciones y otros imprescindibles.",
+            howStep3Title: "3. Hazte Notar",
+            howStep3Text: "Los propietarios ven tu deseo y te contactan <em>a ti</em> por chat seguro.",
+            sectionAppTitle: "Próximamente en tu Móvil",
+            sectionAppSubtitle: "Una app bonita y sencilla para gestionar tu lista de deseos sobre la marcha.",
+            appScreen1Alt: "Pantalla de la app mostrando la lista 'Wish Places' y el mapa",
+            appScreen1Title: "Para Compradores: Fija tu Lista",
+            appScreen1Text: "Explora un mapa y añade los edificios de tus sueños.",
+            appScreen2Alt: "Pantalla de la app mostrando 'Tus Propiedades' para vendedores",
+            appScreen2Title: "Para Vendedores: Publica tu Propiedad",
+            appScreen2Text: "Añade fácilmente tus propiedades al mercado.",
+            appScreen3Alt: "Pantalla de la app mostrando 'Usuarios Interesados' en una propiedad",
+            appScreen3Title: "Para Vendedores: Ve los Interesados",
+            appScreen3Text: "Ve al instante todos los compradores e inquilinos interesados.",
+            sectionPowerTitle: "El Poder está en tus Manos",
+            powerBuyersTitle: "Para Compradores e Inquilinos",
+            powerBuyersSubtitle: "La Casa de tus Sueños, Entregada.",
+            powerBuyersLi1Title: "Deja de Buscar, Empieza a Vivir",
+            powerBuyersLi1Text: "Define tus deseos y espera a que la coincidencia perfecta te encuentre.",
+            powerBuyersLi2Title: "Descubre Joyas Ocultas",
+            powerBuyersLi2Text: "Accede a propiedades fuera del mercado y tratos privados no publicados.",
+            powerBuyersLi3Title: "Consigue el Precio que Quieres",
+            powerBuyersLi3Text: "Los vendedores ven tu presupuesto y pueden contactarte para un trato rápido y justo.",
+            powerBuyersLi4Title: "Privacidad Total",
+            powerBuyersLi4Text: "Tus datos están ocultos. Todo el contacto es por chat seguro.",
+            powerSellersTitle: "Para Vendedores y Agencias",
+            powerSellersSubtitle: "Una Audiencia Cualificada te Espera.",
+            powerSellersLi1Title: "Vende y Alquila Más Rápido",
+            powerSellersLi1Text: "Ve al instante una lista de personas que *ya* quieren tu propiedad exacta.",
+            powerSellersLi2Title: "Clientes Potenciales Cualificados",
+            powerSellersLi2Text: "Todos han especificado su presupuesto y requisitos. No más pérdidas de tiempo.",
+            powerSellersLi3Title: "Entiende la Demanda Real",
+            powerSellersLi3Text: "Mira lo que la gente está *realmente* dispuesta a pagar en tu edificio.",
+            powerSellersLi4Title: "Dirigido y Eficiente",
+            powerSellersLi4Text: "Contacta solo con las mejores coincidencias. Sin spam, solo negociaciones de alta intención.",
+            sectionCtaTitle: "Se Acerca una Revolución Inmobiliaria.",
+            sectionCtaSubtitle1: "Tú decides dónde vivir. Y vivirás allí.",
+            sectionCtaSubtitle2: "Wishplace se lanza pronto. Sé el primero en saber cuándo puedes crear tu lista de deseos o encontrar tu primer comprador cualificado.",
+            formEmailPlaceholder: "Tu Dirección de Email",
+            formCountryDefault: "Selecciona tu país",
+            formButton: "¡Notificarme!",
+            formPromise: "Prometido: Sin spam. Solo un email para avisarte cuando estemos listos.",
+            footerText: "&copy; 2025 Wishplace. Todos los derechos reservados.",
+            modalTitle: "¡Gracias!",
+            modalText: "¡Estás en la lista! Te enviaremos un email en cuanto Wishplace esté disponible.",
+            modalButton: "Cerrar"
+        },
+        'fr': {
+            pageTitle: "Wishplace - Arrêtez de Chercher. Commencez à Souhaiter.",
+            headerGetNotified: "Être Notifié",
+            heroTitle: "Arrêtez de Chercher.<br>Commencez à Souhaiter.",
+            heroSubtitle: "Épinglez les immeubles <strong>exacts</strong> que vous aimez. Laissez les vendeurs vous contacter <strong>vous</strong>.",
+            heroButton: "Rejoindre la Liste d'Attente",
+            logoAlt: "Logo Wishplace",
+            heroImageAlt: "Un immeuble d'appartements moderne, 'l'immeuble de rêve'",
+            sectionBrokenTitle: "L'Ancienne Méthode est Dépassée",
+            sectionBrokenSubtitle: "Trouver la maison parfaite ressemble à un travail à plein temps. Vous êtes coincé dans une boucle de recherche, d'attente et d'opportunités manquées.",
+            brokenCard1Title: "Surveillance Sans Fin",
+            brokenCard1Text: "Des dizaines de sites web, rafraîchir constantly, en espérant être le premier.",
+            brokenCard2Title: "Questionnement Constant",
+            brokenCard2Text: `"Y aura-t-il un jour une place dans *cet* immeuble disponible à mon prix ?"`,
+            brokenCard3Title: "Opportunités Manquées",
+            brokenCard3Text: "Passer à côté d'offres privées vendues avant même d'être annoncées.",
+            brokenCard4Title: "Dépenses Publicitaires Inutiles",
+            brokenCard4Text: "Les vendeurs attendent et paient, en espérant qu'un acheteur qualifié finisse par apparaître.",
+            sectionHowTitle: "Bienvenue sur le Marché Inversé",
+            howStep1Title: "1. Épinglez Votre Wishlist",
+            howStep1Text: "Trouvez et épinglez les immeubles spécifiques où vous voulez vivre.",
+            howStep2Title: "2. Définissez Vos Conditions",
+            howStep2Text: "Définissez votre budget, le nombre de pièces et autres exigences.",
+            howStep3Title: "3. Soyez Remarqué",
+            howStep3Text: "Les propriétaires voient votre souhait et vous contactent <em>vous</em> via un chat sécurisé.",
+            sectionAppTitle: "Bientôt sur Votre Téléphone",
+            sectionAppSubtitle: "Une application belle et simple pour gérer votre wishlist où que vous soyez.",
+            appScreen1Alt: "Écran de l'application montrant la liste 'Wish Places' et la carte",
+            appScreen1Title: "Pour les Acheteurs : Épinglez Votre Wishlist",
+            appScreen1Text: "Parcourez une carte et ajoutez les immeubles de vos rêves.",
+            appScreen2Alt: "Écran de l'application montrant 'Vos Propriétés' pour les vendeurs",
+            appScreen2Title: "Pour les Vendeurs : Listez Votre Bien",
+            appScreen2Text: "Ajoutez facilement vos propriétés sur le marché.",
+            appScreen3Alt: "Écran de l'application montrant les 'Utilisateurs Intéressés' pour un bien",
+            appScreen3Title: "Pour les Vendeurs : Voyez les Prospects",
+            appScreen3Text: "Voyez instantanément tous les acheteurs et locataires intéressés.",
+            sectionPowerTitle: "Le Pouvoir est entre Vos Mains",
+            powerBuyersTitle: "Pour Acheteurs & Locataires",
+            powerBuyersSubtitle: "La Maison de Vos Rêves, Livrée.",
+            powerBuyersLi1Title: "Arrêtez de Chercher, Vivez",
+            powerBuyersLi1Text: "Définissez vos souhaits et attendez que la correspondance parfaite vous trouve.",
+            powerBuyersLi2Title: "Découvrez des Perles Rares",
+            powerBuyersLi2Text: "Accédez à des propriétés hors marché et à des offres privées non listées.",
+            powerBuyersLi3Title: "Obtenez le Prix que Vous Voulez",
+            powerBuyersLi3Text: "Les vendeurs voient votre budget et peuvent vous contacter pour une offre rapide et juste.",
+            powerBuyersLi4Title: "Confidentialité Totale",
+            powerBuyersLi4Text: "Vos coordonnées sont cachées. Tout contact se fait par chat sécurisé.",
+            powerSellersTitle: "Pour Vendeurs & Agences",
+            powerSellersSubtitle: "Une Audience Qualifiée Vous Attend.",
+            powerSellersLi1Title: "Vendez & Louez Plus Vite",
+            powerSellersLi1Text: "Voyez instantanément une liste de personnes qui veulent *déjà* votre propriété exacte.",
+            powerSellersLi2Title: "Prospects Pré-Qualifiés",
+            powerSellersLi2Text: "Chacun a spécifié son budget et ses exigences. Fini le temps perdu.",
+            powerSellersLi3Title: "Comprenez la Demande Réelle",
+            powerSellersLi3Text: "Voyez ce que les gens sont *vraiment* prêts à payer dans votre immeuble.",
+            powerSellersLi4Title: "Ciblé & Efficace",
+            powerSellersLi4Text: "Contactez uniquement les meilleures correspondances. Pas de spam, juste des négociations à forte intention.",
+            sectionCtaTitle: "Une Révolution de l'Immobilier est en Marche.",
+            sectionCtaSubtitle1: "Vous décidez où vivre. Et vous y vivrez.",
+            sectionCtaSubtitle2: "Wishplace arrive bientôt. Soyez le premier à savoir quand vous pourrez créer votre wishlist ou trouver votre premier acheteur pré-qualifié.",
+            formEmailPlaceholder: "Votre Adresse E-mail",
+            formCountryDefault: "Sélectionnez votre pays",
+            formButton: "Prévenez-moi !",
+            formPromise: "Promis : Pas de spam. Juste un e-mail pour vous dire quand nous sommes prêts.",
+            footerText: "&copy; 2025 Wishplace. Tous droits réservés.",
+            modalTitle: "Merci !",
+            modalText: "Vous êtes sur la liste ! Nous vous enverrons un e-mail dès que Wishplace sera lancé.",
+            modalButton: "Fermer"
+        }
+    };
+    // --- END TRANSLATIONS ---
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const notifyForm = document.getElementById('notify-form');
+        const emailInput = document.getElementById('email-input');
+        const countrySelect = document.getElementById('country-select');
+        const messageBox = document.getElementById('message-box');
+        const closeButton = document.getElementById('close-button');
+
+        // --- START i18n LOGIC ---
+        // FIXED: Added const langSwitcher
+        const langSwitcher = document.getElementById('lang-switcher');
+        const langButton = document.getElementById('lang-button');
+        const langDropdown = document.getElementById('lang-dropdown');
+        const langCurrent = document.getElementById('lang-current');
+        const langOptions = document.querySelectorAll('.lang-option');
+        const supportedLangs = ['en', 'it', 'es', 'fr'];
+        let currentLang = 'en'; // Default
+
+        const setLanguage = (lang) => {
+            if (!supportedLangs.includes(lang)) {
+                lang = 'en';
+            }
+            currentLang = lang;
+            localStorage.setItem('language', lang);
+            document.documentElement.lang = lang; // Set HTML lang attribute
+
+            const langStrings = translations[lang];
+
+            document.querySelectorAll('[data-key]').forEach(el => {
+                const key = el.dataset.key;
+                if (langStrings[key]) {
+                    if (el.hasAttribute('placeholder')) {
+                        el.placeholder = langStrings[key];
+                    } else if (el.tagName === 'IMG' && el.hasAttribute('alt')) {
+                        el.alt = langStrings[key];
+                    } else if (el.id === 'page-title') {
+                        el.textContent = langStrings[key];
+                    } else {
+                        // Use innerHTML to render <strong> and <em> tags
+                        el.innerHTML = langStrings[key];
+                    }
+                }
+            });
+
+            // Update language switcher text
+            const langOption = document.querySelector(`.lang-option[data-lang="${lang}"]`);
+            if (langOption) {
+                langCurrent.textContent = langOption.textContent;
+            }
+
+            // Update active class in dropdown
+            langOptions.forEach(opt => opt.classList.remove('active'));
+            if(langOption) {
+                langOption.classList.add('active');
+            }
+
+            // Hide dropdown
+            langDropdown.classList.add('hidden');
+        };
+
+        // Toggle dropdown
+        langButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langDropdown.classList.toggle('hidden');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            // Check if langSwitcher exists before calling .contains
+            if (langSwitcher && !langSwitcher.contains(e.target)) {
+                langDropdown.classList.add('hidden');
+            }
+        });
+
+        // Set language on option click
+        langOptions.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lang = e.target.dataset.lang;
+                setLanguage(lang);
+            });
+        });
+
+        // Initialize language
+        const savedLang = localStorage.getItem('language');
+        const browserLang = navigator.language.split('-')[0];
+
+        if (savedLang && supportedLangs.includes(savedLang)) {
+            setLanguage(savedLang);
+        } else if (browserLang && supportedLangs.includes(browserLang)) {
+            setLanguage(browserLang);
+        } else {
+            setLanguage('en'); // Default
+        }
+        // --- END i18n LOGIC ---
+
+
+        // --- Original Form Logic ---
+        notifyForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // In a real app, you'd send this email and country to a server
+            console.log(`Email: ${emailInput.value}, Country: ${countrySelect.value}`);
+
+            // Clear inputs and show message
+            emailInput.value = '';
+            countrySelect.value = ''; // Reset dropdown to default
+
+            // Reset select color to placeholder gray
+            countrySelect.classList.add('text-gray-500');
+            countrySelect.classList.remove('text-gray-900');
+
+            // Show confirmation modal in the correct language
+            messageBox.classList.remove('hidden');
+        });
+
+        closeButton.addEventListener('click', () => {
+            messageBox.classList.add('hidden');
+        });
+
+        messageBox.addEventListener('click', (e) => {
+            if (e.target === messageBox) {
+                messageBox.classList.add('hidden');
+            }
+        });
+
+        countrySelect.addEventListener('change', () => {
+            if (countrySelect.value === "") {
+                countrySelect.classList.add('text-gray-500');
+                countrySelect.classList.remove('text-gray-900');
+            } else {
+                countrySelect.classList.remove('text-gray-500');
+                countrySelect.classList.add('text-gray-900');
+            }
+        });
+    });
+</script>
+
+</body>
+
+</html>
