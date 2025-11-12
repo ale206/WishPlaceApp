@@ -23,6 +23,8 @@
             font-weight: 700;
             background-color: #f3f4f6; /* bg-gray-100 */
         }
+        .loader{width:1.25rem;height:1.25rem;border:2px solid #fff;border-right-color:transparent;border-radius:50%;animation:spin 0.8s linear infinite;display:inline-block;vertical-align:middle}
+        @keyframes spin{to{transform:rotate(360deg)}}
     </style>
 </head>
 
@@ -392,14 +394,14 @@
             <form id="notify-form" class="max-w-lg mx-auto space-y-4">
                 <div>
                     <label for="email-input" class="sr-only">Email Address</label>
-                    <input id="email-input" type="email" placeholder="Your Email Address" required
+                    <input id="email-input" name="email" type="email" placeholder="Your Email Address" required
                            class="flex-grow p-4 rounded-lg text-gray-900 placeholder-gray-500 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 w-full border border-gray-300"
                            data-key="formEmailPlaceholder">
                 </div>
                 <div>
                     <label for="country-select" class="sr-only">Country</label>
                     <!-- UPDATED: Added text-gray-500 class to act as a placeholder -->
-                    <select id="country-select" required
+                    <select id="country-select" name="country" required
                             class="flex-grow p-4 rounded-lg text-gray-500 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 w-full border border-gray-300">
                         <option value="" disabled selected data-key="formCountryDefault">Select your country</option>
                         <!-- ALPHABETICALLY SORTED LIST -->
@@ -599,7 +601,7 @@
                         <option value="ZW">Zimbabwe</option>
                     </select>
                 </div>
-                <button type="submit"
+                <button id="notify-submit" type="submit"
                         class="bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-blue-700 transition-all w-full transform hover:scale-105"
                         data-key="formButton">
                     Notify Me!
@@ -1017,33 +1019,6 @@
 
 
         // --- Original Form Logic ---
-        notifyForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            // In a real app, you'd send this email and country to a server
-            console.log(`Email: ${emailInput.value}, Country: ${countrySelect.value}`);
-
-            // Clear inputs and show message
-            emailInput.value = '';
-            countrySelect.value = ''; // Reset dropdown to default
-
-            // Reset select color to placeholder gray
-            countrySelect.classList.add('text-gray-500');
-            countrySelect.classList.remove('text-gray-900');
-
-            // Show confirmation modal in the correct language
-            messageBox.classList.remove('hidden');
-        });
-
-        closeButton.addEventListener('click', () => {
-            messageBox.classList.add('hidden');
-        });
-
-        messageBox.addEventListener('click', (e) => {
-            if (e.target === messageBox) {
-                messageBox.classList.add('hidden');
-            }
-        });
 
         countrySelect.addEventListener('change', () => {
             if (countrySelect.value === "") {
@@ -1054,6 +1029,78 @@
                 countrySelect.classList.add('text-gray-900');
             }
         });
+    });
+</script>
+
+<script>
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw6_ziv-zh0vbUlg_AmZafrNO06NP4yYkwSsr32ptGhs7YV_DNP5i9GonlLQ1i3O8lz/exec'; // URL Web App
+
+    const form = document.getElementById('notify-form');
+    const btn = document.getElementById('notify-submit');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (btn) {
+        btn.disabled = true;
+        btn.setAttribute('aria-busy', 'true');
+        btn.classList.add('opacity-75','cursor-not-allowed');
+        if (!btn.dataset.original) btn.dataset.original = btn.innerHTML;
+        btn.innerHTML = '<span class="loader" aria-hidden="true"></span>';
+    }
+
+    // Resolve client IP before submit
+    let clientIp = '';
+    try {
+        const ipRes = await fetch('https://api.ipify.org?format=json');
+        const ipJson = await ipRes.json();
+        clientIp = ipJson.ip || '';
+    } catch (_) { /* ignore */ }
+
+    const fd = new FormData(form);
+    fd.append('ua', navigator.userAgent);
+    fd.append('ip', clientIp);
+
+        // Variante semplice: niente CORS da gestire
+        try {
+            await fetch(SCRIPT_URL, { method: 'POST', body: fd, mode: 'no-cors' });
+
+            // Mostra popup di conferma
+            const messageBox = document.getElementById('message-box');
+            const closeButton = document.getElementById('close-button');
+            const emailInput = document.getElementById('email-input');
+            const countrySelect = document.getElementById('country-select');
+
+            // Reset form campi
+            if (emailInput) emailInput.value = '';
+            if (countrySelect) {
+                countrySelect.value = '';
+                countrySelect.classList.add('text-gray-500');
+                countrySelect.classList.remove('text-gray-900');
+            }
+
+            if (messageBox) messageBox.classList.remove('hidden');
+
+            // Handlers per chiusura popup
+            if (closeButton && messageBox) {
+                closeButton.onclick = () => messageBox.classList.add('hidden');
+                messageBox.onclick = (ev) => { if (ev.target === messageBox) messageBox.classList.add('hidden'); };
+            }
+
+            if (btn) {
+                btn.disabled = false;
+                btn.removeAttribute('aria-busy');
+                btn.classList.remove('opacity-75','cursor-not-allowed');
+                if (btn.dataset.original) btn.innerHTML = btn.dataset.original;
+            }
+        } catch (err) {
+            alert('Error. Try again.');
+            if (btn) {
+                btn.disabled = false;
+                btn.removeAttribute('aria-busy');
+                btn.classList.remove('opacity-75','cursor-not-allowed');
+                if (btn.dataset.original) btn.innerHTML = btn.dataset.original;
+            }
+        }
     });
 </script>
 
