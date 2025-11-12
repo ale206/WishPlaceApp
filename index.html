@@ -391,7 +391,7 @@
             </p>
 
             <!-- Email Form -->
-            <form id="notify-form" class="max-w-lg mx-auto space-y-4">
+            <form id="notify-form" class="max-w-lg mx-auto space-y-4" novalidate>
                 <div>
                     <label for="email-input" class="sr-only">Email Address</label>
                     <input id="email-input" name="email" type="email" placeholder="Your Email Address" required
@@ -601,7 +601,13 @@
                         <option value="ZW">Zimbabwe</option>
                     </select>
                 </div>
-                <button id="notify-submit" type="submit"
+                <div class="flex items-start text-left">
+                    <input id="consent-checkbox" name="consent" type="checkbox" required class="mt-1 mr-3 w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                    <label id="consent-label" for="consent-checkbox" class="text-sm text-gray-700" data-key="formConsentLabel">
+                        I agree to be contacted about my request via email.
+                    </label>
+                </div>
+                <button id="notify-submit" type="submit" data-loading-text="Sending…"
                         class="bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-blue-700 transition-all w-full transform hover:scale-105"
                         data-key="formButton">
                     Notify Me!
@@ -704,8 +710,10 @@
             sectionCtaSubtitle1: "You decide where to live. And you will live there.",
             sectionCtaSubtitle2: "Wishplace is launching soon. Be the first to know when you can build your wishlist or find your first pre-qualified buyer.",
             formEmailPlaceholder: "Your Email Address",
+            formEmailError: "Please enter a valid email address.",
             formCountryDefault: "Select your country",
             formButton: "Notify Me!",
+            formConsentLabel: "I agree to be contacted about my request via email.",
             formPromise: "We promise: No spam. Just one email to let you know we're ready.",
             footerText: "&copy; 2025 Wishplace. All rights reserved.",
             modalTitle: "Thank You!",
@@ -773,8 +781,10 @@
             sectionCtaSubtitle1: "Decidi tu dove vivere. E vivrai lì.",
             sectionCtaSubtitle2: "Wishplace è in arrivo. Sii il primo a sapere quando potrai creare la tua wishlist o trovare il tuo primo acquirente pre-qualificato.",
             formEmailPlaceholder: "Il Tuo Indirizzo Email",
+            formEmailError: "Inserisci un indirizzo email valido.",
             formCountryDefault: "Seleziona il tuo paese",
             formButton: "Avvisami!",
+            formConsentLabel: "Accetto di essere contattato via email in merito alla mia richiesta.",
             formPromise: "Promesso: Niente spam. Solo un'email per farti sapere quando siamo pronti.",
             footerText: "&copy; 2025 Wishplace. Tutti i diritti riservati.",
             modalTitle: "Grazie!",
@@ -842,8 +852,10 @@
             sectionCtaSubtitle1: "Tú decides dónde vivir. Y vivirás allí.",
             sectionCtaSubtitle2: "Wishplace se lanza pronto. Sé el primero en saber cuándo puedes crear tu lista de deseos o encontrar tu primer comprador cualificado.",
             formEmailPlaceholder: "Tu Dirección de Email",
+            formEmailError: "Introduce una dirección de correo válida.",
             formCountryDefault: "Selecciona tu país",
             formButton: "¡Notificarme!",
+            formConsentLabel: "Acepto ser contactado por correo electrónico acerca de mi solicitud.",
             formPromise: "Prometido: Sin spam. Solo un email para avisarte cuando estemos listos.",
             footerText: "&copy; 2025 Wishplace. Todos los derechos reservados.",
             modalTitle: "¡Gracias!",
@@ -911,8 +923,10 @@
             sectionCtaSubtitle1: "Vous décidez où vivre. Et vous y vivrez.",
             sectionCtaSubtitle2: "Wishplace arrive bientôt. Soyez le premier à savoir quand vous pourrez créer votre wishlist ou trouver votre premier acheteur pré-qualifié.",
             formEmailPlaceholder: "Votre Adresse E-mail",
+            formEmailError: "Veuillez saisir une adresse e-mail valide.",
             formCountryDefault: "Sélectionnez votre pays",
             formButton: "Prévenez-moi !",
+            formConsentLabel: "J’accepte d’être contacté par e‑mail au sujet de ma demande.",
             formPromise: "Promis : Pas de spam. Juste un e-mail pour vous dire quand nous sommes prêts.",
             footerText: "&copy; 2025 Wishplace. Tous droits réservés.",
             modalTitle: "Merci !",
@@ -1038,66 +1052,128 @@
     const form = document.getElementById('notify-form');
     const btn = document.getElementById('notify-submit');
 
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    if (btn) {
-        btn.disabled = true;
-        btn.setAttribute('aria-busy', 'true');
-        btn.classList.add('opacity-75','cursor-not-allowed');
-        if (!btn.dataset.original) btn.dataset.original = btn.innerHTML;
-        btn.innerHTML = '<span class="loader" aria-hidden="true"></span>';
+    // Consent checkbox logic (no auto-disabling of button)
+    const consent = document.getElementById('consent-checkbox');
+    if (consent && btn) {
+        consent.addEventListener('change', () => {
+            const consentLabel = document.getElementById('consent-label');
+            if (consentLabel) {
+                consentLabel.classList.remove('text-red-600', 'font-semibold');
+                consentLabel.classList.add('text-gray-700');
+            }
+        });
     }
 
-    // Resolve client IP before submit
-    let clientIp = '';
-    try {
-        const ipRes = await fetch('https://api.ipify.org?format=json');
-        const ipJson = await ipRes.json();
-        clientIp = ipJson.ip || '';
-    } catch (_) { /* ignore */ }
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-    const fd = new FormData(form);
-    fd.append('ua', navigator.userAgent);
-    fd.append('ip', clientIp);
+        // Custom validation: email, country, consent
+        const consentLabel = document.getElementById('consent-label');
+        const consentCheckbox = document.getElementById('consent-checkbox');
+        const emailInput = document.getElementById('email-input');
+        const countrySelectEl = document.getElementById('country-select');
 
-        // Variante semplice: niente CORS da gestire
+        // Reset previous error states
+        if (consentLabel) {
+            consentLabel.classList.remove('text-red-600', 'font-semibold');
+            consentLabel.classList.add('text-gray-700');
+        }
+        if (consentCheckbox) {
+            consentCheckbox.classList.remove('ring-2', 'ring-red-500');
+        }
+        if (emailInput) {
+            emailInput.classList.remove('border-red-500', 'focus:ring-red-500');
+            emailInput.classList.add('border-gray-300', 'focus:ring-blue-500');
+        }
+        if (countrySelectEl) {
+            countrySelectEl.classList.remove('border-red-500');
+            countrySelectEl.classList.add('border-gray-300');
+        }
+
+        let hasError = false;
+
+        // Consent feedback
+        if (consentCheckbox && !consentCheckbox.checked && consentLabel) {
+            consentLabel.classList.remove('text-gray-700');
+            consentLabel.classList.add('text-red-600', 'font-semibold');
+            consentCheckbox.classList.add('ring-2', 'ring-red-500');
+            hasError = true;
+        }
+
+        // Email feedback (custom regex) - red border only
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailInput && !emailPattern.test(emailInput.value.trim())) {
+            emailInput.classList.remove('border-gray-300', 'focus:ring-blue-500');
+            emailInput.classList.add('border-red-500', 'focus:ring-red-500');
+            hasError = true;
+        }
+
+        // Country feedback
+        if (countrySelectEl && !countrySelectEl.value) {
+            countrySelectEl.classList.remove('border-gray-300');
+            countrySelectEl.classList.add('border-red-500');
+            hasError = true;
+        }
+
+        if (hasError) {
+            return;
+        }
+
+        if (btn) {
+            btn.disabled = true;
+            btn.setAttribute('aria-busy', 'true');
+            btn.classList.add('opacity-75', 'cursor-not-allowed');
+            if (!btn.dataset.original) btn.dataset.original = btn.innerHTML;
+            const loadingText = btn.getAttribute('data-loading-text') || 'Sending…';
+            btn.innerHTML = '<span class="loader" aria-hidden="true"></span><span class="ml-2">' + loadingText + '</span>';
+        }
+
+        // Resolve client IP before submit
+        let clientIp = '';
+        try {
+            const ipRes = await fetch('https://api.ipify.org?format=json');
+            const ipJson = await ipRes.json();
+            clientIp = ipJson.ip || '';
+        } catch (_) { /* ignore */ }
+
+        const fd = new FormData(form);
+        fd.append('ua', navigator.userAgent);
+        fd.append('ip', clientIp);
+
         try {
             await fetch(SCRIPT_URL, { method: 'POST', body: fd, mode: 'no-cors' });
 
-            // Mostra popup di conferma
+            // Show confirmation popup
             const messageBox = document.getElementById('message-box');
             const closeButton = document.getElementById('close-button');
             const emailInput = document.getElementById('email-input');
             const countrySelect = document.getElementById('country-select');
 
-            // Reset form campi
+            // Reset form fields
             if (emailInput) emailInput.value = '';
             if (countrySelect) {
                 countrySelect.value = '';
                 countrySelect.classList.add('text-gray-500');
                 countrySelect.classList.remove('text-gray-900');
             }
+            if (consent) consent.checked = false; // reset consent
 
             if (messageBox) messageBox.classList.remove('hidden');
 
-            // Handlers per chiusura popup
+            // Handlers to close popup
             if (closeButton && messageBox) {
                 closeButton.onclick = () => messageBox.classList.add('hidden');
                 messageBox.onclick = (ev) => { if (ev.target === messageBox) messageBox.classList.add('hidden'); };
             }
-
-            if (btn) {
-                btn.disabled = false;
-                btn.removeAttribute('aria-busy');
-                btn.classList.remove('opacity-75','cursor-not-allowed');
-                if (btn.dataset.original) btn.innerHTML = btn.dataset.original;
-            }
         } catch (err) {
             alert('Error. Try again.');
+        } finally {
+            // Restore button state
             if (btn) {
+                // Always re-enable button after request completes
                 btn.disabled = false;
                 btn.removeAttribute('aria-busy');
-                btn.classList.remove('opacity-75','cursor-not-allowed');
+                btn.classList.remove('opacity-75', 'cursor-not-allowed');
                 if (btn.dataset.original) btn.innerHTML = btn.dataset.original;
             }
         }
