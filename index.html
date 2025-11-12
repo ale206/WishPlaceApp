@@ -23,6 +23,7 @@
             font-weight: 700;
             background-color: #f3f4f6; /* bg-gray-100 */
         }
+        /* UPDATED: Loader CSS from your code */
         .loader{width:1.25rem;height:1.25rem;border:2px solid #fff;border-right-color:transparent;border-radius:50%;animation:spin 0.8s linear infinite;display:inline-block;vertical-align:middle}
         @keyframes spin{to{transform:rotate(360deg)}}
     </style>
@@ -398,6 +399,18 @@
                            class="flex-grow p-4 rounded-lg text-gray-900 placeholder-gray-500 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 w-full border border-gray-300"
                            data-key="formEmailPlaceholder">
                 </div>
+
+                <!-- NEW USER TYPE DROPDOWN -->
+                <div>
+                    <label for="user-type-select" class="sr-only">User Type</label>
+                    <select id="user-type-select" name="user_type" required
+                            class="flex-grow p-4 rounded-lg text-gray-500 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 w-full border border-gray-300">
+                        <option value="" disabled selected data-key="formUserTypeDefault">I am...</option>
+                        <option value="individual" data-key="formUserTypeIndividual">An Individual</option>
+                        <option value="agency" data-key="formUserTypeAgency">An Agency / Professional</option>
+                    </select>
+                </div>
+
                 <div>
                     <label for="country-select" class="sr-only">Country</label>
                     <!-- UPDATED: Added text-gray-500 class to act as a placeholder -->
@@ -558,7 +571,7 @@
                         <option value="SA">Saudi Arabia</option>
                         <option value="SN">Senegal</option>
                         <option value="RS">Serbia</option>
-                        <option value="SC">Seychelles</option>
+                        <option valueD="SC">Seychelles</option>
                         <option value="SL">Sierra Leone</option>
                         <option value="SG">Singapore</option>
                         <option value="SK">Slovakia</option>
@@ -601,21 +614,24 @@
                         <option value="ZW">Zimbabwe</option>
                     </select>
                 </div>
+                <!-- NEW: Error Message Div -->
+                <div id="form-error-message" class="text-red-600 text-sm text-left hidden"></div>
+
                 <div class="flex items-start text-left">
                     <input id="consent-checkbox" name="consent" type="checkbox" required class="mt-1 mr-3 w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                     <label id="consent-label" for="consent-checkbox" class="text-sm text-gray-700" data-key="formConsentLabel">
-                        I agree to be contacted about my request via email.
+                        I agree to receive email communications from Wishplace.
                     </label>
                 </div>
                 <button id="notify-submit" type="submit" data-loading-text="Sending…"
-                        class="bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-blue-700 transition-all w-full transform hover:scale-105"
+                        class="bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-blue-700 transition-all w-full transform hover:scale-105 flex items-center justify-center"
                         data-key="formButton">
                     Notify Me!
                 </button>
             </form>
 
             <p class="mt-6 text-gray-500 text-sm" data-key="formPromise">
-                We promise: No spam. Just one email to let you know we're ready.
+                We'll email you about the launch and other relevant updates. No spam, ever.
             </p>
         </div>
     </section>
@@ -648,6 +664,9 @@
 <!-- NEW: i18n and Form Logic -->
 <script>
     // --- START TRANSLATIONS ---
+    // UPDATED: Made currentLang global
+    let currentLang = 'en'; // Default
+
     const translations = {
         'en': {
             pageTitle: "Wishplace - Stop Searching. Start Wishing.",
@@ -710,15 +729,24 @@
             sectionCtaSubtitle1: "You decide where to live. And you will live there.",
             sectionCtaSubtitle2: "Wishplace is launching soon. Be the first to know when you can build your wishlist or find your first pre-qualified buyer.",
             formEmailPlaceholder: "Your Email Address",
-            formEmailError: "Please enter a valid email address.",
             formCountryDefault: "Select your country",
             formButton: "Notify Me!",
-            formConsentLabel: "I agree to be contacted about my request via email.",
-            formPromise: "We promise: No spam. Just one email to let you know we're ready.",
+            formConsentLabel: "I agree to receive email communications from Wishplace.",
+            formPromise: "We'll email you about the launch and other relevant updates. No spam, ever.",
             footerText: "&copy; 2025 Wishplace. All rights reserved.",
             modalTitle: "Thank You!",
             modalText: "You're on the list! We'll email you the moment Wishplace is live.",
-            modalButton: "Close"
+            modalButton: "Close",
+            formLoadingText: "Sending...",
+            formErrorDefault: "An error occurred. Please try again later.",
+            formErrorEmail: "Please enter a valid email address.",
+            formErrorCountry: "Please select your country.",
+            formErrorConsent: "You must agree to receive communications.",
+            // NEW USER TYPE TRANSLATIONS
+            formUserTypeDefault: "I am...",
+            formUserTypeIndividual: "An Individual",
+            formUserTypeAgency: "An Agency / Professional",
+            formErrorUserType: "Please select your user type."
         },
         'it': {
             pageTitle: "Wishplace - Smetti di Cercare. Inizia a Desiderare.",
@@ -781,15 +809,24 @@
             sectionCtaSubtitle1: "Decidi tu dove vivere. E vivrai lì.",
             sectionCtaSubtitle2: "Wishplace è in arrivo. Sii il primo a sapere quando potrai creare la tua wishlist o trovare il tuo primo acquirente pre-qualificato.",
             formEmailPlaceholder: "Il Tuo Indirizzo Email",
-            formEmailError: "Inserisci un indirizzo email valido.",
             formCountryDefault: "Seleziona il tuo paese",
             formButton: "Avvisami!",
-            formConsentLabel: "Accetto di essere contattato via email in merito alla mia richiesta.",
-            formPromise: "Promesso: Niente spam. Solo un'email per farti sapere quando siamo pronti.",
+            formConsentLabel: "Accetto di ricevere comunicazioni via email da Wishplace.",
+            formPromise: "Ti invieremo email sul lancio e altri aggiornamenti pertinenti. Niente spam, promesso.",
             footerText: "&copy; 2025 Wishplace. Tutti i diritti riservati.",
             modalTitle: "Grazie!",
             modalText: "Sei in lista! Ti invieremo un'email non appena Wishplace sarà live.",
-            modalButton: "Chiudi"
+            modalButton: "Chiudi",
+            formLoadingText: "Invio...",
+            formErrorDefault: "Si è verificato un errore. Riprova più tardi.",
+            formErrorEmail: "Inserisci un indirizzo email valido.",
+            formErrorCountry: "Seleziona il tuo paese.",
+            formErrorConsent: "Devi accettare di ricevere comunicazioni.",
+            // NEW USER TYPE TRANSLATIONS
+            formUserTypeDefault: "Sono...",
+            formUserTypeIndividual: "Un Privato",
+            formUserTypeAgency: "Un'Agenzia / Professionista",
+            formErrorUserType: "Seleziona il tuo tipo di utente."
         },
         'es': {
             pageTitle: "Wishplace - Deja de Buscar. Empieza a Desear.",
@@ -805,7 +842,7 @@
             brokenCard1Text: "Docenas de sitios web, actualizando constantemente, esperando ser el primero.",
             brokenCard2Title: "Duda Constante",
             brokenCard2Text: `"¿Habrá alguna vez un lugar en *ese* edificio disponible a mi precio?"`,
-            brokenCard3Title: "Oportunidades Perdidas",
+            brokenCard3Title: "Oportunidads Perdidas",
             brokenCard3Text: "Perderse tratos privados vendidos incluso antes de ser anunciados.",
             brokenCard4Title: "Gasto Inútil en Anuncios",
             brokenCard4Text: "Los vendedores esperan y pagan, esperando que un comprador cualificado aparezca.",
@@ -852,15 +889,24 @@
             sectionCtaSubtitle1: "Tú decides dónde vivir. Y vivirás allí.",
             sectionCtaSubtitle2: "Wishplace se lanza pronto. Sé el primero en saber cuándo puedes crear tu lista de deseos o encontrar tu primer comprador cualificado.",
             formEmailPlaceholder: "Tu Dirección de Email",
-            formEmailError: "Introduce una dirección de correo válida.",
             formCountryDefault: "Selecciona tu país",
             formButton: "¡Notificarme!",
-            formConsentLabel: "Acepto ser contactado por correo electrónico acerca de mi solicitud.",
-            formPromise: "Prometido: Sin spam. Solo un email para avisarte cuando estemos listos.",
+            formConsentLabel: "Acepto recibir comunicaciones por correo electrónico de Wishplace.",
+            formPromise: "Te enviaremos un correo sobre el lanzamiento y otras actualizaciones. Nunca spam.",
             footerText: "&copy; 2025 Wishplace. Todos los derechos reservados.",
             modalTitle: "¡Gracias!",
             modalText: "¡Estás en la lista! Te enviaremos un email en cuanto Wishplace esté disponible.",
-            modalButton: "Cerrar"
+            modalButton: "Cerrar",
+            formLoadingText: "Enviando...",
+            formErrorDefault: "Ocurrió un error. Por favor, inténtalo de nuevo más tarde.",
+            formErrorEmail: "Introduce una dirección de correo válida.",
+            formErrorCountry: "Selecciona tu país.",
+            formErrorConsent: "Debes aceptar recibir comunicaciones.",
+            // NEW USER TYPE TRANSLATIONS
+            formUserTypeDefault: "Soy...",
+            formUserTypeIndividual: "Un Particular",
+            formUserTypeAgency: "Una Agencia / Profesional",
+            formErrorUserType: "Selecciona tu tipo de usuario."
         },
         'fr': {
             pageTitle: "Wishplace - Arrêtez de Chercher. Commencez à Souhaiter.",
@@ -923,15 +969,24 @@
             sectionCtaSubtitle1: "Vous décidez où vivre. Et vous y vivrez.",
             sectionCtaSubtitle2: "Wishplace arrive bientôt. Soyez le premier à savoir quand vous pourrez créer votre wishlist ou trouver votre premier acheteur pré-qualifié.",
             formEmailPlaceholder: "Votre Adresse E-mail",
-            formEmailError: "Veuillez saisir une adresse e-mail valide.",
             formCountryDefault: "Sélectionnez votre pays",
             formButton: "Prévenez-moi !",
-            formConsentLabel: "J’accepte d’être contacté par e‑mail au sujet de ma demande.",
-            formPromise: "Promis : Pas de spam. Juste un e-mail pour vous dire quand nous sommes prêts.",
+            formConsentLabel: "J'accepte de recevoir des communications par e-mail de Wishplace.",
+            formPromise: "Nous vous enverrons un e-mail concernant le lancement et d'autres mises à jour. Jamais de spam.",
             footerText: "&copy; 2025 Wishplace. Tous droits réservés.",
             modalTitle: "Merci !",
             modalText: "Vous êtes sur la liste ! Nous vous enverrons un e-mail dès que Wishplace sera lancé.",
-            modalButton: "Fermer"
+            modalButton: "Fermer",
+            formLoadingText: "Envoi...",
+            formErrorDefault: "Une erreur est survenue. Veuillez réessayer plus tard.",
+            formErrorEmail: "Veuillez saisir une adresse e-mail valide.",
+            formErrorCountry: "Veuillez sélectionner votre pays.",
+            formErrorConsent: "Vous devez accepter de recevoir des communications.",
+            // NEW USER TYPE TRANSLATIONS
+            formUserTypeDefault: "Je suis...",
+            formUserTypeIndividual: "Un Particulier",
+            formUserTypeAgency: "Une Agence / Un Professionnel",
+            formErrorUserType: "Veuillez sélectionner votre type d'utilisateur."
         }
     };
     // --- END TRANSLATIONS ---
@@ -942,16 +997,16 @@
         const countrySelect = document.getElementById('country-select');
         const messageBox = document.getElementById('message-box');
         const closeButton = document.getElementById('close-button');
+        const userTypeSelect = document.getElementById('user-type-select'); // NEW
 
         // --- START i18n LOGIC ---
-        // FIXED: Added const langSwitcher
         const langSwitcher = document.getElementById('lang-switcher');
         const langButton = document.getElementById('lang-button');
         const langDropdown = document.getElementById('lang-dropdown');
         const langCurrent = document.getElementById('lang-current');
         const langOptions = document.querySelectorAll('.lang-option');
         const supportedLangs = ['en', 'it', 'es', 'fr'];
-        let currentLang = 'en'; // Default
+        // currentLang is now global (defined above translations object)
 
         const setLanguage = (lang) => {
             if (!supportedLangs.includes(lang)) {
@@ -1032,7 +1087,7 @@
         // --- END i18n LOGIC ---
 
 
-        // --- Original Form Logic ---
+        // --- Dropdown Placeholder Logic ---
 
         countrySelect.addEventListener('change', () => {
             if (countrySelect.value === "") {
@@ -1043,140 +1098,178 @@
                 countrySelect.classList.add('text-gray-900');
             }
         });
+
+        // NEW: Add placeholder logic for user type dropdown
+        userTypeSelect.addEventListener('change', () => {
+            if (userTypeSelect.value === "") {
+                userTypeSelect.classList.add('text-gray-500');
+                userTypeSelect.classList.remove('text-gray-900');
+            } else {
+                userTypeSelect.classList.remove('text-gray-500');
+                userTypeSelect.classList.add('text-gray-900');
+            }
+        });
+
+        // --- Form submission logic is now in its own script tag ---
     });
 </script>
 
+<!-- UPDATED: Second script for form submission -->
 <script>
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw6_ziv-zh0vbUlg_AmZafrNO06NP4yYkwSsr32ptGhs7YV_DNP5i9GonlLQ1i3O8lz/exec'; // URL Web App
+    document.addEventListener('DOMContentLoaded', () => {
+        // This logic runs after the first DOMContentLoaded, so i18n translations are ready
 
-    const form = document.getElementById('notify-form');
-    const btn = document.getElementById('notify-submit');
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw6_ziv-zh0vbUlg_AmZafrNO06NP4yYkwSsr32ptGhs7YV_DNP5i9GonlLQ1i3O8lz/exec'; // URL Web App
 
-    // Consent checkbox logic (no auto-disabling of button)
-    const consent = document.getElementById('consent-checkbox');
-    if (consent && btn) {
-        consent.addEventListener('change', () => {
-            const consentLabel = document.getElementById('consent-label');
-            if (consentLabel) {
-                consentLabel.classList.remove('text-red-600', 'font-semibold');
-                consentLabel.classList.add('text-gray-700');
-            }
-        });
-    }
-
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        // Custom validation: email, country, consent
+        const form = document.getElementById('notify-form');
+        const btn = document.getElementById('notify-submit');
+        const consent = document.getElementById('consent-checkbox');
         const consentLabel = document.getElementById('consent-label');
-        const consentCheckbox = document.getElementById('consent-checkbox');
         const emailInput = document.getElementById('email-input');
         const countrySelectEl = document.getElementById('country-select');
+        const userTypeSelectEl = document.getElementById('user-type-select'); // NEW
+        const formErrorDiv = document.getElementById('form-error-message'); // NEW error div
 
-        // Reset previous error states
-        if (consentLabel) {
-            consentLabel.classList.remove('text-red-600', 'font-semibold');
-            consentLabel.classList.add('text-gray-700');
-        }
-        if (consentCheckbox) {
-            consentCheckbox.classList.remove('ring-2', 'ring-red-500');
-        }
-        if (emailInput) {
-            emailInput.classList.remove('border-red-500', 'focus:ring-red-500');
-            emailInput.classList.add('border-gray-300', 'focus:ring-blue-500');
-        }
-        if (countrySelectEl) {
-            countrySelectEl.classList.remove('border-red-500');
-            countrySelectEl.classList.add('border-gray-300');
-        }
-
-        let hasError = false;
-
-        // Consent feedback
-        if (consentCheckbox && !consentCheckbox.checked && consentLabel) {
-            consentLabel.classList.remove('text-gray-700');
-            consentLabel.classList.add('text-red-600', 'font-semibold');
-            consentCheckbox.classList.add('ring-2', 'ring-red-500');
-            hasError = true;
-        }
-
-        // Email feedback (custom regex) - red border only
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (emailInput && !emailPattern.test(emailInput.value.trim())) {
-            emailInput.classList.remove('border-gray-300', 'focus:ring-blue-500');
-            emailInput.classList.add('border-red-500', 'focus:ring-red-500');
-            hasError = true;
-        }
-
-        // Country feedback
-        if (countrySelectEl && !countrySelectEl.value) {
-            countrySelectEl.classList.remove('border-gray-300');
-            countrySelectEl.classList.add('border-red-500');
-            hasError = true;
-        }
-
-        if (hasError) {
+        if (!form || !btn || !consent || !consentLabel || !emailInput || !countrySelectEl || !userTypeSelectEl || !formErrorDiv) { // UPDATED
+            console.error("Form elements not found. Submission will not work.");
             return;
         }
 
-        if (btn) {
+        // Store original button text (which is set by i18n)
+        let originalBtnText = btn.innerHTML;
+        // Update it if language changes
+        new MutationObserver(() => {
+            if (!btn.disabled) {
+                originalBtnText = btn.innerHTML;
+            }
+        }).observe(btn, { childList: true });
+
+
+        // Consent checkbox logic (no auto-disabling of button)
+        consent.addEventListener('change', () => {
+            consentLabel.classList.remove('text-red-600', 'font-semibold');
+            consentLabel.classList.add('text-gray-700');
+            consent.classList.remove('ring-2', 'ring-red-500');
+        });
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Get current translations
+            const langStrings = translations[currentLang] || translations['en'];
+            let errorMessages = [];
+
+            // Reset previous error states
+            consentLabel.classList.remove('text-red-600', 'font-semibold');
+            consentLabel.classList.add('text-gray-700');
+            consent.classList.remove('ring-2', 'ring-red-500');
+            emailInput.classList.remove('border-red-500', 'focus:ring-red-500');
+            emailInput.classList.add('border-gray-300', 'focus:ring-blue-500');
+            countrySelectEl.classList.remove('border-red-500', 'focus:ring-red-500');
+            countrySelectEl.classList.add('border-gray-300', 'focus:ring-blue-500');
+            userTypeSelectEl.classList.remove('border-red-500', 'focus:ring-red-500'); // NEW
+            userTypeSelectEl.classList.add('border-gray-300', 'focus:ring-blue-500'); // NEW
+            formErrorDiv.classList.add('hidden');
+            formErrorDiv.innerHTML = '';
+
+            let hasError = false;
+
+            // Consent feedback
+            if (!consent.checked) {
+                consentLabel.classList.remove('text-gray-700');
+                consentLabel.classList.add('text-red-600', 'font-semibold');
+                consent.classList.add('ring-2', 'ring-red-500');
+                errorMessages.push(langStrings.formErrorConsent);
+                hasError = true;
+            }
+
+            // Email feedback (custom regex) - red border only
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailInput.value.trim())) {
+                emailInput.classList.remove('border-gray-300', 'focus:ring-blue-500');
+                emailInput.classList.add('border-red-500', 'focus:ring-red-500');
+                errorMessages.push(langStrings.formErrorEmail);
+                hasError = true;
+            }
+
+            // NEW: User Type feedback
+            if (!userTypeSelectEl.value) {
+                userTypeSelectEl.classList.remove('border-gray-300', 'focus:ring-blue-500');
+                userTypeSelectEl.classList.add('border-red-500', 'focus:ring-red-500');
+                errorMessages.push(langStrings.formErrorUserType);
+                hasError = true;
+            }
+
+            // Country feedback
+            if (!countrySelectEl.value) {
+                countrySelectEl.classList.remove('border-gray-300', 'focus:ring-blue-500');
+                countrySelectEl.classList.add('border-red-500', 'focus:ring-red-500');
+                errorMessages.push(langStrings.formErrorCountry);
+                hasError = true;
+            }
+
+            if (hasError) {
+                formErrorDiv.innerHTML = errorMessages.join('<br>');
+                formErrorDiv.classList.remove('hidden');
+                return;
+            }
+
+            // --- Start Submission ---
             btn.disabled = true;
             btn.setAttribute('aria-busy', 'true');
             btn.classList.add('opacity-75', 'cursor-not-allowed');
-            if (!btn.dataset.original) btn.dataset.original = btn.innerHTML;
-            const loadingText = btn.getAttribute('data-loading-text') || 'Sending…';
+
+            const loadingText = langStrings.formLoadingText || 'Sending…';
             btn.innerHTML = '<span class="loader" aria-hidden="true"></span><span class="ml-2">' + loadingText + '</span>';
-        }
 
-        // Resolve client IP before submit
-        let clientIp = '';
-        try {
-            const ipRes = await fetch('https://api.ipify.org?format=json');
-            const ipJson = await ipRes.json();
-            clientIp = ipJson.ip || '';
-        } catch (_) { /* ignore */ }
+            // Resolve client IP before submit
+            let clientIp = '';
+            try {
+                const ipRes = await fetch('https://api.ipify.org?format=json');
+                const ipJson = await ipRes.json();
+                clientIp = ipJson.ip || '';
+            } catch (_) { /* ignore */ }
 
-        const fd = new FormData(form);
-        fd.append('ua', navigator.userAgent);
-        fd.append('ip', clientIp);
+            const fd = new FormData(form);
+            fd.append('ua', navigator.userAgent);
+            fd.append('ip', clientIp);
 
-        try {
-            await fetch(SCRIPT_URL, { method: 'POST', body: fd, mode: 'no-cors' });
+            try {
+                await fetch(SCRIPT_URL, { method: 'POST', body: fd, mode: 'no-cors' });
 
-            // Show confirmation popup
-            const messageBox = document.getElementById('message-box');
-            const closeButton = document.getElementById('close-button');
-            const emailInput = document.getElementById('email-input');
-            const countrySelect = document.getElementById('country-select');
+                // Show confirmation popup
+                const messageBox = document.getElementById('message-box');
+                const closeButton = document.getElementById('close-button');
 
-            // Reset form fields
-            if (emailInput) emailInput.value = '';
-            if (countrySelect) {
-                countrySelect.value = '';
-                countrySelect.classList.add('text-gray-500');
-                countrySelect.classList.remove('text-gray-900');
-            }
-            if (consent) consent.checked = false; // reset consent
+                // Reset form fields
+                emailInput.value = '';
+                countrySelectEl.value = '';
+                countrySelectEl.classList.add('text-gray-500');
+                countrySelectEl.classList.remove('text-gray-900');
+                userTypeSelectEl.value = ''; // NEW
+                userTypeSelectEl.classList.add('text-gray-500'); // NEW
+                userTypeSelectEl.classList.remove('text-gray-900'); // NEW
+                consent.checked = false; // reset consent
 
-            if (messageBox) messageBox.classList.remove('hidden');
+                if (messageBox) messageBox.classList.remove('hidden');
 
-            // Handlers to close popup
-            if (closeButton && messageBox) {
-                closeButton.onclick = () => messageBox.classList.add('hidden');
-                messageBox.onclick = (ev) => { if (ev.target === messageBox) messageBox.classList.add('hidden'); };
-            }
-        } catch (err) {
-            alert('Error. Try again.');
-        } finally {
-            // Restore button state
-            if (btn) {
-                // Always re-enable button after request completes
+                // Handlers to close popup
+                if (closeButton && messageBox) {
+                    closeButton.onclick = () => messageBox.classList.add('hidden');
+                    messageBox.onclick = (ev) => { if (ev.target === messageBox) messageBox.classList.add('hidden'); };
+                }
+            } catch (err) {
+                // REPLACED ALERT with inline error
+                formErrorDiv.innerHTML = langStrings.formErrorDefault || 'An error occurred. Please try again later.';
+                formErrorDiv.classList.remove('hidden');
+            } finally {
+                // Restore button state
                 btn.disabled = false;
                 btn.removeAttribute('aria-busy');
                 btn.classList.remove('opacity-75', 'cursor-not-allowed');
-                if (btn.dataset.original) btn.innerHTML = btn.dataset.original;
+                btn.innerHTML = originalBtnText; // Restore original translated text
             }
-        }
+        });
     });
 </script>
 
