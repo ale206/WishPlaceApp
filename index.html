@@ -398,6 +398,14 @@
                     <input id="email-input" name="email" type="email" placeholder="Your Email Address" required
                            class="flex-grow p-4 rounded-lg text-gray-900 placeholder-gray-500 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 w-full border border-gray-300"
                            data-key="formEmailPlaceholder">
+
+                    <!-- Honeypot anti-bot field -->
+                    <input type="text"
+                           name="gotcha"
+                           autocomplete="off"
+                           tabindex="-1"
+                           class="hidden"
+                           style="display:none !important; opacity:0 !important; height:0 !important;">
                 </div>
 
                 <!-- NEW USER TYPE DROPDOWN -->
