@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeButton = document.getElementById('close-button');
     const userTypeSelect = document.getElementById('user-type-select');
     const messageInput = document.getElementById('message-input');
-    
 
     // --- START i18n LOGIC ---
     const langSwitcher = document.getElementById('lang-switcher');
@@ -14,8 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const langDropdown = document.getElementById('lang-dropdown');
     const langCurrent = document.getElementById('lang-current');
     const langOptions = document.querySelectorAll('.lang-option');
-    const supportedLangs = ['en', 'it', 'es', 'fr', 'ca', 'de', 'ru', 'zh', 'zh-TW', 'pt', 'ja', 'nl', 'el', 'ar', 'ko', 'et'];
-    // currentLang is now global (defined above translations object)
+    const supportedLangs = ['en', 'it', 'es', 'fr', 'ca', 'de', 'ru', 'zh', 'zh-TW', 'pt', 'ja', 'nl', 'el', 'ar', 'ko', 'et', 'uk'];
 
     if (countrySelect) {
         // Don’t touch the first placeholder <option>, just append the rest
