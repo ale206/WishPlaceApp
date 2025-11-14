@@ -554,9 +554,29 @@
      class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 hidden z-50">
     <div class="bg-white p-10 rounded-lg shadow-2xl text-center max-w-sm w-full border border-gray-200">
         <h3 class="text-2xl font-semibold mb-4 text-gray-900" data-key="modalTitle">Thank You!</h3>
-        <p class="text-gray-600 mb-6" data-key="modalText">
+
+        <!-- Shorter, translated body text (kept using data-key) -->
+        <p class="text-gray-600 mb-4" data-key="modalText">
             You're on the list! We'll email you the moment Wishplace is live.
         </p>
+
+        <!-- Referral link + copy button -->
+        <div class="mb-4 flex flex-col sm:flex-row sm:items-center sm:space-x-2 space-y-2 sm:space-y-0">
+            <input id="referral-link"
+                   type="text"
+                   readonly
+                   class="w-full px-3 py-2 border rounded-md text-sm text-gray-700 bg-gray-50 overflow-x-auto"
+                   value="">
+            <button id="copy-referral"
+                    type="button"
+                    class="w-full sm:w-auto px-4 py-2 rounded-md bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <span data-key="modalCopyButton">Copy</span>
+            </button>
+        </div>
+
+        <!-- Small feedback text when copied -->
+        <p id="referral-feedback" class="text-xs text-green-600 mb-4 hidden"></p>
+
         <button id="close-button"
                 class="bg-blue-600 text-white font-bold px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                 data-key="modalButton">

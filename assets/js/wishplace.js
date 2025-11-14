@@ -1,3 +1,12 @@
+let referralCode = "";
+async function sha(s) {
+    const enc = new TextEncoder().encode(s);
+    const hash = await crypto.subtle.digest("SHA-256", enc);
+    return [...new Uint8Array(hash)]
+        .map(b => b.toString(16).padStart(2, "0"))
+        .join('')
+        .slice(0, 8);
+}
 document.addEventListener('DOMContentLoaded', () => {
     const notifyForm = document.getElementById('notify-form');
     const emailInput = document.getElementById('email-input');
@@ -15,6 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const langOptions = document.querySelectorAll('.lang-option');
     const supportedLangs = ['en', 'it', 'es', 'fr', 'ca', 'de', 'ru', 'zh', 'zh-TW', 'pt', 'ja', 'nl', 'el', 'ar', 'ko', 'et', 'uk', 'lb'];
 
+    // Capture referral parameter from URL (store in global)
+    const urlParams = new URLSearchParams(window.location.search);
+    referralCode = urlParams.get("ref") || "";
+    
     if (countrySelect) {
         // Don’t touch the first placeholder <option>, just append the rest
         COUNTRY_OPTIONS.forEach(({ code, name }) => {
@@ -138,7 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
 <!-- UPDATED: Second script for form submission -->
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -155,6 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const userTypeSelectEl = document.getElementById('user-type-select');
     const messageInput = document.getElementById('message-input');
     const formErrorDiv = document.getElementById('form-error-message');
+    const referralLinkInput = document.getElementById('referral-link');
+    const copyReferralBtn = document.getElementById('copy-referral');
+    const referralCopyFeedback = document.getElementById('referral-feedback');
 
     if (!form || !btn || !consent || !consentLabel || !emailInput || !countrySelectEl || !userTypeSelectEl || !formErrorDiv) { 
         console.error("Form elements not found. Submission will not work.");
@@ -257,6 +272,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        // Email used for referral code
+        const email = emailInput.value.trim();
+        let code = "";
+
         // --- Start Submission ---
         btn.disabled = true;
         btn.setAttribute('aria-busy', 'true');
@@ -274,12 +293,27 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (_) { /* ignore */
         }
 
+        code = await sha(email);
+
         const fd = new FormData(form);
         fd.append('ua', navigator.userAgent);
         fd.append('ip', clientIp);
-
+        fd.append('ref', referralCode);
+        fd.append('referral_code', code);
+        
         try {
             await fetch(SCRIPT_URL, {method: 'POST', body: fd, mode: 'no-cors'});
+
+            const link = `${window.location.origin}${window.location.pathname}?ref=${code}`;
+            const modalTextEl = document.querySelector('[data-key="modalText"]');
+            if (modalTextEl) {
+                const shareTemplate = (langStrings.referralShareMessage
+                    || `You're on the list!<br><br>Share this link to get launch rewards:<br><strong>{link}</strong>`);
+                modalTextEl.innerHTML = shareTemplate.replace('{link}', link);
+            }
+            if (referralLinkInput) {
+                referralLinkInput.value = link;
+            }
 
             // Show confirmation popup
             const messageBox = document.getElementById('message-box');
@@ -319,4 +353,27 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.innerHTML = originalBtnText; // Restore original translated text
         }
     });
+
+    if (copyReferralBtn && referralLinkInput) {
+        copyReferralBtn.addEventListener('click', async () => {
+            const linkToCopy = referralLinkInput.value.trim();
+            if (!linkToCopy) {
+                return;
+            }
+            try {
+                await navigator.clipboard.writeText(linkToCopy);
+                if (referralCopyFeedback) {
+                    const ls = translations[currentLang] || translations['en'];
+                    const successText = ls.modalCopySuccess || 'Link copied to clipboard.';
+                    referralCopyFeedback.textContent = successText;
+                    referralCopyFeedback.classList.remove('hidden');
+                    setTimeout(() => {
+                        referralCopyFeedback.classList.add('hidden');
+                    }, 2500);
+                }
+            } catch (err) {
+                console.error('Clipboard copy failed', err);
+            }
+        });
+    }
 });

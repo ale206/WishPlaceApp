@@ -84,9 +84,11 @@ const translations = {
         formErrorUserType: "Seleziona il tuo tipo di utente.",
         formMessageLabel: "Il tuo messaggio (opzionale)",
         formMessagePlaceholder: "Il tuo messaggio (opzionale)",
-        formErrorMessageTooLong: "Il messaggio è troppo lungo (massimo 1000 caratteri)."
+        formErrorMessageTooLong: "Il messaggio è troppo lungo (massimo 1000 caratteri).",
+        modalCopySuccess: "Link copiato.",
+        referralShareMessage: "Registrazione completata!<br><br>Fai crescere la community e ottieni uno sconto <strong>garantito</strong> al lancio condividendo il tuo link unico. <br><br><ul><li>Invita <strong>3 amici</strong> = Ottieni il <strong>10% di sconto</strong> al lancio.</li><li>Invita <strong>5 amici</strong> = Ottieni il <strong>15% di sconto</strong> al lancio.</li><li>Invita <strong>10 amici</strong> = Ottieni il <strong>25% di sconto</strong> al lancio.</li><li>Invita <strong>20 amici</strong> = Ottieni il <strong>50% di sconto</strong> al lancio!</li></ul><br>Più amici si iscrivono tramite il tuo link, più risparmi!",
+        modalCopyButton: "Copia",
     },
-
     'en': {
         pageTitle: "Wishplace - Stop Searching. Start Dreaming.",
         headerGetNotified: "Get Notified",
@@ -170,9 +172,11 @@ const translations = {
         formErrorUserType: "Select your user type.",
         formMessageLabel: "Your message (optional)",
         formMessagePlaceholder: "Your message (optional)",
-        formErrorMessageTooLong: "Message is too long (max 1000 characters)."
+        formErrorMessageTooLong: "Message is too long (max 1000 characters).",
+        modalCopySuccess: "Link copied.",
+        referralShareMessage: "Registration complete!<br><br>Grow the community and get a <strong>guaranteed</strong> discount at launch by sharing your unique link. <br><br><ul><li>Invite <strong>3 friends</strong> = Get a <strong>10% discount</strong> at launch.</li><li>Invite <strong>5 friends</strong> = Get a <strong>15% discount</strong>.</li><li>Invite <strong>10 friends</strong> = Get a <strong>25% discount</strong>.</li><li>Invite <strong>20 friends</strong> = Get a <strong>50% discount</strong> at launch!</li></ul><br>The more friends sign up through your link, the more you save!",
+        modalCopyButton: "Copy",
     },
-
     'es': {
         pageTitle: "Wishplace - Deja de Buscar. Empieza a Soñar.",
         headerGetNotified: "Recibir Notificaciones",
@@ -256,9 +260,11 @@ const translations = {
         formErrorUserType: "Selecciona tu tipo de usuario.",
         formMessageLabel: "Tu mensaje (opcional)",
         formMessagePlaceholder: "Tu mensaje (opcional)",
-        formErrorMessageTooLong: "El mensaje es demasiado largo (máximo 1000 caracteres)."
+        formErrorMessageTooLong: "El mensaje es demasiado largo (máximo 1000 caracteres).",
+        modalCopySuccess: "Enlace copiado.",
+        referralShareMessage: "¡Registro completado!<br><br>Haz crecer la comunidad y consigue un descuento <strong>garantizado</strong> en el lanzamiento compartiendo tu enlace único. <br><br><ul><li>Invita a <strong>3 amigos</strong> = Obtén un <strong>10% de descuento</strong> en el lanzamiento.</li><li>Invita a <strong>5 amigos</strong> = Obtén un <strong>15% de descuento</strong>.</li><li>Invita a <strong>10 amigos</strong> = Obtén un <strong>25% de descuento</strong>.</li><li>Invita a <strong>20 amigos</strong> = Obtén un <strong>50% de descuento</strong> en el lanzamiento.</li></ul><br>¡Cuantos más amigos se registren con tu enlace, más ahorras!",
+        modalCopyButton: "Copiar",
     },
-
     'fr': {
         pageTitle: "Wishplace - Arrêtez de Chercher. Commencez à Rêver.",
         headerGetNotified: "Recevoir des Notifications",
@@ -342,7 +348,10 @@ const translations = {
         formErrorUserType: "Sélectionnez votre type d’utilisateur.",
         formMessageLabel: "Votre message (optionnel)",
         formMessagePlaceholder: "Votre message (optionnel)",
-        formErrorMessageTooLong: "Le message est trop long (maximum 1000 caractères)."
+        formErrorMessageTooLong: "Le message est trop long (maximum 1000 caractères).",
+        modalCopySuccess: "Lien copié.",
+        referralShareMessage: "Inscription terminée !<br><br>Faites grandir la communauté et obtenez une réduction <strong>garantie</strong> au lancement en partageant votre lien unique. <br><br><ul><li>Invitez <strong>3 amis</strong> = Bénéficiez de <strong>10% de réduction</strong> au lancement.</li><li>Invitez <strong>5 amis</strong> = Bénéficiez de <strong>15% de réduction</strong>.</li><li>Invitez <strong>10 amis</strong> = Bénéficiez de <strong>25% de réduction</strong>.</li><li>Invitez <strong>20 amis</strong> = Bénéficiez de <strong>50% de réduction</strong> au lancement !</li></ul><br>Plus vos amis s’inscrivent via votre lien, plus vous économisez !",
+        modalCopyButton: "Copier",
     },
     'ca': {
         pageTitle: "Wishplace - Deixa de Buscar. Comença a Somiar.",
@@ -427,7 +436,10 @@ const translations = {
         formErrorUserType: "Selecciona el teu tipus d’usuari.",
         formMessageLabel: "El teu missatge (opcional)",
         formMessagePlaceholder: "El teu missatge (opcional)",
-        formErrorMessageTooLong: "El missatge és massa llarg (màxim 1000 caràcters)."
+        formErrorMessageTooLong: "El missatge és massa llarg (màxim 1000 caràcters).",
+        modalCopySuccess: "Enllaç copiat.",
+        referralShareMessage: "Registre completat!<br><br>Fes créixer la comunitat i aconsegueix un descompte <strong>garantit</strong> en el llançament compartint el teu enllaç únic. <br><br><ul><li>Convida <strong>3 amics</strong> = Aconsegueix un <strong>10% de descompte</strong> en el llançament.</li><li>Convida <strong>5 amics</strong> = Aconsegueix un <strong>15% de descompte</strong>.</li><li>Convida <strong>10 amics</strong> = Aconsegueix un <strong>25% de descompte</strong>.</li><li>Convida <strong>20 amics</strong> = Aconsegueix un <strong>50% de descompte</strong> en el llançament.</li></ul><br>Com més amics s’hi registrin amb el teu enllaç, més estalvies!",
+        modalCopyButton: "Copiar",
     },
     'de': {
         pageTitle: "Wishplace - Hör auf zu Suchen. Fang an zu Träumen.",
@@ -512,7 +524,10 @@ const translations = {
         formErrorUserType: "Wähle deinen Nutzertyp.",
         formMessageLabel: "Deine Nachricht (optional)",
         formMessagePlaceholder: "Deine Nachricht (optional)",
-        formErrorMessageTooLong: "Die Nachricht ist zu lang (maximal 1000 Zeichen)."
+        formErrorMessageTooLong: "Die Nachricht ist zu lang (maximal 1000 Zeichen).",
+        modalCopySuccess: "Link kopiert.",
+        referralShareMessage: "Registrierung abgeschlossen!<br><br>Lass die Community wachsen und erhalte einen <strong>garantierten</strong> Rabatt zum Launch, indem du deinen persönlichen Link teilst. <br><br><ul><li>Lade <strong>3 Freunde</strong> ein = Erhalte <strong>10% Rabatt</strong> zum Launch.</li><li>Lade <strong>5 Freunde</strong> ein = Erhalte <strong>15% Rabatt</strong>.</li><li>Lade <strong>10 Freunde</strong> ein = Erhalte <strong>25% Rabatt</strong>.</li><li>Lade <strong>20 Freunde</strong> ein = Erhalte <strong>50% Rabatt</strong> zum Launch!</li></ul><br>Je mehr Freunde sich über deinen Link anmelden, desto mehr sparst du!",
+        modalCopyButton: "Kopieren",
     },
     'ru': {
         pageTitle: "Wishplace — Перестаньте искать. Начните мечтать.",
@@ -597,7 +612,10 @@ const translations = {
         formErrorUserType: "Выберите тип пользователя.",
         formMessageLabel: "Ваше сообщение (необязательно)",
         formMessagePlaceholder: "Ваше сообщение (необязательно)",
-        formErrorMessageTooLong: "Сообщение слишком длинное (максимум 1000 символов)."
+        formErrorMessageTooLong: "Сообщение слишком длинное (максимум 1000 символов).",
+        modalCopySuccess: "Ссылка скопирована.",
+        referralShareMessage: "Регистрация завершена!<br><br>Помогите сообществу расти и получите <strong>гарантированную</strong> скидку на запуск, поделившись своей уникальной ссылкой. <br><br><ul><li>Пригласите <strong>3 друзей</strong> = Получите <strong>10% скидку</strong> при запуске.</li><li>Пригласите <strong>5 друзей</strong> = Получите <strong>15% скидку</strong>.</li><li>Пригласите <strong>10 друзей</strong> = Получите <strong>25% скидку</strong>.</li><li>Пригласите <strong>20 друзей</strong> = Получите <strong>50% скидку</strong> при запуске!</li></ul><br>Чем больше друзей зарегистрируются по вашей ссылке, тем больше вы экономите!",
+        modalCopyButton: "Копировать",
     },
     'zh': {
         pageTitle: "Wishplace - 停止寻找，开始梦想。",
@@ -682,7 +700,10 @@ const translations = {
         formErrorUserType: "请选择用户类型。",
         formMessageLabel: "你的留言（可选）",
         formMessagePlaceholder: "你的留言（可选）",
-        formErrorMessageTooLong: "留言过长（最多 1000 字符）。"
+        formErrorMessageTooLong: "留言过长（最多 1000 字符）。",
+        modalCopySuccess: "链接已复制。",
+        referralShareMessage: "注册完成！<br><br>通过分享你的专属链接来壮大社区，并在上线时获得<strong>保证</strong>折扣。<br><br><ul><li>邀请 <strong>3 位朋友</strong> = 获得上线时<strong>10% 折扣</strong>。</li><li>邀请 <strong>5 位朋友</strong> = 获得<strong>15% 折扣</strong>。</li><li>邀请 <strong>10 位朋友</strong> = 获得<strong>25% 折扣</strong>。</li><li>邀请 <strong>20 位朋友</strong> = 获得上线时<strong>50% 折扣</strong>！</li></ul><br>通过你的链接注册的朋友越多，你节省得越多！",
+        modalCopyButton: "复制",
     },
     'zh-TW': {
         pageTitle: "Wishplace - 停止尋找，開始做夢。",
@@ -767,7 +788,10 @@ const translations = {
         formErrorUserType: "請選擇用戶類型。",
         formMessageLabel: "你的留言（選填）",
         formMessagePlaceholder: "你的留言（選填）",
-        formErrorMessageTooLong: "留言過長（最多 1000 個字）。"
+        formErrorMessageTooLong: "留言過長（最多 1000 個字）。",
+        modalCopySuccess: "連結已複製。",
+        referralShareMessage: "註冊完成！<br><br>分享你的專屬連結，協助壯大社群，並在正式上線時獲得<strong>保證</strong>折扣。<br><br><ul><li>邀請 <strong>3 位朋友</strong> = 上線時可享<strong>10% 折扣</strong>。</li><li>邀請 <strong>5 位朋友</strong> = 可享<strong>15% 折扣</strong>。</li><li>邀請 <strong>10 位朋友</strong> = 可享<strong>25% 折扣</strong>。</li><li>邀請 <strong>20 位朋友</strong> = 上線時可享<strong>50% 折扣</strong>！</li></ul><br>透過你的連結註冊的朋友越多，你省得越多！",
+        modalCopyButton: "複製",
     },
     'pt': {
         pageTitle: "Wishplace - Pare de Procurar. Comece a Sonhar.",
@@ -852,7 +876,10 @@ const translations = {
         formErrorUserType: "Selecione seu tipo de usuário.",
         formMessageLabel: "Sua mensagem (opcional)",
         formMessagePlaceholder: "Sua mensagem (opcional)",
-        formErrorMessageTooLong: "A mensagem é muito longa (máximo de 1000 caracteres)."
+        formErrorMessageTooLong: "A mensagem é muito longa (máximo de 1000 caracteres).",
+        modalCopySuccess: "Link copiado.",
+        referralShareMessage: "Registo concluído!<br><br>Ajuda a fazer crescer a comunidade e recebe um desconto <strong>garantido</strong> no lançamento ao partilhares o teu link único. <br><br><ul><li>Convida <strong>3 amigos</strong> = Recebe <strong>10% de desconto</strong> no lançamento.</li><li>Convida <strong>5 amigos</strong> = Recebe <strong>15% de desconto</strong>.</li><li>Convida <strong>10 amigos</strong> = Recebe <strong>25% de desconto</strong>.</li><li>Convida <strong>20 amigos</strong> = Recebe <strong>50% de desconto</strong> no lançamento!</li></ul><br>Quanto mais amigos se registarem através do teu link, mais poupas!",
+        modalCopyButton: "Copiar",
     },
     'ja': {
         pageTitle: "Wishplace - 探すのをやめて、夢を描こう。",
@@ -862,98 +889,70 @@ const translations = {
         heroButton: "ウェイティングリストに参加",
         logoAlt: "Wishplace ロゴ",
         heroImageAlt: "近代的な建物、あなたの夢の住まい",
-
         sectionBrokenTitle: "従来の家探しではうまくいかない",
         sectionBrokenSubtitle: "理想の家を見つけるのはフルタイムの仕事のよう。検索、待機、そして多くのチャンスを見逃してしまう。",
-
         brokenCard1Title: "終わりのないチェック",
         brokenCard1Text: "何十ものサイトを更新し続け、誰よりも早く見つけようとする日々。",
-
         brokenCard2Title: "尽きない不安",
         brokenCard2Text: `"あの建物に、いつか私の予算に合う部屋が出るのかな？"`,
-
         brokenCard3Title: "逃した機会",
         brokenCard3Text: "本当に良い物件は市場に出ないことが多い。ポータルに載っているのは、まだ誰も選んでいないものばかり。",
-
         brokenCard4Title: "無駄な広告費",
         brokenCard4Text: "売主は広告費を払って待つだけ。理想の買い手が現れるのを祈るしかない。",
-
         sectionHowTitle: "逆転の不動産マーケットへようこそ",
         howStep1Title: "1. ウィッシュリストを作成",
         howStep1Text: "住みたい建物を選ぶだけ。エリア選びだけでは不十分。あなたに合う建物は限られています。",
-
         howStep2Title: "2. 条件と希望を設定",
         howStep2Text: "予算、部屋数、最低条件などを決めます。あとは何もする必要はありません。",
-
         howStep3Title: "3. オーナーから連絡が届く",
         howStep3Text: "オーナーや不動産会社があなたの興味を確認し、安全なチャット経由で連絡します。",
-
         sectionAppTitle: "まもなくスマートフォンに登場",
         sectionAppSubtitle: "売買・賃貸を簡単にするシンプルなアプリ。",
-
         appScreen1Alt: "'Wish Places' リストと地図を表示するアプリ画面",
         appScreen1Title: "買い手向け：住みたい建物を選択",
         appScreen1Text: "夢の建物の住所を入力し、地図上で確認できます。",
-
         appScreen2Alt: "'あなたの物件' を表示するアプリ画面",
         appScreen2Title: "売り手向け：物件の住所を追加",
         appScreen2Text: "オーナーでも不動産会社でも、複数の住所を登録できます。",
-
         appScreen3Alt: "'興味のあるユーザー' を表示するアプリ画面",
         appScreen3Title: "売り手向け：興味のある買主・借主を確認",
         appScreen3Text: "すぐに全ての関心ユーザーを確認し、最適な相手に連絡できます。",
-
         sectionPowerTitle: "力はあなたの手に",
         powerBuyersTitle: "買主・借主のために",
         powerBuyersSubtitle: "ついに、理想の住まいへ。",
-
         powerBuyersLi1Title: "探すのをやめて、夢を描こう",
         powerBuyersLi1Text: "住みたい建物を選ぶだけで、オーナーから連絡が来ます。もう何十ものサイトを巡る必要なし。",
-
         powerBuyersLi2Title: "最高の物件にアクセス",
         powerBuyersLi2Text: "未公開物件や市場に出る前の情報にアクセスできます。",
-
         powerBuyersLi3Title: "あなたの理想の価格で購入・賃貸",
         powerBuyersLi3Text: "売主はあなたの予算を確認し、条件が合えば連絡してくれます。",
-
         powerBuyersLi4Title: "完全なプライバシー",
         powerBuyersLi4Text: "個人情報は公開されません。詳細は必要なときに安全なチャットでのみ共有されます。",
-
         powerSellersTitle: "売主・不動産会社のために",
         powerSellersSubtitle: "もう広告を出して待つ必要はありません。",
-
         powerSellersLi1Title: "より早く売れる・貸せる",
         powerSellersLi1Text: "すでにその建物に住みたい人のリストをすぐ確認できます。",
-
         powerSellersLi2Title: "ターゲットに合った連絡先",
         powerSellersLi2Text: "買主は事前に予算と条件を入力しているため、時間の無駄がありません。",
-
         powerSellersLi3Title: "本当の需要を分析",
         powerSellersLi3Text: "その建物に住むために人々が実際に支払いたい金額を把握できます。",
-
         powerSellersLi4Title: "効率的でプライバシーも安心",
         powerSellersLi4Text: "最適な買主だけに連絡できます。スパムなし。フロア番号や部屋番号は、あなたが許可するまで公開されません。",
-
         sectionFounderTitle: "創設者からのメッセージ",
         sectionFounderText: "家探しは運任せではなく、適切な人同士を適切なタイミングでつなぐべきだと私は信じています。このプラットフォームは、より効率的で直接的な家探しの実現に向けた私のビジョンです。",
         sectionFounderLink: "Alessio、Wishplace 創設者",
-
         sectionCtaTitle: "不動産の新時代が始まります。",
         sectionCtaSubtitle1: "住む場所を決めるのはあなた。そして本当にそこに住めるようになります。",
         sectionCtaSubtitle2: "Wishplace はもうすぐ公開。ウィッシュリストを作成できるタイミングを誰よりも早くお知らせします。",
-
         formEmailPlaceholder: "メールアドレス",
         formCountryDefault: "国を選択",
         formButton: "通知を受け取る",
         formConsentLabel: "Wishplace からのメール通知を受け取ることに同意します。",
         formPromise: "ローンチ情報や重要なお知らせのみを送ります。スパムはありません。",
-
         footerText: "&copy; 2025 Wishplace. 全著作権所有。",
-
         modalTitle: "ありがとうございます！",
         modalText: "リストに登録されました！Wishplace が準備でき次第ご連絡します。",
         modalButton: "閉じる",
-
         formLoadingText: "送信中...",
         formErrorDefault: "エラーが発生しました。後でもう一度お試しください。",
         formErrorEmail: "有効なメールアドレスを入力してください。",
@@ -963,10 +962,12 @@ const translations = {
         formUserTypeIndividual: "個人",
         formUserTypeAgency: "不動産会社 / 専門家",
         formErrorUserType: "ユーザー種別を選択してください。",
-
         formMessageLabel: "メッセージ（任意）",
         formMessagePlaceholder: "メッセージ（任意）",
-        formErrorMessageTooLong: "メッセージが長すぎます（最大 1000 文字）。"
+        formErrorMessageTooLong: "メッセージが長すぎます（最大 1000 文字）。",
+        modalCopySuccess: "リンクをコピーしました。",
+        referralShareMessage: "登録が完了しました！<br><br>あなたの専用リンクを共有してコミュニティを成長させ、リリース時に<strong>保証された</strong>割引を獲得しましょう。<br><br><ul><li><strong>3 人</strong>招待 = リリース時に<strong>10% 割引</strong>。</li><li><strong>5 人</strong>招待 = <strong>15% 割引</strong>。</li><li><strong>10 人</strong>招待 = <strong>25% 割引</strong>。</li><li><strong>20 人</strong>招待 = リリース時に<strong>50% 割引</strong>！</li></ul><br>あなたのリンクから登録する友達が多いほど、お得になります！",
+        modalCopyButton: "コピー",
     },
     'nl': {
         pageTitle:"Wishplace - Stop met Zoeken. Begin met Dromen.",
@@ -1051,7 +1052,10 @@ const translations = {
         formErrorUserType:"Selecteer een type gebruiker.",
         formMessageLabel:"Jouw bericht (optioneel)",
         formMessagePlaceholder:"Jouw bericht (optioneel)",
-        formErrorMessageTooLong:"Het bericht is te lang (max. 1000 tekens)."
+        formErrorMessageTooLong:"Het bericht is te lang (max. 1000 tekens).",
+        modalCopySuccess: "Link gekopieerd.",
+        referralShareMessage: "Registratie voltooid!<br><br>Help de community te groeien en ontvang een <strong>gegarandeerde</strong> korting bij de lancering door je unieke link te delen. <br><br><ul><li>Nodig <strong>3 vrienden</strong> uit = Ontvang <strong>10% korting</strong> bij de lancering.</li><li>Nodig <strong>5 vrienden</strong> uit = Ontvang <strong>15% korting</strong>.</li><li>Nodig <strong>10 vrienden</strong> uit = Ontvang <strong>25% korting</strong>.</li><li>Nodig <strong>20 vrienden</strong> uit = Ontvang <strong>50% korting</strong> bij de lancering!</li></ul><br>Hoe meer vrienden zich via jouw link inschrijven, hoe meer je bespaart!",
+        modalCopyButton: "Kopiëren",
     },
     'el': {
         pageTitle:"Wishplace - Σταμάτα να Ψάχνεις. Ξεκίνα να Ονειρεύεσαι.",
@@ -1136,7 +1140,10 @@ const translations = {
         formErrorUserType:"Επίλεξε τύπο χρήστη.",
         formMessageLabel:"Το μήνυμά σου (προαιρετικό)",
         formMessagePlaceholder:"Το μήνυμά σου (προαιρετικό)",
-        formErrorMessageTooLong:"Το μήνυμα είναι πολύ μεγάλο (μέγιστο 1000 χαρακτήρες)."
+        formErrorMessageTooLong:"Το μήνυμα είναι πολύ μεγάλο (μέγιστο 1000 χαρακτήρες).",
+        modalCopySuccess: "Ο σύνδεσμος αντιγράφηκε.",
+        referralShareMessage: "Η εγγραφή ολοκληρώθηκε!<br><br>Βοήθησε την κοινότητα να μεγαλώσει και κέρδισε μια <strong>εγγυημένη</strong> έκπτωση στο λανσάρισμα μοιράζοντας τον μοναδικό σου σύνδεσμο. <br><br><ul><li>Προσκάλεσε <strong>3 φίλους</strong> = Πάρε <strong>10% έκπτωση</strong> στο λανσάρισμα.</li><li>Προσκάλεσε <strong>5 φίλους</strong> = Πάρε <strong>15% έκπτωση</strong>.</li><li>Προσκάλεσε <strong>10 φίλους</strong> = Πάρε <strong>25% έκπτωση</strong>.</li><li>Προσκάλεσε <strong>20 φίλους</strong> = Πάρε <strong>50% έκπτωση</strong> στο λανσάρισμα!</li></ul><br>Όσο περισσότεροι φίλοι εγγράφονται μέσω του συνδέσμου σου, τόσο περισσότερο κερδίζεις!",
+        modalCopyButton: "Αντιγραφή",
     },
     'ar': {
         pageTitle:"Wishplace - توقّف عن البحث. ابدأ الحلم.",
@@ -1221,7 +1228,10 @@ const translations = {
         formErrorUserType:"اختر نوع المستخدم.",
         formMessageLabel:"رسالتك (اختياري)",
         formMessagePlaceholder:"رسالتك (اختياري)",
-        formErrorMessageTooLong:"الرسالة طويلة جدًا (الحد الأقصى 1000 حرف)."
+        formErrorMessageTooLong:"الرسالة طويلة جدًا (الحد الأقصى 1000 حرف).",
+        modalCopySuccess: "تم نسخ الرابط.",
+        referralShareMessage: "تم إكمال التسجيل!<br><br>شارك رابطك الفريد لمساعدة المجتمع على النمو والحصول على خصم <strong>مضمون</strong> عند الإطلاق. <br><br><ul><li>ادعُ <strong>3 أصدقاء</strong> = احصل على <strong>10% خصم</strong> عند الإطلاق.</li><li>ادعُ <strong>5 أصدقاء</strong> = احصل على <strong>15% خصم</strong>.</li><li>ادعُ <strong>10 أصدقاء</strong> = احصل على <strong>25% خصم</strong>.</li><li>ادعُ <strong>20 صديقًا</strong> = احصل على <strong>50% خصم</strong> عند الإطلاق!</li></ul><br>كلما زاد عدد من يسجّلون عبر رابطك، زادت وفوراتك!",
+        modalCopyButton: "نسخ",
     },
     'ko': {
         pageTitle:"Wishplace - 검색을 멈추고 꿈꾸기 시작하세요.",
@@ -1306,7 +1316,10 @@ const translations = {
         formErrorUserType:"사용자 유형을 선택하세요.",
         formMessageLabel:"메시지 (선택 사항)",
         formMessagePlaceholder:"메시지 (선택 사항)",
-        formErrorMessageTooLong:"메시지가 너무 깁니다 (최대 1000자)."
+        formErrorMessageTooLong:"메시지가 너무 깁니다 (최대 1000자).",
+        modalCopySuccess: "링크가 복사되었습니다.",
+        referralShareMessage: "등록이 완료되었습니다!<br><br>고유 링크를 공유하여 커뮤니티를 성장시키고, 출시 시 <strong>보장된</strong> 할인 혜택을 받으세요. <br><br><ul><li><strong>3명</strong> 초대 = 출시 시 <strong>10% 할인</strong>.</li><li><strong>5명</strong> 초대 = <strong>15% 할인</strong>.</li><li><strong>10명</strong> 초대 = <strong>25% 할인</strong>.</li><li><strong>20명</strong> 초대 = 출시 시 <strong>50% 할인</strong>!</li></ul><br>당신의 링크로 가입한 친구가 많을수록 더 많이 절약할 수 있습니다!",
+        modalCopyButton: "복사",
     },
     'et': {
         pageTitle:"Wishplace - Lõpeta otsimine. Alusta unistamist.",
@@ -1391,7 +1404,10 @@ const translations = {
         formErrorUserType:"Vali kasutaja tüüp.",
         formMessageLabel:"Sinu sõnum (valikuline)",
         formMessagePlaceholder:"Sinu sõnum (valikuline)",
-        formErrorMessageTooLong:"Sõnum on liiga pikk (maksimaalselt 1000 tähemärki)."
+        formErrorMessageTooLong:"Sõnum on liiga pikk (maksimaalselt 1000 tähemärki).",
+        modalCopySuccess: "Link kopeeritud.",
+        referralShareMessage: "Registreerimine on lõpule viidud!<br><br>Jaga oma unikaalset linki, et aidata kogukonnal kasvada ja saada lansseerimisel <strong>garanteeritud</strong> soodustus. <br><br><ul><li>Kutsu <strong>3 sõpra</strong> = Saa lansseerimisel <strong>10% soodustust</strong>.</li><li>Kutsu <strong>5 sõpra</strong> = Saa <strong>15% soodustust</strong>.</li><li>Kutsu <strong>10 sõpra</strong> = Saa <strong>25% soodustust</strong>.</li><li>Kutsu <strong>20 sõpra</strong> = Saa lansseerimisel <strong>50% soodustust</strong>!</li></ul><br>Mida rohkem sõpru sinu lingi kaudu registreerub, seda rohkem säästad!",
+        modalCopyButton: "Kopeeri",
     },
     'uk': {
         pageTitle:"Wishplace - Припини шукати. Почни мріяти.",
@@ -1476,9 +1492,12 @@ const translations = {
         formErrorUserType:"Обери тип користувача.",
         formMessageLabel:"Твоє повідомлення (необов’язково)",
         formMessagePlaceholder:"Твоє повідомлення (необов’язково)",
-        formErrorMessageTooLong:"Повідомлення надто довге (максимум 1000 символів)."
+        formErrorMessageTooLong:"Повідомлення надто довге (максимум 1000 символів).",
+        modalCopySuccess: "Посилання скопійовано.",
+        referralShareMessage: "Реєстрацію завершено!<br><br>Поділіться своїм унікальним посиланням, щоб допомогти спільноті зростати та отримати <strong>гарантовану</strong> знижку на старті. <br><br><ul><li>Запросіть <strong>3 друзів</strong> = Отримайте <strong>10% знижки</strong> на старті.</li><li>Запросіть <strong>5 друзів</strong> = Отримайте <strong>15% знижки</strong>.</li><li>Запросіть <strong>10 друзів</strong> = Отримайте <strong>25% знижки</strong>.</li><li>Запросіть <strong>20 друзів</strong> = Отримайте <strong>50% знижки</strong> на старті!</li></ul><br>Чим більше друзів зареєструються через ваше посилання, тим більше ви заощаджуєте!",
+        modalCopyButton: "Копіювати",
     },
-    lb: {
+    'lb': {
         pageTitle: "Wishplace – Halt op ze sichen. Fänkt un ze dreemen.",
         headerGetNotified: "Kritt Notifikatiounen",
         heroTitle: "Halt op ze sichen.<br>Fänkt un ze dreemen.",
@@ -1486,10 +1505,8 @@ const translations = {
         heroButton: "Op d'Waardelëscht androen",
         logoAlt: "Wishplace Logo",
         heroImageAlt: "E modernen Wunngebai, dat Gebai vun Äre Dreem",
-
         sectionBrokenTitle: "De klassesche Wee ze sichen funktionéiert net",
         sectionBrokenSubtitle: "Déi perfekt Wunneng ze fannen fillt sech wéi e Vollzäitjob un: sichen, waarden, a vill verpasste Geleeënheeten.",
-
         brokenCard1Title: "Onendlecht Iwwerwaachen",
         brokenCard1Text: "Dutzende vu Websäiten, stännegt aktualiséieren, an d’Hoffnung déi éischt ze sinn.",
         brokenCard2Title: "Stännegt Zweiwelen",
@@ -1498,7 +1515,6 @@ const translations = {
         brokenCard3Text: "Déi beschte Wunnengen ginn dacks privat verkaf – an erschéngen ni op de Portalen.",
         brokenCard4Title: "Verschwendent Annoncebudget",
         brokenCard4Text: "Verkeefer bezuelen fir Annoncen a waarden, bis deen richtege Keefer opdaucht.",
-
         sectionHowTitle: "Wëllkomm am Ëmkéierte Immobilie-Maart",
         howStep1Title: "1. Erstellt Är Wonschlëscht",
         howStep1Text: "Wielt déi Gebaier aus, an deenen Dir gäre géift wunnen. Eng Zone eleng geet net duer.",
@@ -1506,7 +1522,6 @@ const translations = {
         howStep2Text: "Definéiert Äre Budget, d'Zuel u Raim a wichteg Mindestkriterien.",
         howStep3Title: "3. Loosst de Besëtzer Iech kontaktéieren",
         howStep3Text: "Besëtzer an Agenturen gesinn Äert Interesse a kontaktéieren Iech iwwer eng sécher Chat-Funktioun.",
-
         sectionAppTitle: "Geschwënn op Ärem Smartphone",
         sectionAppSubtitle: "Eng einfach App fir Kaf, Verkaf a Locatioun ze vereinfachen.",
         appScreen1Alt: "App-Ecran mat 'Wish Places' Lëscht an der Kaart",
@@ -1518,7 +1533,6 @@ const translations = {
         appScreen3Alt: "App-Ecran mat 'Interesséiert Benotzer' fir eng Immobilie",
         appScreen3Title: "Fir Verkeefer: Kuckt potenziell Keefer a Locatairen",
         appScreen3Text: "Kritt direkt eng Lëscht vun allen interesséierte Leit a kontaktéiert déi passendst Persoun.",
-
         sectionPowerTitle: "D’Kraaft läit an Ären Hänn",
         powerBuyersTitle: "Fir Keefer a Locatairen",
         powerBuyersSubtitle: "Är Dreemwunneng, endlech realistesch.",
@@ -1530,7 +1544,6 @@ const translations = {
         powerBuyersLi3Text: "Verkeefer gesinn Äre Budget a kontaktéieren Iech wann Dir passt.",
         powerBuyersLi4Title: "Total Privatsphär",
         powerBuyersLi4Text: "Äre Numm an Donnéeë ginn net gedeelt. Alles leeft iwwer eng sécher Chat-Léisung.",
-
         powerSellersTitle: "Fir Verkeefer an Agenturen",
         powerSellersSubtitle: "Keng Annoncen néideg. Är Keefer waarden schonn.",
         powerSellersLi1Title: "Verkaaft oder verlount méi séier",
@@ -1541,15 +1554,12 @@ const translations = {
         powerSellersLi3Text: "Gesitt wat d'Leit *wierklech* bereet sinn ze bezuelen.",
         powerSellersLi4Title: "Gezilt & effizient, mat Privatsphär",
         powerSellersLi4Text: "Kontaktéiert just déi passendst Keefer. Kee Spamm. Kee Plang oder Dier gëtt gedeelt, bis Dir decidéiert et fräiginn.",
-
         sectionFounderTitle: "E Message vum Grënner",
         sectionFounderText: "Ech gleewen datt d’Siche vun enger Wunneng net vum Gléck ofhängeg soll sinn, mee dovun d’richteg Leit zur richteger Zäit ze verbannen. Dës Plattform ass meng Visioun vun engem méi effizienten a direkten Wee, fir Är Dreemwunneng ze fannen.",
         sectionFounderLink: "Alessio, Grënner vu Wishplace",
-
         sectionCtaTitle: "Eng Immobilie-Revolutioun kënnt geschwënn.",
         sectionCtaSubtitle1: "Dir decidéiert wou Dir wunne wëllt. An Dir wäert do wunnen.",
         sectionCtaSubtitle2: "Wishplace kënnt geschwënn. Gitt als Éischte Bescheed wann d’Plattform online ass.",
-
         formEmailPlaceholder: "Är E-Mail-Adress",
         formCountryDefault: "Wielt Äert Land",
         formButton: "Mellt mech un!",
@@ -1570,6 +1580,9 @@ const translations = {
         formErrorUserType: "Wielt w.e.g. Äre Benotzer-Typ.",
         formMessageLabel: "Äre Message (optional)",
         formMessagePlaceholder: "Äre Message (optional)",
-        formErrorMessageTooLong: "De Message ass ze laang (max. 1000 Zeechen)."
+        formErrorMessageTooLong: "De Message ass ze laang (max. 1000 Zeechen).",
+        modalCopySuccess: "Link kopéiert.",
+        referralShareMessage: "D'Aschreiwung ass ofgeschloss!<br><br>Hëlleft d'Communautéit ze vergréisseren an kritt eng <strong>garantéiert</strong> Remise beim Launch andeems Dir Äre eenzegaartege Link deelt. <br><br><ul><li>Invitéiert <strong>3 Frënn</strong> = Kritt <strong>10% Remise</strong> beim Launch.</li><li>Invitéiert <strong>5 Frënn</strong> = Kritt <strong>15% Remise</strong>.</li><li>Invitéiert <strong>10 Frënn</strong> = Kritt <strong>25% Remise</strong>.</li><li>Invitéiert <strong>20 Frënn</strong> = Kritt <strong>50% Remise</strong> beim Launch!</li></ul><br>Wat méi Frënn sech iwwer Äre Link aschreiwen, wat méi spuert Dir!",
+        modalCopyButton: "Kopéieren",
     },
 };
