@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const langDropdown = document.getElementById('lang-dropdown');
     const langCurrent = document.getElementById('lang-current');
     const langOptions = document.querySelectorAll('.lang-option');
-    const supportedLangs = ['en', 'it', 'es', 'fr', 'ca', 'de', 'ru', 'zh', 'zh-TW', 'pt', 'ja', 'nl', 'el', 'ar', 'ko', 'et', 'uk'];
+    const supportedLangs = ['en', 'it', 'es', 'fr', 'ca', 'de', 'ru', 'zh', 'zh-TW', 'pt', 'ja', 'nl', 'el', 'ar', 'ko', 'et', 'uk', 'lb'];
 
     if (countrySelect) {
         // Don’t touch the first placeholder <option>, just append the rest
