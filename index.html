@@ -466,6 +466,19 @@
                         </option>
                     </select>
                 </div>
+                <!-- OPTIONAL MESSAGE TEXTAREA -->
+                <div>
+                    <label for="message-input" class="sr-only" data-key="formMessageLabel">
+                        Your message
+                    </label>
+                    <textarea id="message-input"
+                              name="message"
+                              rows="3"
+                              maxlength="1000"
+                              class="flex-grow p-4 rounded-lg text-gray-900 placeholder-gray-500 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 w-full border border-gray-300"
+                              placeholder="Your message (optional)"
+                              data-key="formMessagePlaceholder"></textarea>
+                </div>
                 <!-- NEW: Error Message Div -->
                 <div id="form-error-message" class="text-red-600 text-sm text-left hidden"></div>
 

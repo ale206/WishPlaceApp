@@ -83,7 +83,10 @@ const translations = {
         formUserTypeDefault: "I am...",
         formUserTypeIndividual: "An Individual",
         formUserTypeAgency: "An Agency / Professional",
-        formErrorUserType: "Please select your user type."
+        formErrorUserType: "Please select your user type.",
+        formMessageLabel: "Your message",
+        formMessagePlaceholder: "Your message (optional)",
+        formErrorMessageTooLong: "Message is too long (max 1000 characters)."
     },
     'it': {
         pageTitle: "Wishplace - Smetti di Cercare. Inizia a Desiderare.",
@@ -167,7 +170,10 @@ const translations = {
         formUserTypeDefault: "Sono...",
         formUserTypeIndividual: "Un Privato",
         formUserTypeAgency: "Un'Agenzia / Professionista",
-        formErrorUserType: "Seleziona il tuo tipo di utente."
+        formErrorUserType: "Seleziona il tuo tipo di utente.",
+        formMessageLabel: "Il tuo messaggio (opzionale)",
+        formMessagePlaceholder: "Il tuo messaggio (opzionale)",
+        formErrorMessageTooLong: "Message is too long (max 1000 characters)."
     },
     'es': {
         pageTitle: "Wishplace - Deja de Buscar. Empieza a Desear.",
@@ -250,7 +256,10 @@ const translations = {
         formUserTypeDefault: "Soy...",
         formUserTypeIndividual: "Un Particular",
         formUserTypeAgency: "Una Agencia / Profesional",
-        formErrorUserType: "Selecciona tu tipo de usuario."
+        formErrorUserType: "Selecciona tu tipo de usuario.",
+        formMessageLabel: "Tu mensaje (opcional)",
+        formMessagePlaceholder: "Tu mensaje (opcional)",
+        formErrorMessageTooLong: "El mensaje es demasiado largo (máximo 1000 caracteres)."
     },
     'fr': {
         pageTitle: "Wishplace - Arrêtez de Chercher. Commencez à Souhaiter.",
@@ -332,6 +341,9 @@ const translations = {
         formUserTypeDefault: "Je suis...",
         formUserTypeIndividual: "Un Particulier",
         formUserTypeAgency: "Une Agence / Un Professionnel",
-        formErrorUserType: "Veuillez sélectionner votre type d'utilisateur."
+        formErrorUserType: "Veuillez sélectionner votre type d'utilisateur.",
+        formMessageLabel: "Votre message (optionnel)",
+        formMessagePlaceholder: "Votre message (optionnel)",
+        formErrorMessageTooLong: "Le message est trop long (maximum 1000 caractères)."
     }
 };

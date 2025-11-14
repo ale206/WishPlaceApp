@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const countrySelect = document.getElementById('country-select');
     const messageBox = document.getElementById('message-box');
     const closeButton = document.getElementById('close-button');
-    const userTypeSelect = document.getElementById('user-type-select'); // NEW
+    const userTypeSelect = document.getElementById('user-type-select');
+    const messageInput = document.getElementById('message-input');
+    
 
     // --- START i18n LOGIC ---
     const langSwitcher = document.getElementById('lang-switcher');
@@ -25,6 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    if (messageInput) {
+        messageInput.addEventListener('input', () => {
+            messageInput.classList.remove('border-red-500', 'focus:ring-red-500');
+            messageInput.classList.add('border-gray-300', 'focus:ring-blue-500');
+        });
+    }
     
     const setLanguage = (lang) => {
         if (!supportedLangs.includes(lang)) {
@@ -146,10 +154,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const consentLabel = document.getElementById('consent-label');
     const emailInput = document.getElementById('email-input');
     const countrySelectEl = document.getElementById('country-select');
-    const userTypeSelectEl = document.getElementById('user-type-select'); // NEW
-    const formErrorDiv = document.getElementById('form-error-message'); // NEW error div
+    const userTypeSelectEl = document.getElementById('user-type-select');
+    const messageInput = document.getElementById('message-input');
+    const formErrorDiv = document.getElementById('form-error-message');
 
-    if (!form || !btn || !consent || !consentLabel || !emailInput || !countrySelectEl || !userTypeSelectEl || !formErrorDiv) { // UPDATED
+    if (!form || !btn || !consent || !consentLabel || !emailInput || !countrySelectEl || !userTypeSelectEl || !formErrorDiv) { 
         console.error("Form elements not found. Submission will not work.");
         return;
     }
@@ -235,6 +244,15 @@ document.addEventListener('DOMContentLoaded', () => {
             hasError = true;
         }
 
+        // --- MESSAGE (optional but max 1000 chars) ---
+        if (messageInput && messageInput.value.trim().length > 1000) {
+            messageInput.classList.remove('border-gray-300', 'focus:ring-blue-500');
+            messageInput.classList.add('border-red-500', 'focus:ring-red-500');
+
+            errorMessages.push(langStrings.formErrorMessageTooLong || "Message is too long (max 1000 characters).");
+            hasError = true;
+        }
+
         if (hasError) {
             formErrorDiv.innerHTML = errorMessages.join('<br>');
             formErrorDiv.classList.remove('hidden');
@@ -278,6 +296,9 @@ document.addEventListener('DOMContentLoaded', () => {
             userTypeSelectEl.classList.add('text-gray-500'); // NEW
             userTypeSelectEl.classList.remove('text-gray-900'); // NEW
             consent.checked = false; // reset consent
+            if (messageInput) {
+                messageInput.value = ''; // NEW
+            }
 
             if (messageBox) messageBox.classList.remove('hidden');
 
