@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifying your request... | Wishplace</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #f9f9f9; }
+        .card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; max-width: 400px; width: 90%; }
+        .spinner { border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite; margin: 0 auto 1rem; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .error { color: #e74c3c; display: none; }
+        .success { color: #2ecc71; display: none; }
+        button { background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; margin-top: 1rem; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div id="loading">
+        <div class="spinner"></div>
+        <p>Processing your request...</p>
+    </div>
+
+    <div id="success-msg" class="success">
+        <h2>Success!</h2>
+        <p id="status-text">Your email has been verified.</p>
+        <button onclick="window.location.href='/'">Go to Wishplace</button>
+    </div>
+
+    <div id="error-msg" class="error">
+        <h2>Something went wrong</h2>
+        <p id="error-text">The link may be expired or already used.</p>
+        <button onclick="window.location.href='/'">Back to Home</button>
+    </div>
+</div>
+
+<script type="module">
+    // Import the functions you need from the SDKs
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+    import { getAuth, applyActionCode, confirmPasswordReset } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+    
+    const firebaseConfig = {
+        apiKey: "AIzaSyA5UNRWWKx8NTG5qBd_wzVWGh_yNcBbdaw",
+        authDomain: "wishplaceapp.firebaseapp.com",
+        projectId: "wishplaceapp",
+        storageBucket: "wishplaceapp.firebasestorage.app",
+        messagingSenderId: "510347886026",
+        appId: "1:510347886026:web:9ef69423887cb20ddc2333",
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // 1. Parse URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const mode = urlParams.get('mode');
+    const actionCode = urlParams.get('oobCode');
+
+    const loadingEl = document.getElementById('loading');
+    const successEl = document.getElementById('success-msg');
+    const errorEl = document.getElementById('error-msg');
+    const statusText = document.getElementById('status-text');
+    const errorText = document.getElementById('error-text');
+
+    // 2. Handle the action based on the "mode"
+    if (actionCode) {
+        switch (mode) {
+            case 'verifyEmail':
+                handleVerifyEmail(auth, actionCode);
+                break;
+            case 'resetPassword':
+                // Optional: Redirect to your own custom reset page
+                window.location.href = `/reset-password?oobCode=${actionCode}`;
+                break;
+            default:
+                showError("Invalid request mode.");
+        }
+    } else {
+        showError("No action code found in the link.");
+    }
+
+    function handleVerifyEmail(auth, actionCode) {
+        applyActionCode(auth, actionCode)
+            .then(() => {
+                loadingEl.style.display = 'none';
+                successEl.style.display = 'block';
+                statusText.innerText = "Your email has been successfully verified! You can now log in.";
+            })
+            .catch((error) => {
+                showError(error.message);
+            });
+    }
+
+    function showError(message) {
+        loadingEl.style.display = 'none';
+        errorEl.style.display = 'block';
+        errorText.innerText = message;
+    }
+</script>
+
+</body>
+</html>
