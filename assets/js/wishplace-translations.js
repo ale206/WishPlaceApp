@@ -2,6 +2,11 @@ let currentLang = 'en'; // Default
 
 const translations = {
     'it': {
+        footerPrivacy: "Privacy Policy",
+        footerCookie: "Cookie Policy",
+        cookieBannerText: "Utilizziamo i cookie per migliorare la tua esperienza. Continuando a visitare questo sito, accetti il nostro utilizzo dei cookie.",
+        cookieAccept: "Accetta",
+        cookieDecline: "Rifiuta",
         pageTitle: "Wishplace - Smetti di Cercare. Inizia a Sognare.",
         headerGetNotified: "Ricevi Notifiche",
         heroTitle: "Smetti di Cercare.<br>Inizia a Sognare.",
@@ -91,6 +96,11 @@ const translations = {
         modalCopyButton: "Copia",
     },
     'en': {
+        footerPrivacy: "Privacy Policy",
+        footerCookie: "Cookie Policy",
+        cookieBannerText: "We use cookies to improve your experience. By continuing to visit this site you agree to our use of cookies.",
+        cookieAccept: "Accept",
+        cookieDecline: "Decline",
         pageTitle: "Wishplace - Stop Searching. Start Dreaming.",
         headerGetNotified: "Get Notified",
         heroTitle: "Stop Searching.<br>Start Dreaming.",
@@ -180,6 +190,11 @@ const translations = {
         modalCopyButton: "Copy",
     },
     'es': {
+        footerPrivacy: "Política de Privacidad",
+        footerCookie: "Política de Cookies",
+        cookieBannerText: "Utilizamos cookies para mejorar tu experiencia. Al continuar visitando este sitio, aceptas nuestro uso de cookies.",
+        cookieAccept: "Aceptar",
+        cookieDecline: "Rechazar",
         pageTitle: "Wishplace - Deja de Buscar. Empieza a Soñar.",
         headerGetNotified: "Recibir Notificaciones",
         heroTitle: "Deja de Buscar.<br>Empieza a Soñar.",

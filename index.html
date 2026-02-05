@@ -3,18 +3,13 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLJR19TYZF"></script>
+    
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-YLJR19TYZF');
+        // Google Analytics will be loaded via JS upon consent
     </script>
 
-    <script type="text/javascript" src="https://embeds.iubenda.com/widgets/d89c13bd-5cf2-415a-b66b-a06aa13b8304.js"></script>
-    
+
+
     <meta charset="UTF-8"> <!-- Updated charset -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page title will be set by JS -->
@@ -573,8 +568,11 @@
     
     <div class="container mx-auto px-6 text-center">
         <p data-key="footerText">&copy; 2025 Wishplace. All rights reserved.</p>
-        <a href="https://www.iubenda.com/privacy-policy/16250465" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-        <a href="https://www.iubenda.com/privacy-policy/16250465/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Cookie Policy ">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+        <div class="mt-4 flex justify-center space-x-4 text-sm">
+            <a href="legal/privacy-enGB.html" id="privacy-link" class="hover:text-blue-600 transition-colors" data-key="footerPrivacy">Privacy Policy</a>
+            <span class="text-gray-300">|</span>
+            <a href="legal/privacy-enGB.html" id="cookie-link" class="hover:text-blue-600 transition-colors" data-key="footerCookie">Cookie Policy</a>
+        </div>
     </div>
 </footer>
 
@@ -610,6 +608,23 @@
                 class="bg-blue-600 text-white font-bold px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                 data-key="modalButton">
             Close
+        </button>
+    </div>
+</div>
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 hidden z-50 flex flex-col sm:flex-row justify-between items-center shadow-lg border-t border-gray-700">
+    <div class="mb-4 sm:mb-0 mr-4 text-center sm:text-left flex-1">
+        <p class="text-sm" data-key="cookieBannerText">
+            We use cookies to improve your experience. By continuing to visit this site you agree to our use of cookies.
+        </p>
+    </div>
+    <div class="flex space-x-4 shrink-0">
+        <button id="cookie-decline" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white text-sm rounded transition border border-gray-600" data-key="cookieDecline">
+            Decline
+        </button>
+        <button id="cookie-accept" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded transition font-bold shadow-md" data-key="cookieAccept">
+            Accept
         </button>
     </div>
 </div>
