@@ -217,7 +217,7 @@
                     class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative before:hidden md:before:block before:absolute before:top-1/2 before:left-0 before:w-full before:h-0.5 before:bg-gray-200 before:-translate-y-1/2">
 
                 <!-- Step 1 -->
-                <div class="text-center p-4 relative z-10 bg-white">
+                <div class="flex flex-col items-center text-center p-4 relative z-10 bg-white">
                     <div
                             class="w-24 h-24 bg-blue-50 border-2 border-blue-200 text-blue-600 text-4xl rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
                         <!-- Icon: Pin -->
@@ -229,13 +229,13 @@
                                   d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                         </svg>
                     </div>
-                    <h4 class="text-2xl font-semibold mb-3 text-gray-900" data-key="howStep1Title">1. Pin Your Wishlist</h4>
-                    <p class="text-gray-600 text-lg" data-key="howStep1Text">
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-900 min-h-[3.5rem]" data-key="howStep1Title">1. Pin Your Wishlist</h4>
+                    <p class="text-gray-600 text-lg min-h-[4.5rem]" data-key="howStep1Text">
                         Find and pin the specific buildings you want to live in.
                     </p>
                 </div>
                 <!-- Step 2 -->
-                <div class="text-center p-4 relative z-10 bg-white">
+                <div class="flex flex-col items-center text-center p-4 relative z-10 bg-white">
                     <div
                             class="w-24 h-24 bg-blue-50 border-2 border-blue-200 text-blue-600 text-4xl rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
                         <!-- Icon: Sliders -->
@@ -245,13 +245,13 @@
                                   d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0M3.75 18H7.5m3-6h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0M3.75 12H7.5" />
                         </svg>
                     </div>
-                    <h4 class="text-2xl font-semibold mb-3 text-gray-900" data-key="howStep2Title">2. Set Your Terms</h4>
-                    <p class="text-gray-600 text-lg" data-key="howStep2Text">
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-900 min-h-[3.5rem]" data-key="howStep2Title">2. Set Your Terms</h4>
+                    <p class="text-gray-600 text-lg min-h-[4.5rem]" data-key="howStep2Text">
                         Define your budget, rooms, and other must-haves.
                     </p>
                 </div>
                 <!-- Step 3 -->
-                <div class="text-center p-4 relative z-10 bg-white">
+                <div class="flex flex-col items-center text-center p-4 relative z-10 bg-white">
                     <div
                             class="w-24 h-24 bg-blue-50 border-2 border-blue-200 text-blue-600 text-4xl rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
                         <!-- Icon: Bell (REPLACED) -->
@@ -261,8 +261,8 @@
                                   d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
                         </svg>
                     </div>
-                    <h4 class="text-2xl font-semibold mb-3 text-gray-900" data-key="howStep3Title">3. Get Noticed</h4>
-                    <p class="text-gray-600 text-lg" data-key="howStep3Text">
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-900 min-h-[3.5rem]" data-key="howStep3Title">3. Get Noticed</h4>
+                    <p class="text-gray-600 text-lg min-h-[4.5rem]" data-key="howStep3Text">
                         Owners see your wish and contact <em>you</em> via secure chat.
                     </p>
                 </div>
@@ -421,6 +421,27 @@
                             </div>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Events Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto max-w-6xl px-6 text-center">
+            <h3 class="text-3xl md:text-4xl font-bold mb-10 text-gray-900" data-key="sectionNewsEventsTitle">
+                And meantime, news and events
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
+                <div class="flex flex-col items-center">
+                    <img src="assets/img/news-disclaimer-portrait.png"
+                         alt="Wishplace news disclaimer"
+                         class="w-full max-w-[260px]">
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="assets/img/events-disclaimer-portrait.png"
+                         alt="Wishplace events disclaimer"
+                         class="w-full max-w-[260px]">
                 </div>
             </div>
         </div>

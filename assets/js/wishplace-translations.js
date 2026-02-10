@@ -70,6 +70,7 @@ const translations = {
         sectionCtaTitle: "Una Rivoluzione Immobiliare è in Arrivo.",
         sectionCtaSubtitle1: "Decidi tu dove vivere. E vivrai lì.",
         sectionCtaSubtitle2: "Wishplace è quasi pronto. Sii il primo a sapere quando potrai creare la tua lista dei desideri o trovare il tuo primo acquirente.",
+        sectionNewsEventsTitle: "E nel frattempo, notizie ed eventi",
         formEmailPlaceholder: "Il tuo indirizzo email",
         formCountryDefault: "Seleziona il tuo Paese",
         formButton: "Avvisami!",
@@ -164,6 +165,7 @@ const translations = {
         sectionCtaTitle: "A Real Estate Revolution Is Coming.",
         sectionCtaSubtitle1: "Choose where you want to live. And you will live there.",
         sectionCtaSubtitle2: "Wishplace is almost ready. Be the first to know when you can create your wishlist or find your first buyer.",
+        sectionNewsEventsTitle: "And meantime, news and events",
         formEmailPlaceholder: "Your email address",
         formCountryDefault: "Select your country",
         formButton: "Notify Me!",
@@ -258,6 +260,7 @@ const translations = {
         sectionCtaTitle: "Se Acerca una Revolución Inmobiliaria.",
         sectionCtaSubtitle1: "Elige dónde vivir. Y vivirás allí.",
         sectionCtaSubtitle2: "Wishplace está casi listo. Sé el primero en enterarte de cuándo podrás crear tu lista de deseos o encontrar tu primer comprador.",
+        sectionNewsEventsTitle: "Y mientras tanto, noticias y eventos",
         formEmailPlaceholder: "Tu correo electrónico",
         formCountryDefault: "Selecciona tu país",
         formButton: "Avísame!",
@@ -284,6 +287,7 @@ const translations = {
         modalCopyButton: "Copiar",
     },
     'fr': {
+        sectionNewsEventsTitle: "Et en attendant, actualités et événements",
         pageTitle: "Wishplace - Arrêtez de Chercher. Commencez à Rêver.",
         headerGetNotified: "Recevoir des Notifications",
         heroTitle: "Arrêtez de Chercher.<br>Commencez à Rêver.",
@@ -347,6 +351,7 @@ const translations = {
         sectionCtaTitle: "Une Révolution Immobilière Approche.",
         sectionCtaSubtitle1: "Choisissez où vivre. Et vous y vivrez.",
         sectionCtaSubtitle2: "Wishplace est presque prêt. Soyez le premier informé.",
+        sectionNewsEventsTitle: "Et en attendant, actualités et événements",
         formEmailPlaceholder: "Votre adresse email",
         formCountryDefault: "Sélectionnez votre pays",
         formButton: "Prévenez-moi !",
@@ -373,6 +378,7 @@ const translations = {
         modalCopyButton: "Copier",
     },
     'ca': {
+        sectionNewsEventsTitle: "I mentrestant, notícies i esdeveniments",
         pageTitle: "Wishplace - Deixa de Buscar. Comença a Somiar.",
         headerGetNotified: "Rep notificacions",
         heroTitle: "Deixa de Buscar.<br>Comença a Somiar.",
@@ -462,6 +468,7 @@ const translations = {
         modalCopyButton: "Copiar",
     },
     'de': {
+        sectionNewsEventsTitle: "Und in der Zwischenzeit: Nachrichten und Events",
         pageTitle: "Wishplace - Hör auf zu Suchen. Fang an zu Träumen.",
         headerGetNotified: "Benachrichtigt werden",
         heroTitle: "Hör auf zu Suchen.<br>Fang an zu Träumen.",
@@ -551,6 +558,7 @@ const translations = {
         modalCopyButton: "Kopieren",
     },
     'ru': {
+        sectionNewsEventsTitle: "А пока — новости и события",
         pageTitle: "Wishplace — Перестаньте искать. Начните мечтать.",
         headerGetNotified: "Получать уведомления",
         heroTitle: "Перестаньте искать.<br>Начните мечтать.",
@@ -640,6 +648,7 @@ const translations = {
         modalCopyButton: "Копировать",
     },
     'zh': {
+        sectionNewsEventsTitle: "与此同时，新闻与活动",
         pageTitle: "Wishplace - 停止寻找，开始梦想。",
         headerGetNotified: "接收通知",
         heroTitle: "停止寻找。<br>开始梦想。",
@@ -729,6 +738,7 @@ const translations = {
         modalCopyButton: "复制",
     },
     'zh-TW': {
+        sectionNewsEventsTitle: "同時，新聞與活動",
         pageTitle: "Wishplace - 停止尋找，開始做夢。",
         headerGetNotified: "接收通知",
         heroTitle: "停止尋找。<br>開始做夢。",
@@ -818,6 +828,7 @@ const translations = {
         modalCopyButton: "複製",
     },
     'pt': {
+        sectionNewsEventsTitle: "Enquanto isso, notícias e eventos",
         pageTitle: "Wishplace - Pare de Procurar. Comece a Sonhar.",
         headerGetNotified: "Receber notificações",
         heroTitle: "Pare de Procurar.<br>Comece a Sonhar.",
@@ -907,6 +918,7 @@ const translations = {
         modalCopyButton: "Copiar",
     },
     'ja': {
+        sectionNewsEventsTitle: "その間に、ニュースとイベント",
         pageTitle: "Wishplace - 探すのをやめて、夢を描こう。",
         headerGetNotified: "通知を受け取る",
         heroTitle: "探すのをやめて。<br>夢を描こう。",
@@ -996,6 +1008,7 @@ const translations = {
         modalCopyButton: "コピー",
     },
     'nl': {
+        sectionNewsEventsTitle: "En ondertussen: nieuws en evenementen",
         pageTitle:"Wishplace - Stop met Zoeken. Begin met Dromen.",
         headerGetNotified:"Meldingen ontvangen",
         heroTitle:"Stop met Zoeken.<br>Begin met Dromen.",
@@ -1085,6 +1098,7 @@ const translations = {
         modalCopyButton: "Kopiëren",
     },
     'el': {
+        sectionNewsEventsTitle: "Και στο μεταξύ, νέα και εκδηλώσεις",
         pageTitle:"Wishplace - Σταμάτα να Ψάχνεις. Ξεκίνα να Ονειρεύεσαι.",
         headerGetNotified:"Λήψη ειδοποιήσεων",
         heroTitle:"Σταμάτα να Ψάχνεις.<br>Ξεκίνα να Ονειρεύεσαι.",
@@ -1098,7 +1112,7 @@ const translations = {
         brokenCard1Title:"Ατελείωτη Παρακολούθηση",
         brokenCard1Text:"Δεκάδες ιστοσελίδες και συνεχείς ανανεώσεις με την ελπίδα να είσαι ο πρώτος.",
         brokenCard2Title:"Συνεχής Αμφιβολία",
-        brokenCard2Text:`"Θα υπάρξει ποτέ διαμέρισμα *σε εκείνο* το κτίριο στη δική μου τιμή;"`,
+        brokenCard2Text: `"Θα υπάρξει ποτέ διαμέρισμα *σε εκείνο* το κτίριο, στη δική μου τιμή;"`,
         brokenCard3Title:"Χαμένες Ευκαιρίες",
         brokenCard3Text:"Οι καλύτερες ευκαιρίες είναι συχνά εκτός αγοράς. Ό,τι βλέπεις στα portals είναι ό,τι δεν έχει επιλέξει κανείς ακόμα.",
         brokenCard4Title:"Σπατάλη σε Αγγελίες",
@@ -1174,6 +1188,7 @@ const translations = {
         modalCopyButton: "Αντιγραφή",
     },
     'ar': {
+        sectionNewsEventsTitle: "وفي هذه الأثناء، الأخبار والفعاليات",
         pageTitle:"Wishplace - توقّف عن البحث. ابدأ الحلم.",
         headerGetNotified:"استلام الإشعارات",
         heroTitle:"توقّف عن البحث.<br>ابدأ الحلم.",
@@ -1263,6 +1278,7 @@ const translations = {
         modalCopyButton: "نسخ",
     },
     'ko': {
+        sectionNewsEventsTitle: "그동안 뉴스와 이벤트",
         pageTitle:"Wishplace - 검색을 멈추고 꿈꾸기 시작하세요.",
         headerGetNotified:"알림 받기",
         heroTitle:"검색을 멈추고.<br>꿈꾸기 시작하세요.",
@@ -1352,6 +1368,7 @@ const translations = {
         modalCopyButton: "복사",
     },
     'et': {
+        sectionNewsEventsTitle: "Ja vahepeal: uudised ja sündmused",
         pageTitle:"Wishplace - Lõpeta otsimine. Alusta unistamist.",
         headerGetNotified:"Saada teavitusi",
         heroTitle:"Lõpeta otsimine.<br>Alusta unistamist.",
@@ -1441,6 +1458,7 @@ const translations = {
         modalCopyButton: "Kopeeri",
     },
     'uk': {
+        sectionNewsEventsTitle: "А тим часом — новини та події",
         pageTitle:"Wishplace - Припини шукати. Почни мріяти.",
         headerGetNotified:"Отримувати сповіщення",
         heroTitle:"Припини шукати.<br>Почни мріяти.",
@@ -1530,6 +1548,7 @@ const translations = {
         modalCopyButton: "Копіювати",
     },
     'lb': {
+        sectionNewsEventsTitle: "An an der Tëschenzäit: Neiegkeeten an Eventer",
         pageTitle: "Wishplace – Halt op ze sichen. Fänkt un ze dreemen.",
         headerGetNotified: "Kritt Notifikatiounen",
         heroTitle: "Halt op ze sichen.<br>Fänkt un ze dreemen.",
