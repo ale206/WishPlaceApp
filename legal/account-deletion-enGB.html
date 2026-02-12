@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishplace – Account Deletion & Data Policy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        .container {
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 12px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #111;
+            border-bottom: 2px solid #007AFF;
+            padding-bottom: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 25px;
+            color: #222;
+        }
+        h3 {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #444;
+        }
+        p, li {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        .highlight-box {
+            background-color: #f0f7ff;
+            border-left: 4px solid #007AFF;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .process-tag {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #475569;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Wishplace: Account Deletion & Data Removal</h1>
+
+    <p>At Wishplace, we value your privacy and provide a simple, transparent way to manage your account and personal data. This page outlines our deletion process and what happens to your data when you choose to leave the platform.</p>
+
+    <div class="highlight-box">
+        <h2>How to Delete Your Account</h2>
+        <p>You can initiate account deletion directly within the Wishplace mobile app:</p>
+        <ol>
+            <li>Open the <strong>Wishplace</strong> app.</li>
+            <li>Navigate to your <strong>Profile</strong> tab.</li>
+            <li>Scroll to the bottom of the <strong>Profile Settings</strong> screen.</li>
+            <li>Tap on the <strong>"Eliminar Cuenta"</strong> (Delete Account) link.</li>
+            <li>Confirm your choice in the pop-up dialogue by tapping <strong>"Eliminar"</strong>.</li>
+        </ol>
+        <p>Alternatively, you may request deletion by emailing <strong>alessio[at]wishplace[dot]app</strong> from your registered email address.</p>
+    </div>
+
+    <h2>The Deletion Process</h2>
+
+    <h3>1. Immediate Action (Soft Delete)</h3>
+    <p><span class="process-tag">AUTOMATED</span> Once you confirm deletion in the app, your account is immediately "soft-deleted." This means:</p>
+    <ul>
+        <li>Your user profile is disabled in our authentication system (Firebase), preventing any further login.</li>
+        <li>Your account is flagged in our database to ensure your profile, "Wishes," and data are no longer visible to any other users or third parties.</li>
+    </ul>
+
+    <h3>2. Permanent Removal (Hard Delete)</h3>
+    <p><span class="process-tag">MANUAL REVIEW</span> To ensure data integrity and security, the final "hard deletion" of your records is performed manually by our administrative team. During this stage, we permanently purge your personal identifiers and user-generated content from our production systems.</p>
+
+    <h2>Data Types and Handling</h2>
+
+    <h3>What is Permanently Deleted</h3>
+    <p>Following the manual hard delete, the following data is permanently removed:</p>
+    <ul>
+        <li><strong>Personal Identity:</strong> Name, email address, and profile photo.</li>
+        <li><strong>User Content:</strong> All saved search preferences, property requirements, and geographic parameters.</li>
+        <li><strong>Communications:</strong> Message history and chat logs.</li>
+    </ul>
+
+    <h3>What is Retained</h3>
+    <p>Specific information is retained only for legal or regulatory requirements:</p>
+    <ul>
+        <li><strong>Financial Records:</strong> Transaction identifiers for "Credit" purchases are retained for 10 years to comply with Spanish tax and accounting laws (archived and non-identifiable for marketing).</li>
+        <li><strong>Anonymized Data:</strong> Aggregated, non-identifiable usage statistics may be kept for service improvement.</li>
+    </ul>
+
+    <h2>Timeline for Final Deletion</h2>
+    <p>While access is revoked <strong>immediately</strong>, the manual hard deletion and complete removal from all encrypted server backups is typically finalized within <strong>30 to 60 days</strong>. Once this manual process is complete, the data cannot be recovered.</p>
+
+    <div class="footer">
+        <p><strong>Developer:</strong> Alessio Di Salvo<br>
+            <strong>Last Updated:</strong> 12 February 2026</p>
+    </div>
+</div>
+</body>
+</html>
