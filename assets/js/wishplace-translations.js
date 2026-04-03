@@ -4,7 +4,7 @@ const translations = {
     'it': {
         footerPrivacy: "Privacy Policy",
         footerCookie: "Cookie Policy",
-        cookieBannerText: "Utilizziamo i cookie per migliorare la tua esperienza. Continuando a visitare questo sito, accetti il nostro utilizzo dei cookie.",
+        cookieBannerText: "Utilizziamo <strong>Google Analytics</strong> per capire come i visitatori interagiscono con Wishplace e migliorare la tua esperienza. I tuoi dati non vengono <strong>mai venduti</strong> né condivisi con terze parti.",
         cookieAccept: "Accetta",
         cookieDecline: "Rifiuta",
         pageTitle: "Wishplace - Smetti di Cercare. Inizia a Sognare.",
@@ -103,7 +103,7 @@ const translations = {
     'en': {
         footerPrivacy: "Privacy Policy",
         footerCookie: "Cookie Policy",
-        cookieBannerText: "We use cookies to improve your experience. By continuing to visit this site you agree to our use of cookies.",
+        cookieBannerText: "We use <strong>Google Analytics</strong> to understand how visitors interact with Wishplace and improve your experience. Your data is <strong>never sold</strong> or shared with third parties.",
         cookieAccept: "Accept",
         cookieDecline: "Decline",
         pageTitle: "Wishplace - Stop Searching. Start Dreaming.",
@@ -202,7 +202,7 @@ const translations = {
     'es': {
         footerPrivacy: "Política de Privacidad",
         footerCookie: "Política de Cookies",
-        cookieBannerText: "Utilizamos cookies para mejorar tu experiencia. Al continuar visitando este sitio, aceptas nuestro uso de cookies.",
+        cookieBannerText: "Usamos <strong>Google Analytics</strong> para entender cómo los visitantes interactúan con Wishplace y mejorar tu experiencia. Tus datos <strong>nunca se venden</strong> ni se comparten con terceros.",
         cookieAccept: "Aceptar",
         cookieDecline: "Rechazar",
         pageTitle: "Wishplace - Deja de Buscar. Empieza a Soñar.",
@@ -299,7 +299,9 @@ const translations = {
         appScreen5Text: "Explora festivales, actividades y eventos locales en tus ciudades, organizados y actualizados en tiempo real."
     },
     'fr': {
-        pageTitle: "Wishplace - Arrêtez de Chercher. Commencez à Rêver.",
+        cookieBannerText: "Nous utilisons <strong>Google Analytics</strong> pour comprendre comment les visiteurs interagissent avec Wishplace et améliorer votre expérience. Vos données ne sont <strong>jamais vendues</strong> ni partagées avec des tiers.",
+        cookieAccept: "Accepter",
+        cookieDecline: "Refuser",
         headerGetNotified: "Recevoir des Notifications",
         heroTitle: "Arrêtez de Chercher.<br>Commencez à Rêver.",
         heroSubtitle: "Le premier marché immobilier inversé au monde. Épinglez où vous voulez vivre, fixez votre prix et laissez le logement parfait vous trouver.",
@@ -487,6 +489,9 @@ const translations = {
         appScreen5Text: "Explora festivals, activitats i esdeveniments locals a les teves ciutats, organitzats i actualitzats en temps real."
     },
     'de': {
+        cookieBannerText: "Wir verwenden <strong>Google Analytics</strong>, um zu verstehen, wie Besucher mit Wishplace interagieren, und Ihre Erfahrung zu verbessern. Ihre Daten werden <strong>niemals verkauft</strong> oder an Dritte weitergegeben.",
+        cookieAccept: "Akzeptieren",
+        cookieDecline: "Ablehnen",
         sectionNewsEventsTitle: "Neueste Nachrichten und lokale Veranstaltungen",
         appScreen4Title: "Bleiben Sie mit lokalen Nachrichten auf dem Laufenden",
         appScreen4Text: "Verfolgen Sie die neuesten Nachrichten zu Ihren ausgewählten Städten und Gebieten, automatisch in einem einfachen Feed gesammelt.",
@@ -863,6 +868,9 @@ const translations = {
         modalCopyButton: "複製",
     },
     'pt': {
+        cookieBannerText: "Usamos o <strong>Google Analytics</strong> para entender como os visitantes interagem com o Wishplace e melhorar a sua experiência. Os seus dados <strong>nunca são vendidos</strong> nem partilhados com terceiros.",
+        cookieAccept: "Aceitar",
+        cookieDecline: "Recusar",
         sectionNewsEventsTitle: "Últimas notícias e eventos locais",
         appScreen4Title: "Fique atualizado com as notícias locais",
         appScreen4Text: "Acompanhe as últimas notícias relacionadas às suas cidades e áreas selecionadas, reunidas automaticamente em um único feed simples.",

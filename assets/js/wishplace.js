@@ -84,6 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (privacyLink) privacyLink.href = `legal/privacy-${suffix}.html`;
         if (cookieLink) cookieLink.href = `legal/privacy-${suffix}.html`;
 
+        const cookieBannerPrivacyLink = document.getElementById('cookie-privacy-link');
+        if (cookieBannerPrivacyLink) cookieBannerPrivacyLink.href = `legal/privacy-${suffix}.html`;
+
         // Update language switcher text
         const langOption = document.querySelector(`.lang-option[data-lang="${lang}"]`);
         if (langOption) {
@@ -139,32 +142,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Dropdown Placeholder Logic ---
 
-    countrySelect.addEventListener('change', () => {
-        if (countrySelect.value === "") {
-            countrySelect.classList.add('text-gray-500');
-            countrySelect.classList.remove('text-gray-900');
-        } else {
-            countrySelect.classList.remove('text-gray-500');
-            countrySelect.classList.add('text-gray-900');
-        }
-    });
+    if (countrySelect) {
+        countrySelect.addEventListener('change', () => {
+            if (countrySelect.value === "") {
+                countrySelect.classList.add('text-gray-500');
+                countrySelect.classList.remove('text-gray-900');
+            } else {
+                countrySelect.classList.remove('text-gray-500');
+                countrySelect.classList.add('text-gray-900');
+            }
+        });
+    }
 
-    // NEW: Add placeholder logic for user type dropdown
-    userTypeSelect.addEventListener('change', () => {
-        if (userTypeSelect.value === "") {
-            userTypeSelect.classList.add('text-gray-500');
-            userTypeSelect.classList.remove('text-gray-900');
-        } else {
-            userTypeSelect.classList.remove('text-gray-500');
-            userTypeSelect.classList.add('text-gray-900');
-        }
-    });
+    if (userTypeSelect) {
+        userTypeSelect.addEventListener('change', () => {
+            if (userTypeSelect.value === "") {
+                userTypeSelect.classList.add('text-gray-500');
+                userTypeSelect.classList.remove('text-gray-900');
+            } else {
+                userTypeSelect.classList.remove('text-gray-500');
+                userTypeSelect.classList.add('text-gray-900');
+            }
+        });
+    }
 
     // --- Form submission logic is now in its own script tag ---
 });
 
-
-<!-- UPDATED: Second script for form submission -->
 
 document.addEventListener('DOMContentLoaded', () => {
     // This logic runs after the first DOMContentLoaded, so i18n translations are ready
@@ -184,8 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const copyReferralBtn = document.getElementById('copy-referral');
     const referralCopyFeedback = document.getElementById('referral-feedback');
 
-    if (!form || !btn || !consent || !consentLabel || !emailInput || !countrySelectEl || !userTypeSelectEl || !formErrorDiv) { 
-        console.error("Form elements not found. Submission will not work.");
+    if (!form || !btn || !consent || !consentLabel || !emailInput || !countrySelectEl || !userTypeSelectEl || !formErrorDiv) {
         return;
     }
 
@@ -389,52 +392,51 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+});
 
-    // --- COOKIE BANNER LOGIC ---
+// --- COOKIE BANNER & GOOGLE ANALYTICS ---
+// Separate callback so a missing form never blocks the banner from showing.
+document.addEventListener('DOMContentLoaded', () => {
     const cookieBanner = document.getElementById('cookie-banner');
     const cookieAcceptBtn = document.getElementById('cookie-accept');
     const cookieDeclineBtn = document.getElementById('cookie-decline');
 
     function loadGoogleAnalytics() {
-        // Build script tags
-        const script1 = document.createElement('script');
-        script1.async = true;
-        script1.src = "https://www.googletagmanager.com/gtag/js?id=G-YLJR19TYZF";
-        document.head.appendChild(script1);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-YLJR19TYZF');
 
-        const script2 = document.createElement('script');
-        script2.innerHTML = `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-YLJR19TYZF');
-        `;
-        document.head.appendChild(script2);
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-YLJR19TYZF';
+        document.head.appendChild(script);
     }
 
     const consentStatus = localStorage.getItem('cookieConsent');
-    
+
     if (consentStatus === 'accepted') {
         loadGoogleAnalytics();
     } else if (consentStatus === 'declined') {
         // Do nothing
     } else {
-        // Show banner
+        // First visit — show banner
         if (cookieBanner) cookieBanner.classList.remove('hidden');
     }
 
     if (cookieAcceptBtn) {
         cookieAcceptBtn.addEventListener('click', () => {
-             localStorage.setItem('cookieConsent', 'accepted');
-             if (cookieBanner) cookieBanner.classList.add('hidden');
-             loadGoogleAnalytics();
+            localStorage.setItem('cookieConsent', 'accepted');
+            if (cookieBanner) cookieBanner.classList.add('hidden');
+            loadGoogleAnalytics();
         });
     }
 
     if (cookieDeclineBtn) {
         cookieDeclineBtn.addEventListener('click', () => {
-             localStorage.setItem('cookieConsent', 'declined');
-             if (cookieBanner) cookieBanner.classList.add('hidden');
+            localStorage.setItem('cookieConsent', 'declined');
+            if (cookieBanner) cookieBanner.classList.add('hidden');
         });
     }
 });

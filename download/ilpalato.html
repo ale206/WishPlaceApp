@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishplace</title>
+</head>
+<body>
+<script>
+    (function () {
+        var IOS_URL     = "https://apps.apple.com/us/app/wishplace/id6755880713";
+        var ANDROID_URL = "https://play.google.com/store/apps/details?id=com.wishplace.wishplace";
+        var HOME_URL    = "https://wishplace.app";
+
+        /* ── GA: load only if the user already accepted cookies ── */
+        if (localStorage.getItem('cookieConsent') === 'accepted') {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-YLJR19TYZF');
+
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-YLJR19TYZF';
+            document.head.appendChild(s);
+        }
+
+        /* ── Detect device ── */
+        var ua = navigator.userAgent || navigator.vendor || window.opera || '';
+        var dest, store, platform;
+
+        if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+            dest = IOS_URL; store = 'app_store'; platform = 'ios';
+        } else if (/android/i.test(ua)) {
+            dest = ANDROID_URL; store = 'google_play'; platform = 'android';
+        } else {
+            dest = HOME_URL; store = 'none'; platform = 'desktop';
+        }
+
+        /* ── Fire GA event (only if consent was given) ── */
+        if (typeof gtag === 'function') {
+            gtag('event', 'store_redirect', {
+                event_category: 'redirect',
+                event_label: store,
+                store: store,
+                platform: platform,
+                source: 'ilpalato'
+            });
+        }
+
+        /* ── Redirect immediately ── */
+        window.location.replace(dest);
+    })();
+</script>
+</body>
+</html>
