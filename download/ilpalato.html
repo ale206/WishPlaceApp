@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wishplace</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLJR19TYZF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-YLJR19TYZF');
+    </script>
 </head>
 <body>
 <script>
@@ -12,19 +22,6 @@
         var ANDROID_URL = "https://play.google.com/store/apps/details?id=com.wishplace.wishplace";
         var HOME_URL    = "https://wishplace.app";
 
-        /* ── GA: load only if the user already accepted cookies ── */
-        if (localStorage.getItem('cookieConsent') === 'accepted') {
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            window.gtag = gtag;
-            gtag('js', new Date());
-            gtag('config', 'G-YLJR19TYZF');
-
-            var s = document.createElement('script');
-            s.async = true;
-            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-YLJR19TYZF';
-            document.head.appendChild(s);
-        }
 
         /* ── Detect device ── */
         var ua = navigator.userAgent || navigator.vendor || window.opera || '';
@@ -38,7 +35,7 @@
             dest = HOME_URL; store = 'none'; platform = 'desktop';
         }
 
-        /* ── Fire GA event (only if consent was given) ── */
+        /* ── Fire GA event ── */
         if (typeof gtag === 'function') {
             gtag('event', 'store_redirect', {
                 event_category: 'redirect',
