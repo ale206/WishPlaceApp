@@ -3,17 +3,38 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-    
-   
-    
-    <meta charset="UTF-8"> <!-- Updated charset -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Page title will be set by JS -->
-    <title id="page-title">Wishplace</title>
 
-   
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Wishplace | Find Homes Before They Hit the Market</title>
+    <meta name="description" content="Wishplace is the reverse real estate marketplace. Pin the place you love and let owners contact you directly. Discover off-market opportunities.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wishplace.app/">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Wishplace | Find Homes Before They Hit the Market">
+    <meta property="og:description" content="Stop searching. Start dreaming. Pin the place you love and let owners find you.">
+    <meta property="og:image" content="https://wishplace.app/assets/og-image.jpg">
+    <meta property="og:url" content="https://wishplace.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Wishplace">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wishplace | Find Homes Before They Hit the Market">
+    <meta name="twitter:description" content="Pin the place you love. Let owners find you.">
+    <meta name="twitter:image" content="https://wishplace.app/assets/og-image.jpg">
+
+    <!-- Geo -->
+    <meta name="geo.region" content="ES-CT">
+    <meta name="geo.placename" content="Barcelona">
 
     <!-- Consent Manager -->
     <script
@@ -24,52 +45,103 @@
             data-cmp-cdn="cdn.consentmanager.net"
             data-cmp-codesrc="16">
     </script>
-    
-    <!-- Google tag (gtag.js) -->
+
+    <!-- Google Analytics -->
     <script async data-cmp-noblock src="https://www.googletagmanager.com/gtag/js?id=G-YLJR19TYZF"></script>
     <script data-cmp-noblock>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
 
-        // Default: denied
         gtag('consent', 'default', {
-            'analytics_storage': 'denied',
-            'ad_storage': 'denied'
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            wait_for_update: 500
         });
 
         gtag('js', new Date());
         gtag('config', 'G-YLJR19TYZF');
+
+        window.addEventListener('cmpConsentGranted', function () {
+            gtag('consent', 'update', {
+                analytics_storage: 'granted',
+                ad_storage: 'granted'
+            });
+        });
     </script>
 
-    <!-- Load Lato Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-    
-    <link rel="canonical" href="https://wishplace.app/">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Wishplace",
+            "url": "https://wishplace.app",
+            "logo": "https://wishplace.app/assets/logo.png"
+        }
+    </script>
 
-  
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Wishplace",
+            "url": "https://wishplace.app",
+            "description": "Reverse real estate marketplace where users pin locations and owners contact them."
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is Wishplace?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Wishplace is a reverse real estate marketplace where buyers and renters choose locations and owners contact them directly."
+                    }
+                }
+            ]
+        }
+    </script>
+
+    <!-- Tailwind CDN: keep for now if you are not compiling CSS yet -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
         body {
             font-family: 'Lato', sans-serif;
         }
-        /* Style for the active language in the dropdown */
+
         .lang-option.active {
             font-weight: 700;
-            background-color: #f3f4f6; /* bg-gray-100 */
+            background-color: #f3f4f6;
         }
-        /* UPDATED: Loader CSS from your code */
-        .loader{width:1.25rem;height:1.25rem;border:2px solid #fff;border-right-color:transparent;border-radius:50%;animation:spin 0.8s linear infinite;display:inline-block;vertical-align:middle}
-        @keyframes spin{to{transform:rotate(360deg)}}
+
+        .loader {
+            width: 1.25rem;
+            height: 1.25rem;
+            border: 2px solid #fff;
+            border-right-color: transparent;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
     </style>
 
-   
-    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="assets/favicon/site.webmanifest" />
-
-   
-    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
 </head>
 
 <body class="bg-white text-gray-800 antialiased">
