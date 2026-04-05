@@ -107,6 +107,29 @@
         }
     </script>
 
+    <script>
+        function trackStoreClick(store, url) {
+            function go() {
+                window.open(url, '_blank');
+            }
+
+            if (typeof gtag === 'function') {
+                gtag('event', 'store_click', {
+                    store: store,
+                    platform: store === 'app_store' ? 'ios' : 'android',
+                    location: 'homepage',
+                    event_callback: go
+                });
+
+                setTimeout(go, 200);
+            } else {
+                go();
+            }
+
+            return false;
+        }
+    </script>
+
     <!-- Tailwind CDN: keep for now if you are not compiling CSS yet -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -415,24 +438,21 @@
             <!-- Download Buttons -->
             <div class="flex flex-col sm:flex-row justify-center items-center gap-6 max-w-2xl mx-auto">
                 <!-- App Store Button -->
-                <a href="https://apps.apple.com/us/app/wishplace/id6755880713"
-                   target="_blank"
-                   rel="noopener noreferrer"
+                <a href="#"
+                   onclick="return trackStoreClick('app_store','https://apps.apple.com/us/app/wishplace/id6755880713')"
                    class="flex items-center justify-center transition-transform hover:scale-105">
                     <img src="assets/img/download-appstore-black.svg"
                          alt="Download on App Store"
-                         class="h-14"
-                         data-key="downloadAppStoreAlt">
+                         class="h-14">
                 </a>
+                
                 <!-- Google Play Button -->
-                <a href="https://play.google.com/store/apps/details?id=com.wishplace.wishplace"
-                   target="_blank"
-                   rel="noopener noreferrer"
+                <a href="#"
+                   onclick="return trackStoreClick('google_play','https://play.google.com/store/apps/details?id=com.wishplace.wishplace')"
                    class="flex items-center justify-center transition-transform hover:scale-105">
                     <img src="assets/img/download-google-play-black.svg"
                          alt="Get it on Google Play"
-                         class="h-14"
-                         data-key="downloadGooglePlayAlt">
+                         class="h-14">
                 </a>
             </div>
         </div>
