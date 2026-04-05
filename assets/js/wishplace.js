@@ -1,18 +1,18 @@
-let referralCode = "";
-async function sha(s) {
-    const enc = new TextEncoder().encode(s);
-    const hash = await crypto.subtle.digest("SHA-256", enc);
-    return [...new Uint8Array(hash)]
-        .map(b => b.toString(16).padStart(2, "0"))
-        .join('')
-        .slice(0, 8);
-}
+// let referralCode = "";
+// async function sha(s) {
+//     const enc = new TextEncoder().encode(s);
+//     const hash = await crypto.subtle.digest("SHA-256", enc);
+//     return [...new Uint8Array(hash)]
+//         .map(b => b.toString(16).padStart(2, "0"))
+//         .join('')
+//         .slice(0, 8);
+// }
 document.addEventListener('DOMContentLoaded', () => {
-    const notifyForm = document.getElementById('notify-form');
-    const emailInput = document.getElementById('email-input');
+    // const notifyForm = document.getElementById('notify-form');
+    // const emailInput = document.getElementById('email-input');
     const countrySelect = document.getElementById('country-select');
-    const messageBox = document.getElementById('message-box');
-    const closeButton = document.getElementById('close-button');
+    // const messageBox = document.getElementById('message-box');
+    // const closeButton = document.getElementById('close-button');
     const userTypeSelect = document.getElementById('user-type-select');
     const messageInput = document.getElementById('message-input');
 
@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const supportedLangs = ['en', 'it', 'es', 'fr', 'ca', 'de', 'ru', 'zh', 'zh-TW', 'pt', 'ja', 'nl', 'el', 'ar', 'ko', 'et', 'uk', 'lb'];
 
     // Capture referral parameter from URL (store in global)
-    const urlParams = new URLSearchParams(window.location.search);
-    referralCode = urlParams.get("ref") || "";
+    // const urlParams = new URLSearchParams(window.location.search);
+    // referralCode = urlParams.get("ref") || "";
     
     if (countrySelect) {
         // Don’t touch the first placeholder <option>, just append the rest
@@ -170,226 +170,226 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
+//document.addEventListener('DOMContentLoaded', () => {
     // This logic runs after the first DOMContentLoaded, so i18n translations are ready
 
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw6_ziv-zh0vbUlg_AmZafrNO06NP4yYkwSsr32ptGhs7YV_DNP5i9GonlLQ1i3O8lz/exec'; // URL Web App
+    //const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw6_ziv-zh0vbUlg_AmZafrNO06NP4yYkwSsr32ptGhs7YV_DNP5i9GonlLQ1i3O8lz/exec'; // URL Web App
 
-    const form = document.getElementById('notify-form');
-    const btn = document.getElementById('notify-submit');
-    const consent = document.getElementById('consent-checkbox');
-    const consentLabel = document.getElementById('consent-label');
-    const emailInput = document.getElementById('email-input');
-    const countrySelectEl = document.getElementById('country-select');
-    const userTypeSelectEl = document.getElementById('user-type-select');
-    const messageInput = document.getElementById('message-input');
-    const formErrorDiv = document.getElementById('form-error-message');
-    const referralLinkInput = document.getElementById('referral-link');
-    const copyReferralBtn = document.getElementById('copy-referral');
-    const referralCopyFeedback = document.getElementById('referral-feedback');
+    // const form = document.getElementById('notify-form');
+    // const btn = document.getElementById('notify-submit');
+    // const consent = document.getElementById('consent-checkbox');
+    // const consentLabel = document.getElementById('consent-label');
+    // const emailInput = document.getElementById('email-input');
+    // const countrySelectEl = document.getElementById('country-select');
+    // const userTypeSelectEl = document.getElementById('user-type-select');
+    // const messageInput = document.getElementById('message-input');
+    // const formErrorDiv = document.getElementById('form-error-message');
+    // const referralLinkInput = document.getElementById('referral-link');
+    // const copyReferralBtn = document.getElementById('copy-referral');
+    // const referralCopyFeedback = document.getElementById('referral-feedback');
 
-    if (!form || !btn || !consent || !consentLabel || !emailInput || !countrySelectEl || !userTypeSelectEl || !formErrorDiv) {
-        return;
-    }
-
-    // Store original button text (which is set by i18n)
-    let originalBtnText = btn.innerHTML;
-    // Update it if language changes
-    new MutationObserver(() => {
-        if (!btn.disabled) {
-            originalBtnText = btn.innerHTML;
-        }
-    }).observe(btn, {childList: true});
-
-
-    // Consent checkbox logic (no auto-disabling of button)
-    consent.addEventListener('change', () => {
-        consentLabel.classList.remove('text-red-600', 'font-semibold');
-        consentLabel.classList.add('text-gray-700');
-        consent.classList.remove('ring-2', 'ring-red-500');
-    });
-
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        // --- Honeypot check ---
-        const honeypot = form.querySelector('input[name="gotcha"]');
-        if (honeypot && honeypot.value) {
-            console.log("Bot submission detected.");
-            return; // Silently fail for bots
-        }
-        // --- End Honeypot check ---
-
-        // Get current translations
-        const langStrings = translations[currentLang] || translations['en'];
-        let errorMessages = [];
-
-        // Reset previous error states
-        consentLabel.classList.remove('text-red-600', 'font-semibold');
-        consentLabel.classList.add('text-gray-700');
-        consent.classList.remove('ring-2', 'ring-red-500');
-        emailInput.classList.remove('border-red-500', 'focus:ring-red-500');
-        emailInput.classList.add('border-gray-300', 'focus:ring-blue-500');
-        countrySelectEl.classList.remove('border-red-500', 'focus:ring-red-500');
-        countrySelectEl.classList.add('border-gray-300', 'focus:ring-blue-500');
-        userTypeSelectEl.classList.remove('border-red-500', 'focus:ring-red-500'); // NEW
-        userTypeSelectEl.classList.add('border-gray-300', 'focus:ring-blue-500'); // NEW
-        formErrorDiv.classList.add('hidden');
-        formErrorDiv.innerHTML = '';
-
-        let hasError = false;
-
-        // Consent feedback
-        if (!consent.checked) {
-            consentLabel.classList.remove('text-gray-700');
-            consentLabel.classList.add('text-red-600', 'font-semibold');
-            consent.classList.add('ring-2', 'ring-red-500');
-            errorMessages.push(langStrings.formErrorConsent);
-            hasError = true;
-        }
-
-        // Email feedback (custom regex) - red border only
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(emailInput.value.trim())) {
-            emailInput.classList.remove('border-gray-300', 'focus:ring-blue-500');
-            emailInput.classList.add('border-red-500', 'focus:ring-red-500');
-            errorMessages.push(langStrings.formErrorEmail);
-            hasError = true;
-        }
-
-        // NEW: User Type feedback
-        if (!userTypeSelectEl.value) {
-            userTypeSelectEl.classList.remove('border-gray-300', 'focus:ring-blue-500');
-            userTypeSelectEl.classList.add('border-red-500', 'focus:ring-red-500');
-            errorMessages.push(langStrings.formErrorUserType);
-            hasError = true;
-        }
-
-        // Country feedback
-        if (!countrySelectEl.value) {
-            countrySelectEl.classList.remove('border-gray-300', 'focus:ring-blue-500');
-            countrySelectEl.classList.add('border-red-500', 'focus:ring-red-500');
-            errorMessages.push(langStrings.formErrorCountry);
-            hasError = true;
-        }
-
-        // --- MESSAGE (optional but max 1000 chars) ---
-        if (messageInput && messageInput.value.trim().length > 1000) {
-            messageInput.classList.remove('border-gray-300', 'focus:ring-blue-500');
-            messageInput.classList.add('border-red-500', 'focus:ring-red-500');
-
-            errorMessages.push(langStrings.formErrorMessageTooLong || "Message is too long (max 1000 characters).");
-            hasError = true;
-        }
-
-        if (hasError) {
-            formErrorDiv.innerHTML = errorMessages.join('<br>');
-            formErrorDiv.classList.remove('hidden');
-            return;
-        }
-
-        // Email used for referral code
-        const email = emailInput.value.trim();
-        let code = "";
-
-        // --- Start Submission ---
-        btn.disabled = true;
-        btn.setAttribute('aria-busy', 'true');
-        btn.classList.add('opacity-75', 'cursor-not-allowed');
-
-        const loadingText = langStrings.formLoadingText || 'Sending…';
-        btn.innerHTML = '<span class="loader" aria-hidden="true"></span><span class="ml-2">' + loadingText + '</span>';
-
-        // Resolve client IP before submit
-        let clientIp = '';
-        try {
-            const ipRes = await fetch('https://api.ipify.org?format=json');
-            const ipJson = await ipRes.json();
-            clientIp = ipJson.ip || '';
-        } catch (_) { /* ignore */
-        }
-
-        code = await sha(email);
-
-        const fd = new FormData(form);
-        fd.append('ua', navigator.userAgent);
-        fd.append('ip', clientIp);
-        fd.append('ref', referralCode);
-        fd.append('referral_code', code);
-        
-        try {
-            await fetch(SCRIPT_URL, {method: 'POST', body: fd, mode: 'no-cors'});
-
-            const link = `${window.location.origin}${window.location.pathname}?ref=${code}`;
-            const modalTextEl = document.querySelector('[data-key="modalText"]');
-            if (modalTextEl) {
-                const shareTemplate = (langStrings.referralShareMessage
-                    || `You're on the list!<br><br>Share this link to get launch rewards:<br><strong>{link}</strong>`);
-                modalTextEl.innerHTML = shareTemplate.replace('{link}', link);
-            }
-            if (referralLinkInput) {
-                referralLinkInput.value = link;
-            }
-
-            // Show confirmation popup
-            const messageBox = document.getElementById('message-box');
-            const closeButton = document.getElementById('close-button');
-
-            // Reset form fields
-            emailInput.value = '';
-            countrySelectEl.value = '';
-            countrySelectEl.classList.add('text-gray-500');
-            countrySelectEl.classList.remove('text-gray-900');
-            userTypeSelectEl.value = ''; // NEW
-            userTypeSelectEl.classList.add('text-gray-500'); // NEW
-            userTypeSelectEl.classList.remove('text-gray-900'); // NEW
-            consent.checked = false; // reset consent
-            if (messageInput) {
-                messageInput.value = ''; // NEW
-            }
-
-            if (messageBox) messageBox.classList.remove('hidden');
-
-            // Handlers to close popup
-            if (closeButton && messageBox) {
-                closeButton.onclick = () => messageBox.classList.add('hidden');
-                messageBox.onclick = (ev) => {
-                    if (ev.target === messageBox) messageBox.classList.add('hidden');
-                };
-            }
-        } catch (err) {
-            // REPLACED ALERT with inline error
-            formErrorDiv.innerHTML = langStrings.formErrorDefault || 'An error occurred. Please try again later.';
-            formErrorDiv.classList.remove('hidden');
-        } finally {
-            // Restore button state
-            btn.disabled = false;
-            btn.removeAttribute('aria-busy');
-            btn.classList.remove('opacity-75', 'cursor-not-allowed');
-            btn.innerHTML = originalBtnText; // Restore original translated text
-        }
-    });
-
-    if (copyReferralBtn && referralLinkInput) {
-        copyReferralBtn.addEventListener('click', async () => {
-            const linkToCopy = referralLinkInput.value.trim();
-            if (!linkToCopy) {
-                return;
-            }
-            try {
-                await navigator.clipboard.writeText(linkToCopy);
-                if (referralCopyFeedback) {
-                    const ls = translations[currentLang] || translations['en'];
-                    const successText = ls.modalCopySuccess || 'Link copied to clipboard.';
-                    referralCopyFeedback.textContent = successText;
-                    referralCopyFeedback.classList.remove('hidden');
-                    setTimeout(() => {
-                        referralCopyFeedback.classList.add('hidden');
-                    }, 2500);
-                }
-            } catch (err) {
-                console.error('Clipboard copy failed', err);
-            }
-        });
-    }
-});
+//     if (!form || !btn || !consent || !consentLabel || !emailInput || !countrySelectEl || !userTypeSelectEl || !formErrorDiv) {
+//         return;
+//     }
+//
+//     // Store original button text (which is set by i18n)
+//     let originalBtnText = btn.innerHTML;
+//     // Update it if language changes
+//     new MutationObserver(() => {
+//         if (!btn.disabled) {
+//             originalBtnText = btn.innerHTML;
+//         }
+//     }).observe(btn, {childList: true});
+//
+//
+//     // Consent checkbox logic (no auto-disabling of button)
+//     consent.addEventListener('change', () => {
+//         consentLabel.classList.remove('text-red-600', 'font-semibold');
+//         consentLabel.classList.add('text-gray-700');
+//         consent.classList.remove('ring-2', 'ring-red-500');
+//     });
+//
+//     form.addEventListener('submit', async (e) => {
+//         e.preventDefault();
+//
+//         // --- Honeypot check ---
+//         const honeypot = form.querySelector('input[name="gotcha"]');
+//         if (honeypot && honeypot.value) {
+//             console.log("Bot submission detected.");
+//             return; // Silently fail for bots
+//         }
+//         // --- End Honeypot check ---
+//
+//         // Get current translations
+//         const langStrings = translations[currentLang] || translations['en'];
+//         let errorMessages = [];
+//
+//         // Reset previous error states
+//         consentLabel.classList.remove('text-red-600', 'font-semibold');
+//         consentLabel.classList.add('text-gray-700');
+//         consent.classList.remove('ring-2', 'ring-red-500');
+//         emailInput.classList.remove('border-red-500', 'focus:ring-red-500');
+//         emailInput.classList.add('border-gray-300', 'focus:ring-blue-500');
+//         countrySelectEl.classList.remove('border-red-500', 'focus:ring-red-500');
+//         countrySelectEl.classList.add('border-gray-300', 'focus:ring-blue-500');
+//         userTypeSelectEl.classList.remove('border-red-500', 'focus:ring-red-500'); // NEW
+//         userTypeSelectEl.classList.add('border-gray-300', 'focus:ring-blue-500'); // NEW
+//         formErrorDiv.classList.add('hidden');
+//         formErrorDiv.innerHTML = '';
+//
+//         let hasError = false;
+//
+//         // Consent feedback
+//         if (!consent.checked) {
+//             consentLabel.classList.remove('text-gray-700');
+//             consentLabel.classList.add('text-red-600', 'font-semibold');
+//             consent.classList.add('ring-2', 'ring-red-500');
+//             errorMessages.push(langStrings.formErrorConsent);
+//             hasError = true;
+//         }
+//
+//         // Email feedback (custom regex) - red border only
+//         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//         if (!emailPattern.test(emailInput.value.trim())) {
+//             emailInput.classList.remove('border-gray-300', 'focus:ring-blue-500');
+//             emailInput.classList.add('border-red-500', 'focus:ring-red-500');
+//             errorMessages.push(langStrings.formErrorEmail);
+//             hasError = true;
+//         }
+//
+//         // NEW: User Type feedback
+//         if (!userTypeSelectEl.value) {
+//             userTypeSelectEl.classList.remove('border-gray-300', 'focus:ring-blue-500');
+//             userTypeSelectEl.classList.add('border-red-500', 'focus:ring-red-500');
+//             errorMessages.push(langStrings.formErrorUserType);
+//             hasError = true;
+//         }
+//
+//         // Country feedback
+//         if (!countrySelectEl.value) {
+//             countrySelectEl.classList.remove('border-gray-300', 'focus:ring-blue-500');
+//             countrySelectEl.classList.add('border-red-500', 'focus:ring-red-500');
+//             errorMessages.push(langStrings.formErrorCountry);
+//             hasError = true;
+//         }
+//
+//         // --- MESSAGE (optional but max 1000 chars) ---
+//         if (messageInput && messageInput.value.trim().length > 1000) {
+//             messageInput.classList.remove('border-gray-300', 'focus:ring-blue-500');
+//             messageInput.classList.add('border-red-500', 'focus:ring-red-500');
+//
+//             errorMessages.push(langStrings.formErrorMessageTooLong || "Message is too long (max 1000 characters).");
+//             hasError = true;
+//         }
+//
+//         if (hasError) {
+//             formErrorDiv.innerHTML = errorMessages.join('<br>');
+//             formErrorDiv.classList.remove('hidden');
+//             return;
+//         }
+//
+//         // Email used for referral code
+//         const email = emailInput.value.trim();
+//         let code = "";
+//
+//         // --- Start Submission ---
+//         btn.disabled = true;
+//         btn.setAttribute('aria-busy', 'true');
+//         btn.classList.add('opacity-75', 'cursor-not-allowed');
+//
+//         const loadingText = langStrings.formLoadingText || 'Sending…';
+//         btn.innerHTML = '<span class="loader" aria-hidden="true"></span><span class="ml-2">' + loadingText + '</span>';
+//
+//         // Resolve client IP before submit
+//         let clientIp = '';
+//         try {
+//             const ipRes = await fetch('https://api.ipify.org?format=json');
+//             const ipJson = await ipRes.json();
+//             clientIp = ipJson.ip || '';
+//         } catch (_) { /* ignore */
+//         }
+//
+//         code = await sha(email);
+//
+//         const fd = new FormData(form);
+//         fd.append('ua', navigator.userAgent);
+//         fd.append('ip', clientIp);
+//         fd.append('ref', referralCode);
+//         fd.append('referral_code', code);
+//        
+//         try {
+//             await fetch(SCRIPT_URL, {method: 'POST', body: fd, mode: 'no-cors'});
+//
+//             const link = `${window.location.origin}${window.location.pathname}?ref=${code}`;
+//             const modalTextEl = document.querySelector('[data-key="modalText"]');
+//             if (modalTextEl) {
+//                 const shareTemplate = (langStrings.referralShareMessage
+//                     || `You're on the list!<br><br>Share this link to get launch rewards:<br><strong>{link}</strong>`);
+//                 modalTextEl.innerHTML = shareTemplate.replace('{link}', link);
+//             }
+//             if (referralLinkInput) {
+//                 referralLinkInput.value = link;
+//             }
+//
+//             // Show confirmation popup
+//             const messageBox = document.getElementById('message-box');
+//             const closeButton = document.getElementById('close-button');
+//
+//             // Reset form fields
+//             emailInput.value = '';
+//             countrySelectEl.value = '';
+//             countrySelectEl.classList.add('text-gray-500');
+//             countrySelectEl.classList.remove('text-gray-900');
+//             userTypeSelectEl.value = ''; // NEW
+//             userTypeSelectEl.classList.add('text-gray-500'); // NEW
+//             userTypeSelectEl.classList.remove('text-gray-900'); // NEW
+//             consent.checked = false; // reset consent
+//             if (messageInput) {
+//                 messageInput.value = ''; // NEW
+//             }
+//
+//             if (messageBox) messageBox.classList.remove('hidden');
+//
+//             // Handlers to close popup
+//             if (closeButton && messageBox) {
+//                 closeButton.onclick = () => messageBox.classList.add('hidden');
+//                 messageBox.onclick = (ev) => {
+//                     if (ev.target === messageBox) messageBox.classList.add('hidden');
+//                 };
+//             }
+//         } catch (err) {
+//             // REPLACED ALERT with inline error
+//             formErrorDiv.innerHTML = langStrings.formErrorDefault || 'An error occurred. Please try again later.';
+//             formErrorDiv.classList.remove('hidden');
+//         } finally {
+//             // Restore button state
+//             btn.disabled = false;
+//             btn.removeAttribute('aria-busy');
+//             btn.classList.remove('opacity-75', 'cursor-not-allowed');
+//             btn.innerHTML = originalBtnText; // Restore original translated text
+//         }
+//     });
+//
+//     if (copyReferralBtn && referralLinkInput) {
+//         copyReferralBtn.addEventListener('click', async () => {
+//             const linkToCopy = referralLinkInput.value.trim();
+//             if (!linkToCopy) {
+//                 return;
+//             }
+//             try {
+//                 await navigator.clipboard.writeText(linkToCopy);
+//                 if (referralCopyFeedback) {
+//                     const ls = translations[currentLang] || translations['en'];
+//                     const successText = ls.modalCopySuccess || 'Link copied to clipboard.';
+//                     referralCopyFeedback.textContent = successText;
+//                     referralCopyFeedback.classList.remove('hidden');
+//                     setTimeout(() => {
+//                         referralCopyFeedback.classList.add('hidden');
+//                     }, 2500);
+//                 }
+//             } catch (err) {
+//                 console.error('Clipboard copy failed', err);
+//             }
+//         });
+//     }
+// });
