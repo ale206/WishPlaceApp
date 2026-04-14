@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishplace - Google Ad</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLJR19TYZF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YLJR19TYZF');
+    </script>
+</head>
+<body>
+<script>
+    (function () {
+        var IOS_URL = "https://apps.apple.com/us/app/wishplace/id6755880713";
+        var ANDROID_URL = "https://play.google.com/store/apps/details?id=com.wishplace.wishplace";
+        var HOME_URL = "https://wishplace.app";
+
+        var ua = navigator.userAgent || navigator.vendor || window.opera || '';
+        var dest, store, platform;
+
+        if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+            dest = IOS_URL;
+            store = 'app_store';
+            platform = 'ios';
+        } else if (/android/i.test(ua)) {
+            dest = ANDROID_URL;
+            store = 'google_play';
+            platform = 'android';
+        } else {
+            dest = HOME_URL;
+            store = 'none';
+            platform = 'desktop';
+        }
+
+        var redirected = false;
+
+        function go() {
+            if (redirected) return;
+            redirected = true;
+            window.location.replace(dest);
+        }
+
+        if (typeof gtag === 'function') {
+            gtag('event', 'store_redirect', {
+                event_category: 'redirect',
+                event_label: store,
+                store: store,
+                platform: platform,
+                source: 'googlead',
+                event_callback: go
+            });
+
+            setTimeout(go, 300);
+        } else {
+            go();
+        }
+    })();
+</script>
+</body>
+</html>
