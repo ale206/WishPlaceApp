@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FAQ | Wishplace</title>
+    <meta name="description" content="Frequently asked questions about Wishplace — the reverse real estate marketplace. Learn how it works, pricing, privacy and more.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wishplace.app/faq.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="FAQ | Wishplace">
+    <meta property="og:description" content="Frequently asked questions about Wishplace — the reverse real estate marketplace.">
+    <meta property="og:url" content="https://wishplace.app/faq.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Wishplace">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body { font-family: 'Lato', sans-serif; }
+        .lang-option.active { font-weight: 700; background-color: #f3f4f6; }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            padding-bottom: 0;
+        }
+        .faq-answer.open {
+            max-height: 600px;
+            padding-bottom: 1.25rem;
+        }
+        .faq-chevron { transition: transform 0.3s ease; }
+        .faq-chevron.open { transform: rotate(180deg); }
+    </style>
+
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+</head>
+
+<body class="bg-white text-gray-800 antialiased">
+
+<!-- Header -->
+<header class="sticky top-0 left-0 right-0 z-20 p-4 bg-white shadow-sm">
+    <div class="container mx-auto max-w-7xl px-4 flex justify-between items-center">
+        <h1 class="text-3xl font-bold text-blue-600">
+            <a href="https://wishplace.app">
+                <img width="300" height="100" src="assets/img/wishplace-logo-text.png" alt="Wishplace Logo" data-key="logoAlt">
+            </a>
+        </h1>
+
+        <nav class="hidden md:flex items-center space-x-4">
+            <a href="how-it-works.html" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition-colors" data-key="headerHowItWorks">How It Works</a>
+            <a href="faq.html" class="text-sm font-semibold text-blue-600" data-key="headerFaq">FAQ</a>
+            <a href="https://blog.wishplace.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition-colors" data-key="headerBlog">Blog</a>
+
+            <div class="relative" id="lang-switcher">
+                <button id="lang-button" class="flex items-center text-gray-600 hover:text-blue-600 p-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C13.18 6.062 14.11 6.5 15 7.003" />
+                    </svg>
+                    <span id="lang-current" class="text-sm font-medium">English</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </button>
+                <div id="lang-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-xl hidden z-30 border border-gray-100">
+                    <a href="#" data-lang="en" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">English</a>
+                    <a href="#" data-lang="it" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Italiano</a>
+                    <a href="#" data-lang="es" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Español</a>
+                    <a href="#" data-lang="fr" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Français</a>
+                    <a href="#" data-lang="ca" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Català</a>
+                    <a href="#" data-lang="de" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Deutsch</a>
+                    <a href="#" data-lang="pt" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Português</a>
+                </div>
+            </div>
+        </nav>
+
+        <button id="mobile-menu-button" class="md:hidden flex items-center text-gray-600 hover:text-blue-600 p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100">
+        <nav class="flex flex-col space-y-3 pt-4 px-4">
+            <a href="how-it-works.html" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition-colors" data-key="headerHowItWorks">How It Works</a>
+            <a href="faq.html" class="text-sm font-semibold text-blue-600" data-key="headerFaq">FAQ</a>
+            <a href="https://blog.wishplace.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition-colors" data-key="headerBlog">Blog</a>
+            <div class="relative" id="lang-switcher-mobile">
+                <button id="lang-button-mobile" class="flex items-center text-gray-600 hover:text-blue-600 p-1">
+                    <span id="lang-current-mobile" class="text-sm font-medium">English</span>
+                </button>
+                <div id="lang-dropdown-mobile" class="mt-2 w-32 bg-white rounded-lg shadow-xl hidden z-30 border border-gray-100">
+                    <a href="#" data-lang="en" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">English</a>
+                    <a href="#" data-lang="it" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Italiano</a>
+                    <a href="#" data-lang="es" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Español</a>
+                    <a href="#" data-lang="fr" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Français</a>
+                    <a href="#" data-lang="ca" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Català</a>
+                    <a href="#" data-lang="de" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Deutsch</a>
+                    <a href="#" data-lang="pt" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Português</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- FAQ Content -->
+<main>
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto max-w-3xl px-6">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-4 text-gray-900" id="faq-title">Frequently Asked Questions</h2>
+            <p class="text-lg text-gray-600 text-center mb-12" id="faq-subtitle">Everything you need to know about Wishplace.</p>
+
+            <div id="faq-list" class="space-y-4">
+                <!-- FAQ items will be rendered by JS -->
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="/" class="text-blue-600 font-semibold hover:underline" data-key="backToHome">← Back to Home</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="py-8 bg-white text-gray-500 border-t border-gray-200">
+    <div class="container mx-auto px-6 text-center">
+        <p data-key="footerText">&copy; 2026 Wishplace. All rights reserved.</p>
+        <div class="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm">
+            <a href="how-it-works.html" class="hover:text-blue-600 transition-colors" data-key="footerHowItWorks">How It Works</a>
+            <span class="text-gray-300">|</span>
+            <a href="faq.html" class="hover:text-blue-600 transition-colors" data-key="footerFaq">FAQ</a>
+            <span class="text-gray-300">|</span>
+            <a href="https://blog.wishplace.app/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors" data-key="footerBlog">Blog</a>
+            <span class="text-gray-300">|</span>
+            <a href="legal/privacy-enGB.html" id="privacy-link" class="hover:text-blue-600 transition-colors" data-key="footerPrivacy">Privacy Policy</a>
+            <span class="text-gray-300">|</span>
+            <a href="legal/privacy-enGB.html" id="cookie-link" class="hover:text-blue-600 transition-colors" data-key="footerCookie">Cookie Policy</a>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/translations/en.js"></script>
+<script src="assets/js/translations/it.js"></script>
+<script src="assets/js/translations/es.js"></script>
+<script src="assets/js/translations/fr.js"></script>
+<script src="assets/js/translations/ca.js"></script>
+<script src="assets/js/translations/de.js"></script>
+<script src="assets/js/translations/pt.js"></script>
+<script src="assets/js/wishplace-translations.js"></script>
+<script src="assets/js/wishplace.js"></script>
+
+<script>
+    function renderFaq() {
+        const lang = currentLang || 'en';
+        const t = translations[lang] || translations['en'];
+
+        document.getElementById('faq-title').textContent = t.faqPageTitle || 'Frequently Asked Questions';
+        document.getElementById('faq-subtitle').textContent = t.faqPageSubtitle || '';
+
+        const list = document.getElementById('faq-list');
+        list.innerHTML = '';
+
+        const items = t.faqItems || [];
+
+        items.forEach((item, i) => {
+            // First 3 items start open
+            const isOpen = i < 3;
+            const openClass = isOpen ? ' open' : '';
+
+            const div = document.createElement('div');
+            div.className = 'border border-gray-200 rounded-lg';
+            div.innerHTML = `
+                <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none hover:bg-gray-50 transition-colors rounded-lg" onclick="toggleFaq(${i})">
+                    <span class="text-lg font-semibold text-gray-900 pr-4">${item.q}</span>
+                    <svg id="faq-chevron-${i}" class="faq-chevron${openClass} w-5 h-5 text-gray-400 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </button>
+                <div id="faq-answer-${i}" class="faq-answer${openClass}">
+                    <p class="text-gray-600 text-base leading-relaxed">${item.a}</p>
+                </div>
+            `;
+            list.appendChild(div);
+        });
+
+        // Build FAQPage structured data for SEO
+        buildFaqSchema(items);
+    }
+
+    function buildFaqSchema(items) {
+        // Remove any existing FAQ schema
+        const existing = document.getElementById('faq-schema');
+        if (existing) existing.remove();
+
+        const schema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": items.map(item => ({
+                "@type": "Question",
+                "name": item.q,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": item.a
+                }
+            }))
+        };
+
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.id = 'faq-schema';
+        script.textContent = JSON.stringify(schema);
+        document.head.appendChild(script);
+    }
+
+    function toggleFaq(index) {
+        const answer = document.getElementById('faq-answer-' + index);
+        const chevron = document.getElementById('faq-chevron-' + index);
+        answer.classList.toggle('open');
+        chevron.classList.toggle('open');
+    }
+
+    // Render FAQ after language is set
+    document.addEventListener('DOMContentLoaded', () => {
+        // Wait a tick for wishplace.js to initialize
+        setTimeout(renderFaq, 50);
+
+        // Observe lang changes by watching the html lang attribute
+        const observer = new MutationObserver(() => renderFaq());
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+    });
+</script>
+
+</body>
+</html>
+
