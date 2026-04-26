@@ -101,8 +101,8 @@
     <!-- Hero -->
     <section class="py-16 md:py-24 bg-gray-50">
         <div class="container mx-auto max-w-4xl px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900" id="how-title">How Wishplace Works</h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto" id="how-subtitle">A smarter way to find your next home — or your next buyer.</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900" id="how-title">How Wishplace Works</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed" id="how-subtitle"></p>
         </div>
     </section>
 
@@ -110,9 +110,7 @@
     <section class="py-16 md:py-20 bg-white">
         <div class="container mx-auto max-w-4xl px-6">
             <h3 class="text-3xl font-bold mb-10 text-blue-600" id="how-buyers-heading">For Buyers & Renters</h3>
-            <div id="how-buyer-steps" class="space-y-8">
-                <!-- Rendered by JS -->
-            </div>
+            <div id="how-buyer-steps" class="space-y-8"></div>
         </div>
     </section>
 
@@ -120,17 +118,59 @@
     <section class="py-16 md:py-20 bg-gray-50">
         <div class="container mx-auto max-w-4xl px-6">
             <h3 class="text-3xl font-bold mb-10 text-indigo-600" id="how-sellers-heading">For Sellers & Agencies</h3>
-            <div id="how-seller-steps" class="space-y-8">
-                <!-- Rendered by JS -->
-            </div>
+            <div id="how-seller-steps" class="space-y-8"></div>
+        </div>
+    </section>
+
+    <!-- AI Insights -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto max-w-4xl px-6">
+            <h3 class="text-3xl font-bold mb-4 text-blue-600" id="how-ai-title"></h3>
+            <p class="text-lg text-gray-600 mb-10 leading-relaxed" id="how-ai-text"></p>
+            <div id="how-ai-steps" class="space-y-8"></div>
+        </div>
+    </section>
+
+    <!-- Local Insights -->
+    <section class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto max-w-4xl px-6">
+            <h3 class="text-3xl font-bold mb-4 text-indigo-600" id="how-local-title"></h3>
+            <p class="text-lg text-gray-600 mb-10 leading-relaxed" id="how-local-text"></p>
+            <div id="how-local-steps" class="space-y-8"></div>
+        </div>
+    </section>
+
+    <!-- Savings & Transparency -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto max-w-4xl px-6">
+            <h3 class="text-3xl font-bold mb-4 text-blue-600" id="how-savings-title"></h3>
+            <p class="text-lg text-gray-600 mb-10 leading-relaxed" id="how-savings-text"></p>
+            <div id="how-savings-steps" class="space-y-8"></div>
+        </div>
+    </section>
+
+    <!-- Expiration -->
+    <section class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto max-w-4xl px-6">
+            <h3 class="text-3xl font-bold mb-4 text-indigo-600" id="how-expiration-title"></h3>
+            <p class="text-lg text-gray-600 mb-10 leading-relaxed" id="how-expiration-text"></p>
+            <div id="how-expiration-steps" class="space-y-8"></div>
+        </div>
+    </section>
+
+    <!-- Why Different -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto max-w-4xl px-6 text-center">
+            <h3 class="text-3xl font-bold mb-6 text-gray-900" id="how-extra-title"></h3>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed" id="how-extra-text"></p>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="py-16 md:py-20 bg-white">
+    <section class="py-16 md:py-20 bg-gray-50">
         <div class="container mx-auto max-w-3xl px-6 text-center">
-            <h3 class="text-3xl font-bold mb-4 text-gray-900" id="how-cta">Ready to get started?</h3>
-            <p class="text-lg text-gray-600 mb-8" id="how-cta-sub">Download Wishplace and find your dream home — or your next buyer.</p>
+            <h3 class="text-3xl font-bold mb-4 text-gray-900" id="how-cta"></h3>
+            <p class="text-lg text-gray-600 mb-8" id="how-cta-sub"></p>
 
             <div class="flex flex-col sm:flex-row justify-center items-center gap-6 max-w-2xl mx-auto mb-8">
                 <a href="https://apps.apple.com/us/app/wishplace/id6755880713" target="_blank" rel="noopener noreferrer"
@@ -177,37 +217,73 @@
 <script src="assets/js/wishplace.js"></script>
 
 <script>
-    function renderSteps(containerId, steps) {
+    function renderSteps(containerId, steps, accentColor) {
         const container = document.getElementById(containerId);
+        if (!container) return;
         container.innerHTML = '';
+        const bgColor = accentColor === 'indigo' ? 'bg-indigo-100 text-indigo-600' : 'bg-blue-100 text-blue-600';
 
         (steps || []).forEach((step, i) => {
             const div = document.createElement('div');
             div.className = 'flex items-start space-x-4';
             div.innerHTML = `
-                <div class="flex-shrink-0 w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold text-lg">${i + 1}</div>
+                <div class="flex-shrink-0 w-10 h-10 ${bgColor} rounded-full flex items-center justify-center font-bold text-lg">${i + 1}</div>
                 <div>
                     <h4 class="text-xl font-semibold text-gray-900 mb-1">${step.title}</h4>
-                    <p class="text-gray-600">${step.text}</p>
+                    <p class="text-gray-600 leading-relaxed">${step.text}</p>
                 </div>
             `;
             container.appendChild(div);
         });
     }
 
+    function setText(id, value) {
+        const el = document.getElementById(id);
+        if (el && value) el.textContent = value;
+        else if (el) el.textContent = '';
+    }
+
     function renderHowItWorks() {
         const lang = currentLang || 'en';
         const t = translations[lang] || translations['en'];
 
-        document.getElementById('how-title').textContent = t.howPageTitle || 'How Wishplace Works';
-        document.getElementById('how-subtitle').textContent = t.howPageSubtitle || '';
-        document.getElementById('how-buyers-heading').textContent = t.howPageForBuyers || 'For Buyers & Renters';
-        document.getElementById('how-sellers-heading').textContent = t.howPageForSellers || 'For Sellers & Agencies';
-        document.getElementById('how-cta').textContent = t.howPageCta || 'Ready to get started?';
-        document.getElementById('how-cta-sub').textContent = t.howPageCtaSub || '';
+        // Hero
+        setText('how-title', t.howPageTitle);
+        setText('how-subtitle', t.howPageSubtitle);
 
-        renderSteps('how-buyer-steps', t.howBuyerSteps);
-        renderSteps('how-seller-steps', t.howSellerSteps);
+        // Buyers & Sellers
+        setText('how-buyers-heading', t.howPageForBuyers);
+        setText('how-sellers-heading', t.howPageForSellers);
+        renderSteps('how-buyer-steps', t.howBuyerSteps, 'blue');
+        renderSteps('how-seller-steps', t.howSellerSteps, 'indigo');
+
+        // AI Insights
+        setText('how-ai-title', t.howPageAIInsightsTitle);
+        setText('how-ai-text', t.howPageAIInsightsText);
+        renderSteps('how-ai-steps', t.howAIInsightsSteps, 'blue');
+
+        // Local Insights
+        setText('how-local-title', t.howPageLocalInsightsTitle);
+        setText('how-local-text', t.howPageLocalInsightsText);
+        renderSteps('how-local-steps', t.howLocalInsightsSteps, 'indigo');
+
+        // Savings
+        setText('how-savings-title', t.howPageSavingsTitle);
+        setText('how-savings-text', t.howPageSavingsText);
+        renderSteps('how-savings-steps', t.howSavingsSteps, 'blue');
+
+        // Expiration
+        setText('how-expiration-title', t.howPageExpirationTitle);
+        setText('how-expiration-text', t.howPageExpirationText);
+        renderSteps('how-expiration-steps', t.howExpirationSteps, 'indigo');
+
+        // Why Different
+        setText('how-extra-title', t.howPageExtraTitle);
+        setText('how-extra-text', t.howPageExtraText);
+
+        // CTA
+        setText('how-cta', t.howPageCtaTitle);
+        setText('how-cta-sub', t.howPageCtaText);
     }
 
     document.addEventListener('DOMContentLoaded', () => {
