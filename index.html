@@ -11,6 +11,16 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://wishplace.app/">
 
+    <!-- Hreflang: help Google serve the right language -->
+    <link rel="alternate" hreflang="en" href="https://wishplace.app/">
+    <link rel="alternate" hreflang="it" href="https://wishplace.app/">
+    <link rel="alternate" hreflang="es" href="https://wishplace.app/">
+    <link rel="alternate" hreflang="fr" href="https://wishplace.app/">
+    <link rel="alternate" hreflang="ca" href="https://wishplace.app/">
+    <link rel="alternate" hreflang="de" href="https://wishplace.app/">
+    <link rel="alternate" hreflang="pt" href="https://wishplace.app/">
+    <link rel="alternate" hreflang="x-default" href="https://wishplace.app/">
+
     <!-- Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,10 +110,47 @@
                     "name": "What is Wishplace?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Wishplace is a reverse real estate marketplace where buyers and renters choose locations and owners contact them directly."
+                        "text": "Wishplace is the world's first reverse real estate marketplace. Instead of browsing listings, you pin the buildings where you'd like to live, set your budget and preferences, and let property owners or agencies contact you directly."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How does the reverse marketplace work?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Traditional platforms list properties and wait for buyers. Wishplace flips this: buyers and renters declare their interest in specific buildings, and owners who have availability can reach out via secure chat."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is Wishplace free to use?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Wishplace is free for buyers and renters. You can create your wishlist, set your preferences, and receive messages from owners at no cost."
                     }
                 }
             ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Wishplace",
+            "operatingSystem": "iOS, Android",
+            "applicationCategory": "LifestyleApplication",
+            "description": "The reverse real estate marketplace. Pin where you want to live, set your price, and let owners contact you.",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "ratingCount": "1"
+            }
         }
     </script>
 
@@ -683,7 +730,7 @@
     </div>
     
     <div class="container mx-auto px-6 text-center">
-        <p data-key="footerText">&copy; 2025 Wishplace. All rights reserved.</p>
+        <p data-key="footerText">&copy; 2026 Wishplace. All rights reserved.</p>
         <div class="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm">
             <a href="how-it-works.html" class="hover:text-blue-600 transition-colors" data-key="footerHowItWorks">How It Works</a>
             <span class="text-gray-300">|</span>
