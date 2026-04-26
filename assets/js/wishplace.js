@@ -22,14 +22,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const langDropdown = document.getElementById('lang-dropdown');
     const langCurrent = document.getElementById('lang-current');
     const langOptions = document.querySelectorAll('.lang-option');
-    const supportedLangs = ['en', 'it', 'es', 'fr', 'ca', 'de', 'ru', 'zh', 'zh-TW', 'pt', 'ja', 'nl', 'el', 'ar', 'ko', 'et', 'uk', 'lb'];
+    const supportedLangs = ['en', 'it', 'es', 'fr', 'ca', 'de', 'pt'];
+
+    // Mobile menu
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const langSwitcherMobile = document.getElementById('lang-switcher-mobile');
+    const langButtonMobile = document.getElementById('lang-button-mobile');
+    const langDropdownMobile = document.getElementById('lang-dropdown-mobile');
+    const langCurrentMobile = document.getElementById('lang-current-mobile');
+
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+
+    if (langButtonMobile && langDropdownMobile) {
+        langButtonMobile.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langDropdownMobile.classList.toggle('hidden');
+        });
+    }
 
     // Capture referral parameter from URL (store in global)
     // const urlParams = new URLSearchParams(window.location.search);
     // referralCode = urlParams.get("ref") || "";
     
-    if (countrySelect) {
-        // Don’t touch the first placeholder <option>, just append the rest
+    if (countrySelect && typeof COUNTRY_OPTIONS !== 'undefined') {
         COUNTRY_OPTIONS.forEach(({ code, name }) => {
             const opt = document.createElement('option');
             opt.value = code;
@@ -90,7 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update language switcher text
         const langOption = document.querySelector(`.lang-option[data-lang="${lang}"]`);
         if (langOption) {
-            langCurrent.textContent = langOption.textContent;
+            if (langCurrent) langCurrent.textContent = langOption.textContent;
+            if (langCurrentMobile) langCurrentMobile.textContent = langOption.textContent;
         }
 
         // Update active class in dropdown
@@ -100,20 +122,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Hide dropdown
-        langDropdown.classList.add('hidden');
+        if (langDropdown) langDropdown.classList.add('hidden');
+        if (langDropdownMobile) langDropdownMobile.classList.add('hidden');
     };
 
     // Toggle dropdown
-    langButton.addEventListener('click', (e) => {
-        e.stopPropagation();
-        langDropdown.classList.toggle('hidden');
-    });
+    if (langButton && langDropdown) {
+        langButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langDropdown.classList.toggle('hidden');
+        });
+    }
 
     // Close dropdown when clicking outside
     document.addEventListener('click', (e) => {
         // Check if langSwitcher exists before calling .contains
         if (langSwitcher && !langSwitcher.contains(e.target)) {
-            langDropdown.classList.add('hidden');
+            if (langDropdown) langDropdown.classList.add('hidden');
+        }
+        if (langSwitcherMobile && !langSwitcherMobile.contains(e.target)) {
+            if (langDropdownMobile) langDropdownMobile.classList.add('hidden');
+        }
+        if (mobileMenu && mobileMenuButton && !mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+            mobileMenu.classList.add('hidden');
         }
     });
 

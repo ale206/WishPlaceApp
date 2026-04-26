@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>How It Works | Wishplace</title>
+    <meta name="description" content="Learn how Wishplace works — the reverse real estate marketplace for buyers, renters, sellers and agencies.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wishplace.app/how-it-works.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body { font-family: 'Lato', sans-serif; }
+        .lang-option.active { font-weight: 700; background-color: #f3f4f6; }
+    </style>
+
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+</head>
+
+<body class="bg-white text-gray-800 antialiased">
+
+<!-- Header -->
+<header class="sticky top-0 left-0 right-0 z-20 p-4 bg-white shadow-sm">
+    <div class="container mx-auto max-w-7xl px-4 flex justify-between items-center">
+        <h1 class="text-3xl font-bold text-blue-600">
+            <a href="https://wishplace.app">
+                <img width="300" height="100" src="assets/img/wishplace-logo-text.png" alt="Wishplace Logo" data-key="logoAlt">
+            </a>
+        </h1>
+
+        <nav class="hidden md:flex items-center space-x-4">
+            <a href="how-it-works.html" class="text-sm font-semibold text-blue-600" data-key="headerHowItWorks">How It Works</a>
+            <a href="faq.html" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition-colors" data-key="headerFaq">FAQ</a>
+            <a href="https://blog.wishplace.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition-colors" data-key="headerBlog">Blog</a>
+
+            <div class="relative" id="lang-switcher">
+                <button id="lang-button" class="flex items-center text-gray-600 hover:text-blue-600 p-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C13.18 6.062 14.11 6.5 15 7.003" />
+                    </svg>
+                    <span id="lang-current" class="text-sm font-medium">English</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </button>
+                <div id="lang-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-xl hidden z-30 border border-gray-100">
+                    <a href="#" data-lang="en" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">English</a>
+                    <a href="#" data-lang="it" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Italiano</a>
+                    <a href="#" data-lang="es" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Español</a>
+                    <a href="#" data-lang="fr" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Français</a>
+                    <a href="#" data-lang="ca" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Català</a>
+                    <a href="#" data-lang="de" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Deutsch</a>
+                    <a href="#" data-lang="pt" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Português</a>
+                </div>
+            </div>
+        </nav>
+
+        <button id="mobile-menu-button" class="md:hidden flex items-center text-gray-600 hover:text-blue-600 p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100">
+        <nav class="flex flex-col space-y-3 pt-4 px-4">
+            <a href="how-it-works.html" class="text-sm font-semibold text-blue-600" data-key="headerHowItWorks">How It Works</a>
+            <a href="faq.html" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition-colors" data-key="headerFaq">FAQ</a>
+            <a href="https://blog.wishplace.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition-colors" data-key="headerBlog">Blog</a>
+            <div class="relative" id="lang-switcher-mobile">
+                <button id="lang-button-mobile" class="flex items-center text-gray-600 hover:text-blue-600 p-1">
+                    <span id="lang-current-mobile" class="text-sm font-medium">English</span>
+                </button>
+                <div id="lang-dropdown-mobile" class="mt-2 w-32 bg-white rounded-lg shadow-xl hidden z-30 border border-gray-100">
+                    <a href="#" data-lang="en" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">English</a>
+                    <a href="#" data-lang="it" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Italiano</a>
+                    <a href="#" data-lang="es" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Español</a>
+                    <a href="#" data-lang="fr" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Français</a>
+                    <a href="#" data-lang="ca" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Català</a>
+                    <a href="#" data-lang="de" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Deutsch</a>
+                    <a href="#" data-lang="pt" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Português</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- How It Works Content -->
+<main>
+    <!-- Hero -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto max-w-4xl px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900" id="how-title">How Wishplace Works</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed" id="how-subtitle"></p>
+        </div>
+    </section>
+
+    <!-- For Buyers -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto max-w-4xl px-6">
+            <h3 class="text-3xl font-bold mb-10 text-blue-600" id="how-buyers-heading">For Buyers & Renters</h3>
+            <div id="how-buyer-steps" class="space-y-8"></div>
+        </div>
+    </section>
+
+    <!-- For Sellers -->
+    <section class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto max-w-4xl px-6">
+            <h3 class="text-3xl font-bold mb-10 text-indigo-600" id="how-sellers-heading">For Sellers & Agencies</h3>
+            <div id="how-seller-steps" class="space-y-8"></div>
+        </div>
+    </section>
+
+    <!-- AI Insights -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto max-w-4xl px-6">
+            <h3 class="text-3xl font-bold mb-4 text-blue-600" id="how-ai-title"></h3>
+            <p class="text-lg text-gray-600 mb-10 leading-relaxed" id="how-ai-text"></p>
+            <div id="how-ai-steps" class="space-y-8"></div>
+        </div>
+    </section>
+
+    <!-- Local Insights -->
+    <section class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto max-w-4xl px-6">
+            <h3 class="text-3xl font-bold mb-4 text-indigo-600" id="how-local-title"></h3>
+            <p class="text-lg text-gray-600 mb-10 leading-relaxed" id="how-local-text"></p>
+            <div id="how-local-steps" class="space-y-8"></div>
+        </div>
+    </section>
+
+    <!-- Savings & Transparency -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto max-w-4xl px-6">
+            <h3 class="text-3xl font-bold mb-4 text-blue-600" id="how-savings-title"></h3>
+            <p class="text-lg text-gray-600 mb-10 leading-relaxed" id="how-savings-text"></p>
+            <div id="how-savings-steps" class="space-y-8"></div>
+        </div>
+    </section>
+
+    <!-- Expiration -->
+    <section class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto max-w-4xl px-6">
+            <h3 class="text-3xl font-bold mb-4 text-indigo-600" id="how-expiration-title"></h3>
+            <p class="text-lg text-gray-600 mb-10 leading-relaxed" id="how-expiration-text"></p>
+            <div id="how-expiration-steps" class="space-y-8"></div>
+        </div>
+    </section>
+
+    <!-- Why Different -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto max-w-4xl px-6 text-center">
+            <h3 class="text-3xl font-bold mb-6 text-gray-900" id="how-extra-title"></h3>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed" id="how-extra-text"></p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto max-w-3xl px-6 text-center">
+            <h3 class="text-3xl font-bold mb-4 text-gray-900" id="how-cta"></h3>
+            <p class="text-lg text-gray-600 mb-8" id="how-cta-sub"></p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 max-w-2xl mx-auto mb-8">
+                <a href="https://apps.apple.com/us/app/wishplace/id6755880713" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center justify-center transition-transform hover:scale-105">
+                    <img src="assets/img/download-appstore-black.svg" alt="Download on App Store" class="h-14">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.wishplace.wishplace" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center justify-center transition-transform hover:scale-105">
+                    <img src="assets/img/download-google-play-black.svg" alt="Get it on Google Play" class="h-14">
+                </a>
+            </div>
+
+            <a href="/" class="text-blue-600 font-semibold hover:underline" data-key="backToHome">← Back to Home</a>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="py-8 bg-white text-gray-500 border-t border-gray-200">
+    <div class="container mx-auto px-6 text-center">
+        <p data-key="footerText">&copy; 2026 Wishplace. All rights reserved.</p>
+        <div class="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm">
+            <a href="how-it-works.html" class="hover:text-blue-600 transition-colors" data-key="footerHowItWorks">How It Works</a>
+            <span class="text-gray-300">|</span>
+            <a href="faq.html" class="hover:text-blue-600 transition-colors" data-key="footerFaq">FAQ</a>
+            <span class="text-gray-300">|</span>
+            <a href="https://blog.wishplace.app/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors" data-key="footerBlog">Blog</a>
+            <span class="text-gray-300">|</span>
+            <a href="legal/privacy-enGB.html" id="privacy-link" class="hover:text-blue-600 transition-colors" data-key="footerPrivacy">Privacy Policy</a>
+            <span class="text-gray-300">|</span>
+            <a href="legal/privacy-enGB.html" id="cookie-link" class="hover:text-blue-600 transition-colors" data-key="footerCookie">Cookie Policy</a>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/translations/en.js"></script>
+<script src="assets/js/translations/it.js"></script>
+<script src="assets/js/translations/es.js"></script>
+<script src="assets/js/translations/fr.js"></script>
+<script src="assets/js/translations/ca.js"></script>
+<script src="assets/js/translations/de.js"></script>
+<script src="assets/js/translations/pt.js"></script>
+<script src="assets/js/wishplace-translations.js"></script>
+<script src="assets/js/wishplace.js"></script>
+
+<script>
+    function renderSteps(containerId, steps, accentColor) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        container.innerHTML = '';
+        const bgColor = accentColor === 'indigo' ? 'bg-indigo-100 text-indigo-600' : 'bg-blue-100 text-blue-600';
+
+        (steps || []).forEach((step, i) => {
+            const div = document.createElement('div');
+            div.className = 'flex items-start space-x-4';
+            div.innerHTML = `
+                <div class="flex-shrink-0 w-10 h-10 ${bgColor} rounded-full flex items-center justify-center font-bold text-lg">${i + 1}</div>
+                <div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-1">${step.title}</h4>
+                    <p class="text-gray-600 leading-relaxed">${step.text}</p>
+                </div>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    function setText(id, value) {
+        const el = document.getElementById(id);
+        if (el && value) el.textContent = value;
+        else if (el) el.textContent = '';
+    }
+
+    function renderHowItWorks() {
+        const lang = currentLang || 'en';
+        const t = translations[lang] || translations['en'];
+
+        // Hero
+        setText('how-title', t.howPageTitle);
+        setText('how-subtitle', t.howPageSubtitle);
+
+        // Buyers & Sellers
+        setText('how-buyers-heading', t.howPageForBuyers);
+        setText('how-sellers-heading', t.howPageForSellers);
+        renderSteps('how-buyer-steps', t.howBuyerSteps, 'blue');
+        renderSteps('how-seller-steps', t.howSellerSteps, 'indigo');
+
+        // AI Insights
+        setText('how-ai-title', t.howPageAIInsightsTitle);
+        setText('how-ai-text', t.howPageAIInsightsText);
+        renderSteps('how-ai-steps', t.howAIInsightsSteps, 'blue');
+
+        // Local Insights
+        setText('how-local-title', t.howPageLocalInsightsTitle);
+        setText('how-local-text', t.howPageLocalInsightsText);
+        renderSteps('how-local-steps', t.howLocalInsightsSteps, 'indigo');
+
+        // Savings
+        setText('how-savings-title', t.howPageSavingsTitle);
+        setText('how-savings-text', t.howPageSavingsText);
+        renderSteps('how-savings-steps', t.howSavingsSteps, 'blue');
+
+        // Expiration
+        setText('how-expiration-title', t.howPageExpirationTitle);
+        setText('how-expiration-text', t.howPageExpirationText);
+        renderSteps('how-expiration-steps', t.howExpirationSteps, 'indigo');
+
+        // Why Different
+        setText('how-extra-title', t.howPageExtraTitle);
+        setText('how-extra-text', t.howPageExtraText);
+
+        // CTA
+        setText('how-cta', t.howPageCtaTitle);
+        setText('how-cta-sub', t.howPageCtaText);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(renderHowItWorks, 50);
+        const observer = new MutationObserver(() => renderHowItWorks());
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+    });
+</script>
+
+</body>
+</html>
+
