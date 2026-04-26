@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://wishplace.app/sitemap.xml
+Sitemap: https://blog.wishplace.app/sitemap.xml
