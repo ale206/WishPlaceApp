@@ -3,63 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishplace - Il Palato</title>
+    <title>Wishplace | Il Palato</title>
+    <meta name="description" content="Continue to Wishplace from Il Palato using a direct store or website link.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://wishplace.app/download/ilpalato.html">
+    <style>
+        :root {
+            color-scheme: light;
+            --bg: #f7f8fb;
+            --card: #ffffff;
+            --text: #152033;
+            --muted: #5f6b84;
+            --primary: #1769ff;
+            --border: #dbe2ef;
+        }
 
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 100%);
+            color: var(--text);
+        }
+
+        main {
+            width: min(100%, 640px);
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 20px 60px rgba(21, 32, 51, 0.08);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            line-height: 1.05;
+            text-align: center;
+        }
+
+        .brand {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .brand img {
+            width: min(240px, 70vw);
+            height: auto;
+        }
+
+        .actions {
+            display: grid;
+            gap: 12px;
+            margin-top: 28px;
+            justify-items: center;
+        }
+
+        .button {
+            display: block;
+            padding: 16px 18px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid var(--border);
+            color: var(--text);
+            background: #fff;
+        }
+
+        .store-badge {
+            display: inline-block;
+        }
+
+        .store-badge img {
+            display: block;
+            width: 200px;
+            max-width: 100%;
+            height: auto;
+        }
+
+    </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLJR19TYZF"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-YLJR19TYZF');
+
+        function trackStoreClick(store) {
+            gtag('event', 'store_click', {
+                event_category: 'download',
+                event_label: store,
+                store: store,
+                source: 'ilpalato'
+            });
+        }
     </script>
 </head>
 <body>
-<script>
-    (function () {
-        var IOS_URL = "https://apps.apple.com/us/app/wishplace/id6755880713";
-        var ANDROID_URL = "https://play.google.com/store/apps/details?id=com.wishplace.wishplace";
-        var HOME_URL = "https://wishplace.app";
+<main>
+    <div class="brand">
+        <img src="../assets/img/wishplace-logo-text.png" alt="Wishplace">
+    </div>
 
-        var ua = navigator.userAgent || navigator.vendor || window.opera || '';
-        var dest, store, platform;
-
-        if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
-            dest = IOS_URL;
-            store = 'app_store';
-            platform = 'ios';
-        } else if (/android/i.test(ua)) {
-            dest = ANDROID_URL;
-            store = 'google_play';
-            platform = 'android';
-        } else {
-            dest = HOME_URL;
-            store = 'none';
-            platform = 'desktop';
-        }
-
-        var redirected = false;
-
-        function go() {
-            if (redirected) return;
-            redirected = true;
-            window.location.replace(dest);
-        }
-
-        if (typeof gtag === 'function') {
-            gtag('event', 'store_redirect', {
-                event_category: 'redirect',
-                event_label: store,
-                store: store,
-                platform: platform,
-                source: 'ilpalato',
-                event_callback: go
-            });
-
-            setTimeout(go, 300);
-        } else {
-            go();
-        }
-    })();
-</script>
+    <div class="actions">
+        <a class="store-badge" href="https://apps.apple.com/us/app/wishplace/id6755880713" onclick="trackStoreClick('app_store')">
+            <img src="../assets/img/download-appstore-black.svg" alt="Download on the App Store">
+        </a>
+        <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.wishplace.wishplace" onclick="trackStoreClick('google_play')">
+            <img src="../assets/img/download-google-play-black.svg" alt="Get it on Google Play">
+        </a>
+        <a class="button" href="https://wishplace.app" onclick="trackStoreClick('website')">Visit wishplace.app</a>
+    </div>
+</main>
 </body>
 </html>
