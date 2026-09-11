@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishplace – Política de Privacidad</title>
+    <title>Wishplace – Política de privacidad</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -80,133 +80,131 @@
     <script data-cmp-noblock>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            wait_for_update: 500
+        });
         gtag('js', new Date());
-
         gtag('config', 'G-YLJR19TYZF');
+        window.addEventListener('cmpConsentGranted', function () {
+            gtag('consent', 'update', {
+                analytics_storage: 'granted',
+                ad_storage: 'granted'
+            });
+        });
     </script>
 </head>
 <body>
-<div class="container">
-    <h1>Wishplace – Política de Privacidad</h1>
+<div class="container"><h1>Wishplace – Política de privacidad</h1>
 
     <div class="metadata">
-        <p><strong>Versión:</strong> 1.0.1</p>
-        <p><strong>Última actualización:</strong> 17 de julio de 2026</p>
-    </div>
+        <p><strong>Versión:</strong> 1.1.0</p>
+        <p><strong>Última actualización:</strong> 11 de septiembre de 2026</p>
+    </div><h2>1. Introducción</h2>
+    <p>Esta Política de Privacidad describe cómo la aplicación móvil Wishplace y el sitio web Wishplace.app (en conjunto, la "Plataforma") recopilan, utilizan y comparten datos personales. Wishplace es propiedad y está operado por Alessio Di Salvo, que actúa como un individuo (persona física) con sede en España ("el Controlador", "nosotros", "nos" o "nuestro").</p>
+    <p>Esta Política proporciona información sobre nuestro procesamiento; no es una solicitud de consentimiento general. Procesamos datos personales únicamente sobre las bases legales que se describen a continuación y de acuerdo con el Reglamento General de Protección de Datos (GDPR) y otras leyes aplicables.</p><h2>2. Responsable del tratamiento</h2>
+    <p><strong>Controlador:</strong> Alessio Di Salvo<br>
+        <strong>Dirección postal:</strong> Avinguda Diagonal, 08019 Barcelona, España<br>
+        <strong>Correo electrónico de contacto:</strong> alessio@wishplace.app</p>
+    <p>Si tiene alguna pregunta sobre esta Política de Privacidad o sus datos, comuníquese con nosotros a la dirección de correo electrónico proporcionada anteriormente.</p><h2>3. Datos personales que recopilamos</h2>
+    <p>Recopilamos información que usted nos proporciona directamente, así como información generada automáticamente cuando utiliza la Plataforma.</p>
 
-    <h2>1. Introducción</h2>
-    <p>Esta Política de Privacidad describe cómo Wishplace ("la Plataforma", "la App") recopila, utiliza y comparte su información personal. Wishplace es propiedad de y está operada por Alessio Di Salvo, actuando como persona física con base en España ("el Responsable", "nosotros", "nos" o "nuestro").</p>
-    <p>Al utilizar la Plataforma, usted acepta la recopilación y el uso de información de acuerdo con esta Política de Privacidad. Nos comprometemos a proteger su privacidad y a garantizar que sus datos personales se procesen de conformidad con el Reglamento General de Protección de Datos (RGPD) y otras leyes aplicables.</p>
-
-    <h2>2. Responsable del Tratamiento de los Datos</h2>
-    <p><strong>Responsable:</strong> Alessio Di Salvo<br>
-        <strong>Ubicación:</strong> España (UE)<br>
-        <strong>Correo electrónico de contacto:</strong> alessio[at]wishplace[dot]app</p>
-    <p>Para cualquier pregunta relacionada con esta Política de Privacidad o sus datos, póngase en contacto con nosotros a través de la dirección de correo electrónico facilitada anteriormente.</p>
-
-    <h2>3. Datos Personales que Recopilamos</h2>
-    <p>Recopilamos información que usted nos proporciona directamente, así como información generada automáticamente al utilizar la Plataforma.</p>
-
-    <h3>3.1 Datos de la Cuenta y del Perfil</h3>
+    <h3>3.1 Datos de cuenta y perfil</h3>
     <ul>
-        <li><strong>Información de Identidad:</strong> Nombre (facilitado por usted durante el registro o compartido por su proveedor de inicio de sesión social, como Apple o Google).</li>
-        <li><strong>Información de Contacto:</strong> Dirección de correo electrónico (facilitada por usted o compartida por su proveedor de inicio de sesión social).</li>
-        <li><strong>Información del Perfil:</strong> Foto de perfil (si se sube), cargo profesional (opcional) y breve biografía (opcional).</li>
+        <li><strong>Información de identidad:</strong> nombre (proporcionado por usted durante el registro o compartido por su proveedor de inicio de sesión social, como Apple o Google).</li>
+        <li><strong>Información de contacto:</strong> Dirección de correo electrónico (proporcionada por usted o compartida por su proveedor de inicio de sesión social).</li>
+        <li><strong>Información de perfil:</strong> foto de perfil (si está cargada), función profesional (opcional) y breve biografía (opcional).</li>
         <li><strong>Preferencias:</strong> Moneda preferida (por ejemplo, EUR).</li>
-        <li><strong>Identificadores de Autenticación:</strong> Identificadores únicos proporcionados por nuestro servicio de autenticación (por ejemplo, UID de Firebase).</li>
+        <li><strong>Identificadores de autenticación:</strong> identificadores únicos proporcionados por nuestro servicio de autenticación (por ejemplo, Firebase UID).</li>
     </ul>
 
-    <h3>3.2 Contenido Generado por el Usuario (UGC) y Preferencias de Búsqueda</h3>
-    <p>Recopilamos criterios detallados que usted introduce para definir sus "Wish Places" o requisitos de propiedad. Estos datos se utilizan específicamente para nuestro algoritmo de emparejamiento.</p>
+    <h3>3.2 Contenido generado por el usuario, listados y preferencias de búsqueda</h3>
+    <p>Recopilamos los criterios y el contenido que ingresa para crear Wish Places, listados de propiedades y listados de habitaciones. Estos datos se utilizan para proporcionar la función solicitada, incluida la coincidencia técnica y la comunicación de usuario a usuario.</p>
     <ul>
-        <li><strong>Preferencias de la Propiedad:</strong> Tipo de propiedad, rangos de precio, número de habitaciones/baños, superficie (m²), estado del amueblado, preferencias de planta, clase energética, tipo de calefacción, disponibilidad, políticas sobre mascotas, preferencias de jardín/balcón y requisitos de aparcamiento.</li>
-        <li><strong>Preferencias de Aparcamiento:</strong> Tipo de aparcamiento (garaje, plaza, etc.), rango de precio, cubierto/descubierto, disponibilidad de carga para vehículos eléctricos, acceso cerrado y presencia de cámaras de seguridad.</li>
-        <li><strong>Preferencias Geográficas (Wishplace):</strong> Nombres de ubicaciones, radio de búsqueda, ciudad, región, país y coordenadas GPS precisas (latitud/longitud) proporcionadas para búsquedas basadas en áreas.</li>
-        <li><strong>Comunicación:</strong> Mensajes enviados a través del Chat Directo de la Plataforma. Nota: Los mensajes están cifrados, pero se puede acceder a ellos para fines de moderación, investigación de denuncias o cumplimiento legal.</li>
+        <li><strong>Preferencias de propiedad:</strong> tipo de propiedad, rangos de precios, número de habitaciones/baños, superficie (m²), estado del mobiliario, preferencias de pisos, clase energética, tipo de calefacción, disponibilidad, políticas sobre mascotas, preferencias de jardín/balcón y requisitos de estacionamiento.</li>
+        <li><strong>Preferencias de estacionamiento:</strong> Tipo de estacionamiento (garaje, box, etc.), rango de precios, estado cubierto/descubierto, disponibilidad de carga para vehículos eléctricos, acceso privado y presencia de cámaras de seguridad.</li>
+        <li><strong>Preferencias geográficas (Wishplace):</strong> nombres de ubicaciones, radio de búsqueda, ciudad, región, país y coordenadas GPS precisas (latitud/longitud) proporcionadas para búsquedas basadas en áreas.</li>
+        <li><strong>Listados de habitaciones y búsquedas de habitaciones:</strong> la dirección o ubicación de la propiedad relevante, el precio de la habitación, la fecha de disponibilidad, la duración prevista, el mobiliario, las características del baño y de la habitación, los servicios públicos incluidos, la ocupación y las preferencias del hogar, y cualquier descripción, imagen u otro contenido que elija proporcionar.</li>
+        <li><strong>Declaración de listado de habitaciones:</strong> Cuando crea un listado de habitaciones, registramos su confirmación de que tiene derecho a publicarlo y de que su publicación y cualquier eventual alquiler cumplen con la ley aplicable. Este es un registro de su declaración, no una verificación por parte de Wishplace de los hechos subyacentes o del estado legal.</li>
+        <li><strong>Comunicación:</strong> Mensajes enviados a través del Chat Directo de la Plataforma. Nota: Los mensajes están cifrados, pero se puede acceder a ellos para moderación, investigación de informes o cumplimiento legal.</li>
     </ul>
 
-    <h3>3.3 Datos Técnicos y de Uso</h3>
+    <h3>3.3 Datos técnicos y de uso</h3>
     <ul>
-        <li><strong>Información del Dispositivo:</strong> Tipo de dispositivo, versión del sistema operativo e identificadores únicos del dispositivo.</li>
-        <li><strong>Datos de Registro:</strong> Direcciones IP (anonimizadas en la medida de lo posible), tiempos de acceso, fallos de la aplicación (crashes) y configuración del hardware.</li>
-        <li><strong>Analíticas:</strong> Información sobre cómo interactúa con la App (por ejemplo, funciones utilizadas, tiempo de permanencia).</li>
+        <li><strong>Datos de dispositivo, red y diagnóstico:</strong> tipo de dispositivo, sistema operativo y versión de la aplicación, identificadores técnicos, dirección IP, tiempos de acceso, informes de fallas, datos de rendimiento y errores, y configuraciones de hardware o red necesarias para diagnosticar y mejorar la aplicación.</li>
+        <li><strong>Ubicación y datos de mapas:</strong> ubicación precisa o aproximada del dispositivo cuando lo permita, y la dirección, coordenadas, interacciones de mapas y consultas de búsqueda que proporcione o seleccione. Estos datos se utilizan para proporcionar búsquedas basadas en la ubicación, mapas, autocompletar direcciones y Street View.</li>
+        <li><strong>Datos de análisis y medición de publicidad:</strong> información sobre cómo interactúa con la aplicación, como funciones utilizadas, tiempo invertido, activaciones de la aplicación, registros, vistas de la tienda de crédito, compras, listados, deseos y chats. Cuando sea necesario, la medición y el seguimiento de la publicidad se utilizan únicamente después de su consentimiento.</li>
+        <li><strong>Datos web y de consentimiento:</strong> cuando visita wishplace.app, podemos procesar información del navegador, dispositivo, IP, vistas de página, referencias y elección de consentimiento. El almacenamiento de publicidad o análisis no esenciales se desactiva hasta que se requiera el consentimiento. Puede cambiar o retirar su elección a través de los controles de consentimiento del sitio web.</li>
     </ul>
 
-    <h3>3.4 Datos de Compra</h3>
+    <h3>3.4 Datos de compra</h3>
     <ul>
-        <li><strong>Información de Transacción:</strong> Hacemos un seguimiento de los saldos de "Créditos" e identificadores del historial de compras.</li>
-        <li><strong>Procesamiento de Pagos:</strong> No recopilamos ni almacenamos los datos de su tarjeta de crédito o cuenta bancaria. Todas las transacciones financieras son gestionadas de forma segura por el App Store de Apple o el Google Play Store.</li>
-    </ul>
-
-    <h2>4. Finalidades y Base Legal del Tratamiento</h2>
-    <p>En virtud del RGPD, tratamos sus datos basándonos en los siguientes fundamentos jurídicos:</p>
+        <li><strong>Información de la transacción:</strong> realizamos un seguimiento de los saldos de crédito y los datos del historial de compras, incluida la tienda, el identificador del producto, el identificador de la transacción, el estado, el monto, la moneda y la información necesaria para verificar y restaurar una compra. Podemos recibir y conservar información sobre recibos o tokens de compra para ese fin.</li>
+        <li><strong>Procesamiento de pagos:</strong> No recopilamos ni almacenamos su tarjeta de crédito ni sus datos bancarios. Las compras son procesadas por Apple App Store o Google Play, que procesan los datos de pago según sus propios términos e información de privacidad.</li>
+    </ul><h2>4. Finalidades y Base Legal del Tratamiento</h2>
+    <p>Según el RGPD, procesamos sus datos en base a los siguientes fundamentos legales:</p>
     <ul>
-        <li><strong>Ejecución de un Contrato (Art. 6(1)(b) RGPD):</strong> Para proporcionar los servicios que ha solicitado, incluido el funcionamiento de nuestro algoritmo de emparejamiento y motor de recomendación patentado que conecta sus Preferencias de Búsqueda con anuncios relevantes. Esto también cubre la gestión de la cuenta y el uso de Créditos.</li>
-        <li><strong>Consentimiento (Art. 6(1)(a) RGPD):</strong> Para funciones opcionales o cuando usted elige explícitamente compartir ciertos datos (como fotos de perfil, ubicaciones GPS para búsquedas o imágenes de propiedades).</li>
-        <li><strong>Intereses Legítimos (Art. 6(1)(f) RGPD):</strong> Para mejorar nuestra Plataforma, garantizar la seguridad de la red y de la información, y prevenir actividades fraudulentas o el abuso del servicio. Esto incluye la investigación de informes de comportamiento inapropiado.</li>
-        <li><strong>Obligación Legal (Art. 6(1)(c) RGPD):</strong> Para cumplir con los requisitos fiscales, contables o legales aplicables.</li>
-    </ul>
+        <li><strong>Ejecución de un contrato (Art. 6(1)(b) GDPR):</strong> Para proporcionar las características técnicas que usted solicita, incluida la administración de cuentas, el uso de crédito, la publicación y administración de sus Wish Places, listados de propiedades o listados de habitaciones, haciendo coincidir preferencias y listados relevantes, y permitiendo comunicaciones de usuario a usuario.</li>
+        <li><strong>Consentimiento (Art. 6(1)(a) GDPR):</strong> para procesamiento opcional, incluidos análisis y medición o seguimiento de publicidad de Meta cuando se requiere consentimiento, y para permisos del dispositivo, como la ubicación precisa donde el sistema operativo requiere su permiso. Puede rechazar o retirar el consentimiento sin perder el acceso a las funciones principales de la Plataforma que no dependen de él.</li>
+        <li><strong>Intereses legítimos (Art. 6(1)(f) GDPR):</strong> Mejorar y proteger la Plataforma, garantizar la seguridad de la red y de la información, prevenir fraudes y abusos, investigar informes y establecer o defender reclamaciones legales. Consideramos la necesidad y el impacto de este procesamiento y no nos basamos en esta base cuando sus derechos e intereses prevalezcan sobre los nuestros.</li>
+        <li><strong>Obligación Legal (Art. 6(1)(c) RGPD):</strong> Cumplir con los requisitos fiscales, contables o legales aplicables.</li>
+    </ul><h2>5. Intercambio de datos y servicios de terceros</h2>
+    <p>No vendemos datos personales. Compartimos datos personales solo como se describe a continuación, cuando sea necesario para operar la Plataforma, cuando usted elija utilizar una función integrada, cuando dé su consentimiento o cuando estemos legalmente obligados a hacerlo.</p>
 
-    <h2>5. Intercambio de Datos y Servicios de Terceros</h2>
-    <p>No vendemos sus datos personales. Solo compartimos su información con proveedores de servicios externos que nos ayudan a operar la Plataforma (Infraestructura, Alojamiento, Servicios de IA y Analítica).</p>
-
-    <h3>5.1 Intercambio entre Usuarios (Agencias y Propietarios)</h3>
+    <h3>5.1 Compartir entre usuarios (incluidos los listados de habitaciones)</h3>
     <div class="warning-box">
-        <p><strong>Importante:</strong> Cuando usted inicia voluntariamente un chat o comparte su información de contacto/perfil con otro usuario (como una agencia inmobiliaria, un bróker profesional o un propietario privado) a través de la Plataforma, ese destinatario se convierte en un <strong>Responsable Independiente del Tratamiento</strong> de la información que usted le proporcione.</p>
-        <p>Wishplace no se hace responsable de cómo estos terceros usuarios utilizan, almacenan o protegen sus datos una vez que se han compartido con ellos. Recomendamos revisar las políticas de privacidad o las prácticas profesionales de cualquier agencia o usuario profesional con el que interactúe a través de la App.</p>
+        <p><strong>Importante:</strong> Para hacer posible una coincidencia o comunicación, la información relevante de su perfil, preferencias, listado o Listado de habitaciones puede estar disponible para el otro usuario como parte de la función de la Plataforma. Cuando inicia voluntariamente un chat o comparte información adicional de contacto, perfil, listado o sala con otro usuario (por ejemplo, un propietario privado, posible ocupante, agencia o profesional), ese destinatario puede procesar la información para sus propios fines y puede actuar como un <strong>controlador independiente</strong>.</p>
+        <p>Wishplace no controla cómo otro usuario usa, almacena o protege la información después de haberla compartido con él. No comparta información confidencial innecesaria. Antes de celebrar un acuerdo de venta, alquiler o alquiler de habitación, los usuarios deben realizar sus propias consultas sobre la otra parte y, cuando corresponda, sus prácticas de privacidad.</p>
     </div>
 
     <h3>5.2 Proveedores de Servicios</h3>
     <ul>
-        <li><strong>Infraestructura y Alojamiento:</strong> Google Cloud / Firebase (Almacenamiento de datos y alojamiento).</li>
-        <li><strong>Autenticación:</strong> Firebase Auth (Servicios de inicio de sesión seguro).</li>
-        <li><strong>Servicios de IA y Búsqueda:</strong> Proveedores como Perplexity AI y SerpApi.</li>
-        <li><strong>Analíticas:</strong> Google Analytics para Firebase.</li>
-        <li><strong>Cumplimiento Legal:</strong> Divulgación a las autoridades si así lo exige la ley.</li>
+        <li><strong>Google/Firebase:</strong> servicios de Google Cloud y Firebase para alojamiento, autenticación, almacenamiento de archivos o bases de datos, notificaciones push, análisis y diagnóstico de fallos.</li>
+        <li><strong>Plataforma Google Maps:</strong> Google Maps, Places y Street View para mostrar mapas, proporcionar autocompletado de direcciones y codificación geográfica, y mostrar Street View. La dirección, las coordenadas, la consulta de búsqueda, los datos técnicos y, cuando estén habilitados, los datos de ubicación relevantes pueden enviarse a Google cuando utilice dichas funciones.</li>
+        <li><strong>Servicios de búsqueda e inteligencia artificial:</strong> Google Gemini, Perplexity y SerpApi para sugerencias automatizadas, búsquedas, noticias o funciones de eventos. Limitamos los datos enviados a lo que se necesita para la solicitud correspondiente, que puede incluir un área, ubicación, búsqueda o preferencias de listado.</li>
+        <li><strong>Análisis, diagnóstico y medición de publicidad:</strong> Google Analytics para Firebase, Firebase Crashlytics, New Relic y Meta/Facebook App Events. Meta App Events puede recibir eventos de activación de aplicaciones, registro, participación y conversión de compras. Cuando se requiere consentimiento para análisis, medición o seguimiento de publicidad, estas actividades se habilitan solo después del consentimiento.</li>
+        <li><strong>Gestión del consentimiento del sitio web:</strong> consentmanager registra y comunica las opciones de consentimiento del sitio web; Google Analytics se utiliza en el sitio web únicamente de acuerdo con aquellas opciones para las que se requiere consentimiento.</li>
+        <li><strong>Tiendas de aplicaciones:</strong> Apple App Store y Google Play para procesar y verificar compras y restauraciones de crédito. Apple y Google actúan según sus propios términos aplicables e información de privacidad para los servicios de su tienda.</li>
+        <li><strong>Comunicaciones:</strong> Firebase Cloud Messaging y proveedores de correo electrónico, cuando estén habilitados, para entregar mensajes de servicio y notificaciones.</li>
+        <li><strong>Cumplimiento legal:</strong> Divulgación a las autoridades si así lo exige la ley.</li>
     </ul>
-    <p>Cuando das tu consentimiento para el uso de servicios de Google, Google puede utilizar tus datos personales como se describe en el <a href="https://business.safety.google/privacy/" target="_blank" rel="noopener noreferrer">Sitio de Responsabilidad de Datos Empresariales de Google</a>.</p>
-
-    <h2>6. Transferencias Internacionales de Datos</h2>
-    <p>Wishplace es un servicio global. Aunque el Responsable tiene su sede en España, sus datos pueden ser almacenados y procesados en países fuera del Espacio Económico Europeo (EEE), principalmente en los Estados Unidos (a través de Google/Firebase). Nos aseguramos de que dichas transferencias estén protegidas por las salvaguardias adecuadas, como las Cláusulas Contractuales Tipo (CCT) aprobadas por la Comisión Europea.</p>
-
-    <h2>7. Conservación de Datos</h2>
+    <p>Estos proveedores pueden procesar datos como procesadores para Wishplace o, para sus propios servicios, como controladores independientes bajo sus propios términos. Cuando usted acepta el uso de los servicios de Google, Google puede utilizar datos personales como se describe en el <a href="https://business.safety.google/privacy/" target="_blank" rel="noopener noreferrer">Sitio de Responsabilidad de Datos Empresariales de Google</a>. El procesamiento de Meta se describe en su información de privacidad aplicable.</p><h2>6. Transferencias Internacionales de Datos</h2>
+    <p>Algunos de los proveedores enumerados anteriormente pueden procesar datos fuera del Espacio Económico Europeo, incluso en los Estados Unidos. Cuando una transferencia requiere una salvaguardia según la ley de protección de datos aplicable, Wishplace se basa en el mecanismo de transferencia aplicable a ese proveedor y procesamiento, como una decisión de adecuación o las Cláusulas Contractuales Estándar de la Comisión Europea, con medidas complementarias cuando sea necesario. Puede contactarnos para obtener más información sobre el mecanismo aplicable.</p><h2>7. Retención de datos</h2>
     <ul>
-        <li><strong>Datos de la Cuenta:</strong> Se conservan mientras su cuenta esté activa.</li>
-        <li><strong>UGC y Preferencias:</strong> Los Wishes, criterios de búsqueda e imágenes se conservan hasta que usted los elimine o se cierre su cuenta.</li>
-        <li><strong>Datos Anonimizados:</strong> Podemos conservar datos agregados y anonimizados con fines estadísticos de forma indefinida.</li>
-        <li><strong>Eliminación:</strong> Si solicita la eliminación de su cuenta, eliminaremos sus datos personales de nuestras bases de datos activas en un plazo de 30 días, sin perjuicio de cualquier requisito legal de conservación.</li>
-    </ul>
-
-    <h2>8. Sus Derechos (RGPD)</h2>
+        <li><strong>Datos de la cuenta:</strong> se conservan mientras la cuenta está activa. La eliminación de la cuenta desactiva la cuenta e inicia nuestro proceso de eliminación o anonimización; la información puede permanecer cuando sea necesaria para una obligación legal, un informe no resuelto, prevención de fraude, una disputa o el establecimiento, ejercicio o defensa de reclamos legales.</li>
+        <li><strong>CGU y preferencias:</strong> los deseos, los criterios de búsqueda y el contenido de la lista se conservan hasta que los elimine, caduquen o se cierre la cuenta, sujetos a los mismos criterios legales, de seguridad y de retención de reclamos. Las copias almacenadas y los respaldos se pueden conservar hasta que se sobrescriban según el ciclo de respaldo aplicable.</li>
+        <li><strong>Datos de la habitación:</strong> los listados de habitaciones, las preferencias de búsqueda de habitaciones y el registro de declaración asociado se conservan hasta que el listado o preferencia relevante se elimine, caduque o se cierre su cuenta, a menos que sea necesario un período más largo para procesar un informe, proteger reclamos legales o cumplir con una obligación legal.</li>
+        <li><strong>Datos anonimizados:</strong> Podemos conservar datos agregados y anonimizados con fines estadísticos de forma indefinida.</li>
+        <li><strong>Compras y contabilidad:</strong> Los registros de verificación y compra a crédito se conservan durante el período requerido por las normas contables, fiscales, de prevención de fraude y de limitación aplicables.</li>
+        <li><strong>Diagnóstico:</strong> los registros técnicos, los informes de fallos y los registros de seguridad se conservan durante el tiempo razonablemente necesario para la seguridad, la confiabilidad y la investigación de incidentes, y luego se eliminan o anonimizan de acuerdo con la configuración de retención del proveedor correspondiente.</li>
+    </ul><h2>8. Tus derechos (RGPD)</h2>
     <p>Si se encuentra en el EEE, tiene los siguientes derechos:</p>
     <ul>
         <li><strong>Derecho de Acceso:</strong> Solicitar una copia de sus datos personales.</li>
-        <li><strong>Derecho de Rectificación:</strong> Solicitar la corrección de datos inexactos.</li>
-        <li><strong>Derecho de Supresión:</strong> Solicitar la eliminación de sus datos ("Derecho al olvido").</li>
-        <li><strong>Derecho de Limitación:</strong> Solicitar que limitemos el uso de sus datos.</li>
-        <li><strong>Derecho a la Portabilidad de los Datos:</strong> Recibir sus datos en un formato estructurado y de lectura mecánica.</li>
-        <li><strong>Derecho de Oposición:</strong> Oponerse al tratamiento basado en intereses legítimos.</li>
+        <li><strong>Derecho de Rectificación:</strong> Solicitar la corrección de los datos inexactos.</li>
+        <li><strong>Derecho de Supresión:</strong> Solicitar la supresión de tus datos (“Derecho al olvido”).</li>
+        <li><strong>Derecho a la restricción:</strong> Solicite que limitemos el uso que hacemos de sus datos.</li>
+        <li><strong>Derecho a la Portabilidad de los Datos:</strong> Recibir tus datos en un formato estructurado y legible por máquina.</li>
+        <li><strong>Derecho de oposición:</strong> Oponerse al procesamiento basado en intereses legítimos.</li>
+        <li><strong>Derecho a retirar el consentimiento:</strong> Retirar el consentimiento en cualquier momento cuando el procesamiento se base en el consentimiento. La retirada no afecta al tratamiento ya realizado antes de su retirada.</li>
     </ul>
-    <p>Para ejercer estos derechos, póngase en contacto con nosotros en alessio[at]wishplace[dot]app. También tiene derecho a presentar una reclamación ante su Autoridad de Protección de Datos local (por ejemplo, la AEPD en España).</p>
+    <p>Para ejercer estos derechos, contáctenos en alessio@wishplace.app. También tienes derecho a presentar una reclamación ante tu Autoridad de Protección de Datos local (por ejemplo, la AEPD en España).</p>
 
-    <h2>9. Seguridad</h2>
-    <p>Implementamos medidas técnicas y organizativas estándar en la industria (como el cifrado AES-256-GCM para las comunicaciones y controles de acceso seguros) para proteger sus datos. Sin embargo, tenga en cuenta que ningún método de transmisión por Internet o de almacenamiento electrónico es 100% seguro.</p>
+    <h3>8.1 Datos obligatorios y opcionales</h3>
+    <p>Las credenciales de la cuenta y los datos marcados como requeridos en la pantalla correspondiente son necesarios para crear una cuenta o proporcionar la función solicitada. Si no los proporciona, es posible que no podamos crear la cuenta, publicar o hacer coincidir un listado, habilitar un chat o verificar una compra. Los datos de perfil opcionales, los permisos opcionales del dispositivo y los análisis basados en el consentimiento o la medición de publicidad no son necesarios para funciones principales no relacionadas.</p>
 
-    <h2>10. Privacidad de los Menores</h2>
-    <p>Wishplace no está destinado a ser utilizado por personas menores de 18 años. No recopilamos conscientemente datos personales de menores. Si tenemos conocimiento de que un menor nos ha facilitado datos personales, tomaremos medidas para eliminarlos inmediatamente.</p>
-
-    <h2>11. Versiones Multilingües</h2>
-    <p>Esta política puede ser traducida a varios idiomas para conveniencia del usuario. En caso de discrepancia o conflicto entre la versión en inglés y cualquier versión traducida, prevalecerá la versión en inglés.</p>
-
-    <h2>12. Cambios en esta Política</h2>
-    <p>Podemos actualizar nuestra Política de Privacidad de vez en cuando. Le notificaremos cualquier cambio sustancial publicando la nueva Política de Privacidad dentro de la App y actualizando la fecha de "Última actualización" en la parte superior de este documento.</p>
-
-    <h2>13. Contacto</h2>
+    <h3>8.2 Coincidencia automatizada</h3>
+    <p>Wishplace utiliza herramientas automáticas de coincidencia y recomendación para sugerir una posible compatibilidad entre preferencias y listados, incluidos los listados de habitaciones. Estas herramientas no toman decisiones que produzcan efectos legales o efectos igualmente significativos sobre usted. No deciden si usted puede alquilar, ofrecer, comprar o vender una propiedad o habitación; los usuarios toman esas decisiones de forma independiente.</p><h2>9. Seguridad</h2>
+    <p>Implementamos medidas técnicas y organizativas apropiadas diseñadas para proteger los datos personales, incluidos controles de acceso y medidas de seguridad adecuadas a la naturaleza del procesamiento. Sin embargo, ningún método de transmisión a través de Internet o almacenamiento electrónico es completamente seguro.</p><h2>10. Privacidad de los niños</h2>
+    <p>Wishplace no está diseñado para que lo utilicen personas menores de 18 años. No recopilamos conscientemente datos personales de niños. Si tenemos conocimiento de que un menor nos ha proporcionado datos personales, tomaremos medidas para eliminarlos inmediatamente.</p><h2>11. Versiones multilingües</h2>
+    <p>Esta política puede traducirse a varios idiomas para comodidad del usuario. Si una traducción difiere de la versión en inglés, la versión en inglés es la versión de referencia, excepto cuando la ley aplicable obligatoria requiera lo contrario.</p><h2>12. Cambios a esta política</h2>
+    <p>Podemos actualizar esta Política de Privacidad de vez en cuando. Le notificaremos los cambios materiales a través de la Aplicación o por correo electrónico cuando corresponda, y actualizaremos la versión y la fecha de "Última actualización" en la parte superior de este documento. Cuando corresponda, obtendremos un nuevo consentimiento antes de habilitar el procesamiento opcional que lo requiera.</p><h2>13. Contáctenos</h2>
     <div class="contact-info">
-        <p>Si tiene alguna pregunta o duda sobre esta Política de Privacidad, o si necesitamos ponernos en contacto con usted en relación con un problema de seguridad o la investigación de una denuncia, utilizaremos los datos de contacto que se facilitan a continuación o su dirección de correo electrónico registrada:</p>
+        <p>Si tiene alguna pregunta o inquietud sobre esta Política de privacidad, o si necesitamos comunicarnos con usted con respecto a un problema de seguridad o la investigación de un informe, utilizaremos los datos de contacto que se proporcionan a continuación o su dirección de correo electrónico registrada:</p>
         <p><strong>Alessio Di Salvo</strong><br>
-            <strong>Correo electrónico:</strong> alessio[at]wishplace[dot]app</p>
-    </div>
-</div>
+            <strong>Dirección postal:</strong> Avinguda Diagonal, 08019 Barcelona, España<br>
+            <strong>Correo electrónico:</strong> alessio@wishplace.app</p>
+    </div></div>
 </body>
 </html>
