@@ -12,19 +12,19 @@ const lang_fr = {
     cookieDecline: "Refuser",
     headerGetNotified: "Recevoir des Notifications",
     heroTitle: "Arrêtez de Chercher.<br>Commencez à Rêver.",
-    heroSubtitle: "Le premier marché immobilier inversé au monde. Épinglez où vous voulez vivre, fixez votre prix et laissez le logement parfait vous trouver.",
+    heroSubtitle: "Le premier marché immobilier inversé au monde. Épinglez où vous voulez vivre, fixez votre prix et laissez le logement ou la chambre de vos rêves vous trouver.",
     heroButton: "Rejoindre la Liste d'Attente",
     discordButton: "Rejoignez le Discord de Wishplace",
     logoAlt: "Logo Wishplace",
     heroImageAlt: "Un bâtiment moderne, le bâtiment de vos rêves",
     sectionBrokenTitle: "La Méthode de Recherche Classique ne Fonctionne Pas",
-    sectionBrokenSubtitle: "Trouver le logement parfait ressemble à un travail à plein temps. Recherche, attente et nombreuses occasions manquées.",
+    sectionBrokenSubtitle: "Trouver le logement ou la chambre qui vous convient ressemble à un travail à plein temps. Recherche, attente et nombreuses occasions manquées.",
     brokenCard1Title: "Surveillance Infinie",
     brokenCard1Text: "Des dizaines de sites et des mises à jour constantes, en espérant être le premier.",
     brokenCard2Title: "Doute Constant",
     brokenCard2Text: `"Y aura-t-il un logement dans *ce* bâtiment, à mon prix ?"`,
     brokenCard3Title: "Opportunités Manquées",
-    brokenCard3Text: "Les meilleures opportunités sont souvent hors marché. Ce que vous voyez en ligne est ce que personne n'a encore choisi.",
+    brokenCard3Text: "Les meilleurs logements et les meilleures chambres sont souvent hors marché. Ce que vous voyez en ligne est ce que personne n'a encore choisi.",
     brokenCard4Title: "Dépenses Publicitaires Inutiles",
     brokenCard4Text: "Les vendeurs paient pour des annonces et attendent que l'acheteur idéal apparaisse.",
     sectionHowTitle: "Bienvenue dans l'Immobilier Inversé",
@@ -40,18 +40,32 @@ const lang_fr = {
     appScreen1Title: "Pour Acheteurs : sélectionnez les immeubles où vous souhaitez vivre",
     appScreen1Text: "Entrez les adresses des bâtiments qui vous plaisent et visualisez-les sur une carte.",
     appScreen2Alt: "Écran de l'app montrant 'Vos Propriétés' pour vendeurs",
-    appScreen2Title: "Pour Vendeurs : ajoutez l'adresse de votre logement",
+    appScreen2Title: "Pour Vendeurs : ajoutez l'adresse de votre logement ou de votre chambre",
     appScreen2Text: "Propriétaire ou agence, vous pouvez ajouter plusieurs adresses.",
     appScreen3Alt: "Écran de l'app montrant les utilisateurs intéressés",
     appScreen3Title: "Pour Vendeurs : voyez la liste des acheteurs ou locataires potentiels",
     appScreen3Text: "Voyez immédiatement tous les intéressés et contactez le meilleur profil.",
+    sectionEverydayTitle: "Tout ce qu'il faut pour décider en confiance",
+    sectionEverydaySubtitle: "Explorez les chambres, comprenez l'activité sur Wishplace, recevez des suggestions utiles et gardez vos conversations privées.",
+    everydayChatAlt: "Écran de chat privé Wishplace",
+    everydayChatTitle: "Chat privé, selon vos règles",
+    everydayChatText: "Échangez directement avec les personnes pertinentes et gardez la conversation dans un espace privé.",
+    everydayStatsAlt: "Écran des statistiques de marché Wishplace",
+    everydayStatsTitle: "Comprendre l'activité sur Wishplace",
+    everydayStatsText: "Explorez les statistiques de marché et les signaux d'activité Wishplace dans les zones qui vous importent.",
+    everydayRoomsAlt: "Écran d'annonce de chambre Wishplace",
+    everydayRoomsTitle: "Trouvez la bonne chambre",
+    everydayRoomsText: "Découvrez des chambres avec les détails importants, de la disponibilité aux préférences de vie en commun.",
+    everydayAiAlt: "Écran de suggestion d'adresse par IA Wishplace",
+    everydayAiTitle: "Suggestions IA intelligentes",
+    everydayAiText: "Utilisez des idées d'adresses propulsées par l'IA pour transformer une recherche large en Wishplace plus ciblé.",
     sectionPowerTitle: "Le Pouvoir est Entre Vos Mains",
     powerBuyersTitle: "Pour Acheteurs et Locataires",
-    powerBuyersSubtitle: "Enfin, le logement de vos rêves.",
+    powerBuyersSubtitle: "Enfin, le logement ou la chambre de vos rêves.",
     powerBuyersLi1Title: "Arrêtez de Chercher, Commencez à Rêver",
     powerBuyersLi1Text: "Sélectionnez les bâtiments où vous aimeriez vivre et laissez les propriétaires vous contacter.",
     powerBuyersLi2Title: "Accès aux Meilleures Offres",
-    powerBuyersLi2Text: "Accédez à des biens hors marché et non encore publiés.",
+    powerBuyersLi2Text: "Accédez à des logements et à des chambres hors marché et non encore publiés.",
     powerBuyersLi3Title: "Achetez ou Louez au Prix que Vous Voulez",
     powerBuyersLi3Text: "Les vendeurs voient votre budget et vous contactent si vous correspondez à leurs attentes.",
     powerBuyersLi4Title: "Confidentialité Totale",
@@ -67,7 +81,7 @@ const lang_fr = {
     powerSellersLi4Title: "Efficace et Privé",
     powerSellersLi4Text: "Contactez uniquement les meilleurs acheteurs. Pas de spam. Vos données restent privées.",
     sectionFounderTitle: "Un Message du Fondateur",
-    sectionFounderText: "Je pense que trouver un logement ne devrait pas être une question de chance, mais de mettre en relation les bonnes personnes au bon moment.",
+    sectionFounderText: "Je pense que trouver un logement ou une chambre ne devrait pas être une question de chance, mais de mettre en relation les bonnes personnes au bon moment.",
     sectionFounderLink: "Alessio, Fondateur de Wishplace",
     footerText: "&copy; 2026 Wishplace. Tous droits réservés.",
     sectionNewsEventsTitle: "Dernières actualités et événements locaux",
@@ -78,28 +92,36 @@ const lang_fr = {
 
     faqPageTitle: "Questions fréquentes",
 
-    faqPageSubtitle: "Tout ce que tu dois savoir sur Wishplace, le marché immobilier inversé pour trouver un logement, une place de parking ou un local commercial à partir des lieux qui t’intéressent vraiment.",
+    faqPageSubtitle: "Tout ce que tu dois savoir sur Wishplace, le marché immobilier inversé pour trouver un logement, une chambre, une place de parking ou un local commercial à partir des lieux qui t’intéressent vraiment.",
 
     faqItems: [
         {
             q: "Qu’est-ce que Wishplace ?",
-            a: "Wishplace est une app immobilière basée sur le marché inversé : au lieu de chercher uniquement parmi des annonces déjà publiées, tu peux indiquer sur la carte les immeubles, les adresses ou les rues qui t’intéressent. Si un propriétaire ajoute un bien compatible, un match peut être créé et vous pouvez échanger via un chat sécurisé."
+            a: "Wishplace est une app immobilière basée sur le marché inversé : au lieu de chercher uniquement parmi des annonces déjà publiées, tu peux indiquer sur la carte les immeubles, les adresses ou les rues qui t’intéressent. Si un utilisateur ajoute une annonce de bien ou de chambre compatible, un match peut être créé et vous pouvez échanger via un chat sécurisé."
         },
         {
             q: "Que signifie marché immobilier inversé ?",
-            a: "Dans le marché immobilier traditionnel, les propriétaires publient une annonce et les personnes intéressées la recherchent. Avec Wishplace, c’est l’inverse : ce sont les acheteurs et les locataires qui indiquent d’abord où ils aimeraient vivre, acheter, louer ou trouver un espace. Ainsi, la demande réelle devient visible avant même qu’une annonce existe."
+            a: "Dans le marché immobilier traditionnel, les propriétaires publient une annonce et les personnes intéressées la recherchent. Avec Wishplace, c’est l’inverse : les personnes indiquent d’abord où elles souhaitent trouver un logement, une chambre, une place de parking ou un local commercial. Ainsi, la demande réelle devient visible avant même qu’une annonce existe."
         },
         {
-            q: "Comment fonctionne Wishplace pour les personnes qui cherchent un logement ?",
-            a: "Tu télécharges l’app, tu recherches une adresse exacte ou un immeuble précis, tu ajoutes ton Wishplace et tu configures tes préférences, comme le budget, l’achat ou la location, le nombre de pièces, l’urgence et d’autres caractéristiques. Si un propriétaire ajoute un bien compatible avec ton intérêt, Wishplace peut créer un match."
+            q: "Comment fonctionne Wishplace pour les personnes qui cherchent un logement ou une chambre ?",
+            a: "Tu télécharges l’app, tu recherches une adresse exacte ou un immeuble précis, tu ajoutes ton Wishplace et tu configures tes préférences, comme le budget, l’achat ou la location, les critères de chambre, la disponibilité, l’urgence et d’autres caractéristiques. Si un utilisateur ajoute une annonce de bien ou de chambre compatible avec ton intérêt, Wishplace peut créer un match."
         },
         {
-            q: "Puis-je aussi chercher des places de parking ou des locaux commerciaux ?",
-            a: "Oui. Wishplace n’est pas pensée uniquement pour les maisons et les appartements. Tu peux aussi utiliser l’app pour chercher des places de parking et des locaux commerciaux. Dans ces cas, tu peux indiquer des adresses exactes ou des rues, afin que ton intérêt reste lié à un lieu réel et précis."
+            q: "Puis-je aussi chercher des chambres, des places de parking ou des locaux commerciaux ?",
+            a: "Oui. Wishplace n’est pas pensée uniquement pour les logements. Tu peux aussi utiliser l’app pour chercher des chambres, des places de parking et des locaux commerciaux. Pour les logements et les chambres, tu peux partir d’une adresse ou d’un immeuble précis ; pour les parkings et les locaux commerciaux, tu peux indiquer une adresse exacte ou une rue."
+        },
+        {
+            q: "Puis-je proposer une chambre sur Wishplace ?",
+            a: "Oui, si tu as le droit, l’autorité et, lorsque cela est nécessaire, les autorisations pour proposer la chambre. Tu dois fournir des informations exactes, à jour et licites. Les annonces de chambres ne peuvent pas être utilisées pour l’hébergement touristique, les locations de vacances ou tout usage interdit par le droit applicable ou les droits qui régissent le bien."
+        },
+        {
+            q: "Wishplace vérifie-t-elle ou gère-t-elle les locations de chambres ?",
+            a: "Non. Une annonce de chambre est une information générée par un utilisateur qui aide les utilisateurs à s’identifier et à se contacter. Wishplace ne vérifie pas toutes les annonces ou tous les utilisateurs, ne gère pas les visites, ne négocie pas les conditions, ne traite pas les dépôts ou les loyers, ne remet pas les clés et n’est pas partie à un contrat de location de chambre. Les utilisateurs doivent effectuer leurs propres vérifications et convenir directement entre eux de toute location."
         },
         {
             q: "Puis-je chercher des quartiers ou des zones générales ?",
-            a: "Non. Wishplace fonctionne avec des lieux spécifiques, comme des adresses exactes, des immeubles ou des rues. Cela rend le système plus précis et aide à créer des matchs plus utiles entre les personnes qui cherchent et les propriétaires qui proposent un bien."
+            a: "Non. Wishplace fonctionne avec des lieux spécifiques, comme des adresses exactes, des immeubles ou des rues. Cela rend le système plus précis et aide à créer des matchs plus utiles entre les personnes qui cherchent un bien ou une chambre et les utilisateurs qui en proposent."
         },
         {
             q: "Que se passe-t-il si je ne sais pas exactement où je veux vivre ?",
@@ -119,23 +141,23 @@ const lang_fr = {
         },
         {
             q: "Que se passe-t-il quand je reçois un match ?",
-            a: "Lorsqu’un propriétaire ajoute un bien compatible avec l’un de tes Wishplaces, un match peut être créé. Si les deux parties sont intéressées, vous pouvez commencer une conversation via le chat sécurisé de l’app."
+            a: "Lorsqu’un utilisateur ajoute une annonce de bien ou de chambre compatible avec l’un de tes Wishplaces, un match peut être créé. Si les deux parties sont intéressées, vous pouvez commencer une conversation via le chat sécurisé de l’app."
         },
         {
             q: "Que se passe-t-il si je ne reçois pas de match tout de suite ?",
-            a: "Tu n’as rien de spécial à faire. Ton Wishplace reste actif jusqu’à sa date d’expiration et peut générer un match si un propriétaire ajoute un bien compatible. Tu peux aussi mettre à jour ou renouveler tes intérêts pour les garder actifs."
+            a: "Tu n’as rien de spécial à faire. Ton Wishplace reste actif jusqu’à sa date d’expiration et peut générer un match si un utilisateur ajoute une annonce de bien ou de chambre compatible. Tu peux aussi mettre à jour ou renouveler tes intérêts pour les garder actifs."
         },
         {
             q: "Wishplace est-elle gratuite ?",
             a: "Tu peux télécharger Wishplace gratuitement et commencer à utiliser l’app pour rechercher des lieux, ajouter des Wishplaces et découvrir des matchs possibles. Certaines actions ou fonctionnalités peuvent nécessiter des crédits, clairement indiqués dans l’app avant utilisation."
         },
         {
-            q: "Comment fonctionne Wishplace pour les propriétaires ?",
-            a: "Un propriétaire peut ajouter un bien en saisissant son adresse. Wishplace montre s’il existe déjà des personnes intéressées par ce lieu ou compatibles avec ce bien. Le propriétaire peut ainsi comprendre la demande réelle et, lorsqu’il trouve un profil pertinent, contacter directement la personne intéressée via le chat sécurisé de l’app."
+            q: "Comment fonctionne Wishplace pour les propriétaires et les personnes qui proposent une chambre ?",
+            a: "Un propriétaire, ou une personne autorisée à proposer une chambre, peut ajouter une annonce en saisissant l’adresse. Wishplace peut montrer s’il existe déjà des personnes intéressées par ce lieu ou compatibles avec l’annonce. Cela les aide à comprendre la demande et, lorsqu’ils trouvent un profil pertinent, à contacter la personne intéressée via le chat sécurisé de l’app."
         },
         {
-            q: "Pourquoi un propriétaire devrait-il utiliser Wishplace ?",
-            a: "Wishplace aide les propriétaires à découvrir s’il existe déjà un intérêt pour leur bien. Au lieu d’attendre des contacts génériques, ils peuvent voir des personnes qui ont exprimé un intérêt pour une adresse, un immeuble ou une rue spécifique, avec des préférences et des budgets plus clairs."
+            q: "Pourquoi un propriétaire ou une personne qui propose une chambre devrait-il utiliser Wishplace ?",
+            a: "Wishplace aide les propriétaires et les personnes qui proposent des chambres à découvrir s’il existe déjà un intérêt pour leur lieu. Au lieu d’attendre des contacts génériques, ils peuvent voir des personnes qui ont exprimé un intérêt pour une adresse, un immeuble ou une rue spécifique, avec des préférences et des budgets plus clairs."
         },
         {
             q: "Wishplace peut-elle aider à économiser des frais d’agence ?",
@@ -146,8 +168,8 @@ const lang_fr = {
             a: "Oui, l’objectif est de rendre la demande réelle plus visible. Les propriétaires peuvent mieux comprendre le budget des personnes intéressées, et les personnes qui cherchent peuvent indiquer ce qu’elles peuvent se permettre. Cela peut aider à créer un marché plus transparent, avec des prix plus proches de la capacité réelle des personnes."
         },
         {
-            q: "Les propriétaires peuvent-ils voir mes informations personnelles ?",
-            a: "Non. Tes données personnelles restent privées. Les propriétaires peuvent uniquement voir les informations utiles pour la compatibilité, comme le budget, le type de recherche et les préférences principales. La communication se fait via le chat sécurisé de l’app."
+            q: "Les propriétaires ou les personnes qui proposent des chambres peuvent-ils voir mes informations personnelles ?",
+            a: "Pas automatiquement. Les autres utilisateurs voient uniquement les informations utiles à la compatibilité, comme le budget, le type de recherche et les préférences principales. Tu choisis quelles informations supplémentaires partager dans le chat et tu ne dois pas partager de données sensibles inutiles."
         },
         {
             q: "Dois-je partager mon numéro de téléphone ou mon adresse email ?",
@@ -158,12 +180,12 @@ const lang_fr = {
             a: "Wishplace est conçue pour protéger la confidentialité des utilisateurs. Tes données ne sont pas vendues et les informations visibles par les autres utilisateurs sont limitées à ce qui est nécessaire pour créer une compatibilité et des conversations utiles. Tu peux gérer tes intérêts et tes informations directement depuis l’app."
         },
         {
-            q: "Wishplace publie-t-elle automatiquement une annonce immobilière ?",
-            a: "Non. Ajouter un Wishplace signifie indiquer un intérêt pour un lieu. Ajouter un bien signifie enregistrer une disponibilité ou une opportunité liée à une adresse. Wishplace ne publie pas automatiquement d’annonces sur des portails externes."
+            q: "Wishplace publie-t-elle ou gère-t-elle automatiquement une annonce de bien ou de chambre ?",
+            a: "Non. Ajouter un Wishplace signifie indiquer un intérêt pour un lieu. Ajouter une annonce de bien ou de chambre signifie enregistrer une information générée par un utilisateur liée à une adresse. Wishplace ne publie pas automatiquement d’annonces sur des portails externes et ne gère pas la location ou la vente qui en résulte."
         },
         {
             q: "Wishplace affiche-t-elle des actualités et des événements locaux ?",
-            a: "Oui. Wishplace peut afficher des actualités, des événements et des informations locales liés aux villes de tes Wishplaces ou de tes biens. Cela aide à mieux comprendre le contexte d’un lieu avant d’acheter, de louer ou d’investir."
+            a: "Oui. Wishplace peut afficher des actualités, des événements et des informations locales liés aux villes de tes Wishplaces, de tes annonces de biens ou de tes annonces de chambres. Cela aide à mieux comprendre le contexte d’un lieu avant d’acheter, de louer ou d’investir."
         },
         {
             q: "Pourquoi les actualités et les événements sont-ils utiles dans une recherche immobilière ?",
@@ -171,7 +193,7 @@ const lang_fr = {
         },
         {
             q: "Wishplace est-elle disponible dans mon pays ?",
-            a: "Wishplace est disponible à l’international, mais l’activité peut varier selon la ville et le nombre d’utilisateurs présents. Tu peux télécharger l’app et vérifier directement s’il existe des Wishplaces, des biens, des actualités ou des événements dans ta zone."
+            a: "Wishplace est disponible à l’international, mais l’activité peut varier selon la ville et le nombre d’utilisateurs présents. Tu peux télécharger l’app et vérifier directement s’il existe des Wishplaces, des annonces de biens, des annonces de chambres, des actualités ou des événements dans ta zone."
         },
         {
             q: "Wishplace est-elle utile même s’il y a encore peu d’utilisateurs dans ma ville ?",
@@ -186,10 +208,10 @@ const lang_fr = {
     // How It Works page
     howPageTitle: "Comment fonctionne Wishplace",
 
-    howPageSubtitle: "Wishplace change la façon de rechercher un logement, une place de parking ou un local commercial. Au lieu d’attendre que la bonne annonce apparaisse, tu peux indiquer sur la carte les adresses et les immeubles qui t’intéressent vraiment. Si un propriétaire ajoute un bien compatible, un match peut être créé. Plus de demande réelle signifie plus de transparence, moins de temps perdu et des prix plus proches de ce que les personnes peuvent réellement se permettre.",
+    howPageSubtitle: "Wishplace change la façon de rechercher un logement, une chambre, une place de parking ou un local commercial. Au lieu d’attendre que la bonne annonce apparaisse, tu peux indiquer sur la carte les adresses et les immeubles qui t’intéressent vraiment. Si un utilisateur ajoute une annonce de bien ou de chambre compatible, un match peut être créé. Plus de demande réelle signifie plus de transparence, moins de temps perdu et des prix plus proches de ce que les personnes peuvent réellement se permettre.",
 
-    howPageForBuyers: "Pour les acheteurs et les locataires",
-    howPageForSellers: "Pour les propriétaires",
+    howPageForBuyers: "Pour les acheteurs, locataires et personnes cherchant une chambre",
+    howPageForSellers: "Pour les propriétaires et personnes proposant une chambre",
 
     howBuyerSteps: [
         {
@@ -259,7 +281,7 @@ const lang_fr = {
 
     howPageAIInsightsTitle: "Suggestions avec IA pour trouver le bon endroit",
 
-    howPageAIInsightsText: "Tu ne sais pas toujours quel immeuble choisir. C’est pourquoi Wishplace intègre des suggestions avec IA, conçues pour t’aider à découvrir des adresses et des appartements potentiellement intéressants. L’objectif est de rendre la recherche plus simple, plus guidée et plus proche de tes préférences réelles.",
+    howPageAIInsightsText: "Tu ne sais pas toujours quel immeuble, bien ou chambre choisir. C’est pourquoi Wishplace intègre des suggestions avec IA, conçues pour t’aider à découvrir des adresses, biens et chambres potentiellement intéressants. L’objectif est de rendre la recherche plus simple, plus guidée et plus proche de tes préférences réelles.",
 
     howAIInsightsSteps: [
         {
@@ -282,7 +304,7 @@ const lang_fr = {
 
     howPageLocalInsightsTitle: "Actualités, événements et informations locales",
 
-    howPageLocalInsightsText: "Wishplace t’aide aussi à mieux connaître les lieux qui t’intéressent. Pour les villes liées à tes Wishplaces ou à tes biens, tu peux découvrir des actualités locales, des événements, des mises à jour et des informations utiles pour mieux évaluer où vivre, acheter, louer ou investir.",
+    howPageLocalInsightsText: "Wishplace t’aide aussi à mieux connaître les lieux qui t’intéressent. Pour les villes liées à tes Wishplaces, annonces de biens ou annonces de chambres, tu peux découvrir des actualités locales, des événements, des mises à jour et des informations utiles pour mieux évaluer où vivre, acheter, louer ou investir.",
 
     howLocalInsightsSteps: [
         {
@@ -332,7 +354,7 @@ const lang_fr = {
 
     howPageExpirationTitle: "Annonces et intérêts toujours à jour",
 
-    howPageExpirationText: "Chaque adresse ou bien sur Wishplace a une durée limitée. L’expiration en jours sert à maintenir la plateforme propre, actuelle et utile. Les intérêts anciens ou qui ne sont plus valables ne devraient pas créer de faux matchs : c’est pourquoi Wishplace privilégie les demandes et les biens récents, mis à jour et réellement actifs.",
+    howPageExpirationText: "Chaque adresse, annonce de bien ou annonce de chambre sur Wishplace a une durée limitée. L’expiration en jours sert à maintenir la plateforme propre, actuelle et utile. Les intérêts anciens ou qui ne sont plus valables ne devraient pas créer de faux matchs : c’est pourquoi Wishplace privilégie les demandes et les annonces récentes, mises à jour et réellement actives.",
 
     howExpirationSteps: [
         {
@@ -359,7 +381,6 @@ const lang_fr = {
 
     howPageCtaTitle: "Commence depuis la carte",
 
-    howPageCtaText: "Recherche une adresse, un immeuble ou une rue, ajoute ton Wishplace ou enregistre ton bien, et découvre s’il existe déjà une connexion possible.",
+    howPageCtaText: "Recherche une adresse, un immeuble ou une rue, ajoute ton Wishplace ou enregistre ton annonce de bien ou de chambre, et découvre s’il existe déjà une connexion possible.",
     backToHome: "← Retour à l'Accueil"
 };
-
