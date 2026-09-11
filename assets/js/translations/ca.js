@@ -10,19 +10,19 @@ const lang_ca = {
     pageTitle: "Wishplace - Deixa de Buscar. Comença a Somiar.",
     headerGetNotified: "Rep notificacions",
     heroTitle: "Deixa de Buscar.<br>Comença a Somiar.",
-    heroSubtitle: "El primer mercat immobiliari invers del món. Marca on vols viure, fixa el teu preu i deixa que la llar perfecta et trobi.",
+    heroSubtitle: "El primer mercat immobiliari invers del món. Marca on vols viure, fixa el teu preu i deixa que la llar o l'habitació perfecta et trobi.",
     heroButton: "Uneix-te a la Llista d'Espera",
     discordButton: "Uneix-te al Discord de Wishplace",
     logoAlt: "Logotip de Wishplace",
     heroImageAlt: "Un edifici modern, l'edifici dels teus somnis",
     sectionBrokenTitle: "El mètode clàssic de cerca no funciona",
-    sectionBrokenSubtitle: "Trobar la casa perfecta sembla una feina a temps complet. Només cerca, espera i moltes oportunitats perdudes.",
+    sectionBrokenSubtitle: "Trobar la casa o l'habitació perfecta sembla una feina a temps complet. Només cerca, espera i moltes oportunitats perdudes.",
     brokenCard1Title: "Monitoratge Infinit",
     brokenCard1Text: "Dotzenes de webs i actualitzacions constants, esperant ser el primer.",
     brokenCard2Title: "Dubte Constant",
     brokenCard2Text: `"Hi haurà algun dia un pis en *aquest* edifici disponible al meu preu?"`,
     brokenCard3Title: "Oportunitats Perdudes",
-    brokenCard3Text: "Les millors oportunitats solen ser fora del mercat. El que veus als portals és el que ningú ha triat encara.",
+    brokenCard3Text: "Les millors cases i habitacions solen ser fora del mercat. El que veus als portals és el que ningú ha triat encara.",
     brokenCard4Title: "Despesa en Anuncis",
     brokenCard4Text: "Els venedors paguen anuncis i esperen que aparegui el comprador perfecte.",
     sectionHowTitle: "Benvingut al Mercat Immobiliari Invers",
@@ -38,18 +38,32 @@ const lang_ca = {
     appScreen1Title: "Per Compradors: selecciona els edificis on vols viure",
     appScreen1Text: "Introdueix les adreces dels edificis que t'agraden i visualitza'ls al mapa.",
     appScreen2Alt: "Pantalla amb 'Les Teves Propietats'",
-    appScreen2Title: "Per Venedors: Introdueix l'adreça del teu pis",
+    appScreen2Title: "Per Venedors: Introdueix l'adreça del teu habitatge o habitació",
     appScreen2Text: "Propietari o agència, pots afegir-hi diversos habitatges.",
     appScreen3Alt: "Pantalla amb 'Usuaris Interessats'",
     appScreen3Title: "Per Venedors: consulta la llista d'interessats",
     appScreen3Text: "Mira immediatament tots els interessats i contacta el perfil més adequat.",
+    sectionEverydayTitle: "Tot el que necessites per decidir amb confiança",
+    sectionEverydaySubtitle: "Explora habitacions, entén l'activitat de Wishplace, rep suggeriments útils i mantén privades totes les converses.",
+    everydayChatAlt: "Pantalla de xat privat de Wishplace",
+    everydayChatTitle: "Xat privat, segons les teves condicions",
+    everydayChatText: "Contacta directament amb persones rellevants i mantén la conversa en un espai privat.",
+    everydayStatsAlt: "Pantalla d'estadístiques de mercat de Wishplace",
+    everydayStatsTitle: "Entén l'activitat de Wishplace",
+    everydayStatsText: "Explora les estadístiques de mercat i els senyals d'activitat de Wishplace a les zones que t'importen.",
+    everydayRoomsAlt: "Pantalla d'anunci d'habitació de Wishplace",
+    everydayRoomsTitle: "Troba l'habitació adequada",
+    everydayRoomsText: "Descobreix habitacions amb els detalls que importen, des de la disponibilitat fins a les preferències de convivència.",
+    everydayAiAlt: "Pantalla de suggeriment d'adreça amb IA de Wishplace",
+    everydayAiTitle: "Suggeriments intel·ligents amb IA",
+    everydayAiText: "Utilitza idees d'adreces amb IA per transformar una cerca àmplia en un Wishplace més concret.",
     sectionPowerTitle: "El Poder és a les Teves Mans",
     powerBuyersTitle: "Per Compradors i Llogaters",
-    powerBuyersSubtitle: "Finalment, la casa dels teus somnis.",
+    powerBuyersSubtitle: "Finalment, la casa o l'habitació dels teus somnis.",
     powerBuyersLi1Title: "Deixa de Buscar, Comença a Somiar",
     powerBuyersLi1Text: "Selecciona els edificis i espera que propietaris o agències et contactin.",
     powerBuyersLi2Title: "Accés a Millors Ofertes",
-    powerBuyersLi2Text: "Accedeix a propietats fora del mercat i no publicades.",
+    powerBuyersLi2Text: "Accedeix a habitatges i habitacions fora del mercat i no publicats.",
     powerBuyersLi3Title: "Compra o Lloga al Teu Preu",
     powerBuyersLi3Text: "Els venedors veuen el teu pressupost i et contacten si encaixes en el que busquen.",
     powerBuyersLi4Title: "Privacitat Total",
@@ -65,7 +79,7 @@ const lang_ca = {
     powerSellersLi4Title: "Eficaç i Privat",
     powerSellersLi4Text: "Contacta només els millors compradors. Ni planta ni porta es comparteixen fins que tu ho decideixis.",
     sectionFounderTitle: "Un Missatge del Fundador",
-    sectionFounderText: "Crec que trobar casa no hauria de ser qüestió de sort, sinó de connectar les persones adequades en el moment adequat.",
+    sectionFounderText: "Crec que trobar una casa o una habitació no hauria de ser qüestió de sort, sinó de connectar les persones adequades en el moment adequat.",
     sectionFounderLink: "Alessio, Fundador de Wishplace",
     footerText: "&copy; 2026 Wishplace. Tots els drets reservats.",
     sectionNewsEventsTitle: "Últimes notícies i esdeveniments locals",
@@ -76,28 +90,36 @@ const lang_ca = {
 
     faqPageTitle: "Preguntes freqüents",
 
-    faqPageSubtitle: "Tot el que has de saber sobre Wishplace, el mercat immobiliari invers per trobar habitatge, aparcaments i locals comercials a partir dels llocs que realment t’interessen.",
+    faqPageSubtitle: "Tot el que has de saber sobre Wishplace, el mercat immobiliari invers per trobar habitatges, habitacions, aparcaments i locals comercials a partir dels llocs que realment t’interessen.",
 
     faqItems: [
         {
             q: "Què és Wishplace?",
-            a: "Wishplace és una app immobiliària basada en el mercat invers: en lloc de buscar només entre anuncis ja publicats, pots indicar al mapa els edificis, les adreces o els carrers que t’interessen. Si un propietari afegeix una propietat compatible, es pot crear un match i podeu parlar mitjançant un xat segur."
+            a: "Wishplace és una app immobiliària basada en el mercat invers: en lloc de buscar només entre anuncis ja publicats, pots indicar al mapa els edificis, les adreces o els carrers que t’interessen. Si un usuari afegeix un anunci de propietat o d’habitació compatible, es pot crear un match i podeu parlar mitjançant un xat segur."
         },
         {
             q: "Què vol dir mercat immobiliari invers?",
-            a: "En el mercat immobiliari tradicional, els propietaris publiquen un anunci i les persones interessades el busquen. Amb Wishplace passa el contrari: són compradors i llogaters qui indiquen primer on voldrien viure, comprar, llogar o trobar un espai. Així, la demanda real es fa visible abans que existeixi un anunci."
+            a: "En el mercat immobiliari tradicional, els propietaris publiquen un anunci i les persones interessades el busquen. Amb Wishplace passa el contrari: les persones indiquen primer on voldrien trobar un habitatge, una habitació, un aparcament o un local comercial. Així, la demanda real es fa visible abans que existeixi un anunci."
         },
         {
-            q: "Com funciona Wishplace per a qui busca habitatge?",
-            a: "Descarregues l’app, busques una adreça o un edifici concret, afegeixes el teu Wishplace i configures les teves preferències, com ara pressupost, compra o lloguer, nombre d’habitacions, urgència i altres característiques. Si un propietari afegeix una propietat compatible amb el teu interès, Wishplace pot crear un match."
+            q: "Com funciona Wishplace per a qui busca habitatge o habitació?",
+            a: "Descarregues l’app, busques una adreça o un edifici concret, afegeixes el teu Wishplace i configures les teves preferències, com ara pressupost, compra o lloguer, requisits de l’habitació, disponibilitat, urgència i altres característiques. Si un usuari afegeix un anunci de propietat o d’habitació compatible amb el teu interès, Wishplace pot crear un match."
         },
         {
-            q: "Puc buscar també aparcaments o locals comercials?",
-            a: "Sí. Wishplace no està pensat només per a cases i apartaments. També pots fer servir l’app per buscar aparcaments i locals comercials. En aquests casos pots indicar adreces o carrers concrets, perquè el teu interès quedi vinculat a un lloc real i específic."
+            q: "Puc buscar també habitacions, aparcaments o locals comercials?",
+            a: "Sí. Wishplace no està pensat només per a habitatges. També pots fer servir l’app per buscar habitacions, aparcaments i locals comercials. Per a habitatges i habitacions, pots començar per una adreça o edifici concret; per a aparcaments i locals comercials, pots indicar una adreça exacta o un carrer."
+        },
+        {
+            q: "Puc oferir una habitació a Wishplace?",
+            a: "Sí, si tens el dret, l’autoritat i, quan calgui, els consentiments per oferir l’habitació. Has de proporcionar informació exacta, actualitzada i lícita. Els anuncis d’habitacions no es poden utilitzar per a allotjament turístic, lloguers de vacances ni cap ús prohibit per la legislació aplicable o pels drets que regeixen l’immoble."
+        },
+        {
+            q: "Wishplace verifica o gestiona els lloguers d’habitacions?",
+            a: "No. Un anunci d’habitació és informació generada pels usuaris que ajuda les persones a identificar-se i contactar-se. Wishplace no verifica tots els anuncis o usuaris, no gestiona visites, no negocia condicions, no processa fiances o lloguers, no entrega claus i no forma part d’un contracte de lloguer d’habitació. Els usuaris han de fer les seves pròpies comprovacions i acordar directament entre ells qualsevol lloguer."
         },
         {
             q: "Puc buscar barris o zones genèriques?",
-            a: "No. Wishplace funciona amb llocs específics, com adreces exactes, edificis o carrers. Això fa que el sistema sigui més precís i ajuda a crear matches més útils entre qui busca i qui ofereix una propietat."
+            a: "No. Wishplace funciona amb llocs específics, com adreces exactes, edificis o carrers. Això fa que el sistema sigui més precís i ajuda a crear matches més útils entre qui busca una propietat o habitació i qui l’ofereix."
         },
         {
             q: "Què passa si no sé exactament on viure?",
@@ -117,23 +139,23 @@ const lang_ca = {
         },
         {
             q: "Què passa quan rebo un match?",
-            a: "Quan un propietari afegeix una propietat compatible amb un dels teus Wishplace, es pot crear un match. Si totes dues parts hi estan interessades, podeu iniciar una conversa mitjançant el xat segur de l’app."
+            a: "Quan un usuari afegeix un anunci de propietat o d’habitació compatible amb un dels teus Wishplace, es pot crear un match. Si totes dues parts hi estan interessades, podeu iniciar una conversa mitjançant el xat segur de l’app."
         },
         {
             q: "Què passa si no rebo cap match de seguida?",
-            a: "No has de fer res especial. El teu Wishplace queda actiu fins a la seva caducitat i pot generar un match si un propietari afegeix una propietat compatible. També pots actualitzar o renovar els teus interessos per mantenir-los actius."
+            a: "No has de fer res especial. El teu Wishplace queda actiu fins a la seva caducitat i pot generar un match si un usuari afegeix un anunci de propietat o d’habitació compatible. També pots actualitzar o renovar els teus interessos per mantenir-los actius."
         },
         {
             q: "Wishplace és gratuït?",
             a: "Pots descarregar Wishplace gratuïtament i començar a utilitzar l’app per buscar llocs, afegir Wishplace i descobrir possibles matches. Algunes accions o funcionalitats poden requerir crèdits, indicats clarament dins de l’app abans d’utilitzar-les."
         },
         {
-            q: "Com funciona Wishplace per als propietaris?",
-            a: "Un propietari pot afegir una propietat introduint-ne l’adreça. Wishplace mostra si hi ha persones ja interessades en aquell lloc o compatibles amb aquella propietat. Així, el propietari pot entendre la demanda real i, quan troba un perfil rellevant, pot contactar directament amb la persona interessada mitjançant el xat segur de l’app."
+            q: "Com funciona Wishplace per a propietaris i persones que ofereixen una habitació?",
+            a: "Un propietari, o una persona amb dret a oferir una habitació, pot afegir un anunci introduint-ne l’adreça. Wishplace pot mostrar si hi ha persones ja interessades en aquell lloc o compatibles amb l’anunci. Això els ajuda a entendre la demanda i, quan troben un perfil rellevant, a contactar amb la persona interessada mitjançant el xat segur de l’app."
         },
         {
-            q: "Per què un propietari hauria d’utilitzar Wishplace?",
-            a: "Wishplace ajuda els propietaris a descobrir si ja existeix interès per la seva propietat. En lloc d’esperar contactes genèrics, poden veure persones que han expressat interès per una adreça, un edifici o un carrer específic, amb preferències i pressupostos més clars."
+            q: "Per què un propietari o una persona que ofereix una habitació hauria d’utilitzar Wishplace?",
+            a: "Wishplace ajuda propietaris i persones que ofereixen habitacions a descobrir si ja existeix interès pel seu espai. En lloc d’esperar contactes genèrics, poden veure persones que han expressat interès per una adreça, un edifici o un carrer específic, amb preferències i pressupostos més clars."
         },
         {
             q: "Wishplace pot ajudar a estalviar despeses d’agència?",
@@ -144,8 +166,8 @@ const lang_ca = {
             a: "Sí, l’objectiu és fer més visible la demanda real. Els propietaris poden entendre quin pressupost tenen les persones interessades i qui busca pot declarar què es pot permetre. Això pot ajudar a crear un mercat més transparent, amb preus més propers a la capacitat real de les persones."
         },
         {
-            q: "Els propietaris poden veure la meva informació personal?",
-            a: "No. Les teves dades personals continuen sent privades. Els propietaris només poden veure la informació útil per a la compatibilitat, com el pressupost, el tipus de cerca i les preferències principals. La comunicació es fa mitjançant el xat segur de l’app."
+            q: "Els propietaris o les persones que ofereixen habitacions poden veure la meva informació personal?",
+            a: "No automàticament. Altres usuaris només veuen la informació rellevant per a la compatibilitat, com el pressupost, el tipus de cerca i les preferències principals. Tu decideixes quina informació addicional comparteixes al xat i no hauries de compartir dades sensibles innecessàries."
         },
         {
             q: "He de compartir el meu número de telèfon o el meu correu electrònic?",
@@ -156,12 +178,12 @@ const lang_ca = {
             a: "Wishplace està dissenyada per protegir la privacitat dels usuaris. Les teves dades no es venen i la informació visible per a altres usuaris es limita al que cal per crear compatibilitat i converses útils. Pots gestionar els teus interessos i la teva informació directament des de l’app."
         },
         {
-            q: "Wishplace publica automàticament un anunci immobiliari?",
-            a: "No. Afegir un Wishplace significa indicar interès per un lloc. Afegir una propietat significa registrar una disponibilitat o una oportunitat vinculada a una adreça. Wishplace no publica automàticament anuncis en portals externs."
+            q: "Wishplace publica o gestiona automàticament un anunci de propietat o d’habitació?",
+            a: "No. Afegir un Wishplace significa indicar interès per un lloc. Afegir un anunci de propietat o d’habitació significa registrar informació generada pels usuaris vinculada a una adreça. Wishplace no publica automàticament anuncis en portals externs ni gestiona el lloguer o la compravenda resultants."
         },
         {
             q: "Wishplace mostra notícies i esdeveniments locals?",
-            a: "Sí. Wishplace pot mostrar notícies, esdeveniments i informació local vinculats a les ciutats dels teus Wishplace o de les teves propietats. Això ajuda a entendre millor el context d’un lloc abans de comprar, llogar o invertir."
+            a: "Sí. Wishplace pot mostrar notícies, esdeveniments i informació local vinculats a les ciutats dels teus Wishplace, anuncis de propietats o anuncis d’habitacions. Això ajuda a entendre millor el context d’un lloc abans de comprar, llogar o invertir."
         },
         {
             q: "Per què les notícies i els esdeveniments són útils en la cerca immobiliària?",
@@ -169,7 +191,7 @@ const lang_ca = {
         },
         {
             q: "Wishplace està disponible al meu país?",
-            a: "Wishplace està disponible internacionalment, però l’activitat pot variar segons la ciutat i el nombre d’usuaris presents. Pots descarregar l’app i comprovar directament si hi ha Wishplace, propietats, notícies o esdeveniments a la teva àrea."
+            a: "Wishplace està disponible internacionalment, però l’activitat pot variar segons la ciutat i el nombre d’usuaris presents. Pots descarregar l’app i comprovar directament si hi ha Wishplace, anuncis de propietats, anuncis d’habitacions, notícies o esdeveniments a la teva àrea."
         },
         {
             q: "Wishplace és útil encara que a la meva ciutat hi hagi pocs usuaris?",
@@ -184,10 +206,10 @@ const lang_ca = {
     // How It Works page
     howPageTitle: "Com funciona Wishplace",
 
-    howPageSubtitle: "Wishplace canvia la manera de buscar habitatge, aparcaments i locals comercials. En lloc d’esperar que aparegui l’anunci correcte, pots indicar al mapa les adreces i els edificis que realment t’interessen. Si un propietari afegeix una propietat compatible, es pot crear un match. Més demanda real significa més transparència, menys temps perdut i preus més propers al que les persones realment es poden permetre.",
+    howPageSubtitle: "Wishplace canvia la manera de buscar habitatges, habitacions, aparcaments i locals comercials. En lloc d’esperar que aparegui l’anunci correcte, pots indicar al mapa les adreces i els edificis que realment t’interessen. Si un usuari afegeix un anunci de propietat o d’habitació compatible, es pot crear un match. Més demanda real significa més transparència, menys temps perdut i preus més propers al que les persones realment es poden permetre.",
 
-    howPageForBuyers: "Per a compradors i llogaters",
-    howPageForSellers: "Per a propietaris",
+    howPageForBuyers: "Per a compradors, llogaters i qui busca habitació",
+    howPageForSellers: "Per a propietaris i qui ofereix habitacions",
 
     howBuyerSteps: [
         {
@@ -257,7 +279,7 @@ const lang_ca = {
 
     howPageAIInsightsTitle: "Suggeriments amb IA per trobar el lloc adequat",
 
-    howPageAIInsightsText: "No sempre saps quin edifici triar. Per això Wishplace integra suggeriments amb IA pensats per ajudar-te a descobrir adreces i apartaments potencialment interessants. L’objectiu és fer que la cerca sigui més senzilla, més guiada i més propera a les teves preferències reals.",
+    howPageAIInsightsText: "No sempre saps quin edifici, propietat o habitació triar. Per això Wishplace integra suggeriments amb IA pensats per ajudar-te a descobrir adreces, propietats i habitacions potencialment interessants. L’objectiu és fer que la cerca sigui més senzilla, més guiada i més propera a les teves preferències reals.",
 
     howAIInsightsSteps: [
         {
@@ -280,7 +302,7 @@ const lang_ca = {
 
     howPageLocalInsightsTitle: "Notícies, esdeveniments i informació local",
 
-    howPageLocalInsightsText: "Wishplace també t’ajuda a conèixer millor els llocs que t’interessen. Per a les ciutats vinculades als teus Wishplace o a les teves propietats, pots descobrir notícies locals, esdeveniments, actualitzacions i informació útil per valorar millor on viure, comprar, llogar o invertir.",
+    howPageLocalInsightsText: "Wishplace també t’ajuda a conèixer millor els llocs que t’interessen. Per a les ciutats vinculades als teus Wishplace, anuncis de propietats o anuncis d’habitacions, pots descobrir notícies locals, esdeveniments, actualitzacions i informació útil per valorar millor on viure, comprar, llogar o invertir.",
 
     howLocalInsightsSteps: [
         {
@@ -330,7 +352,7 @@ const lang_ca = {
 
     howPageExpirationTitle: "Anuncis i interessos sempre actualitzats",
 
-    howPageExpirationText: "Cada adreça o propietat a Wishplace té una durada limitada. La caducitat en dies serveix per mantenir la plataforma neta, actual i útil. Els interessos antics o que ja no són vàlids no haurien de crear falsos matches: per això Wishplace afavoreix sol·licituds i propietats recents, actualitzades i realment actives.",
+    howPageExpirationText: "Cada adreça, anunci de propietat o anunci d’habitació a Wishplace té una durada limitada. La caducitat en dies serveix per mantenir la plataforma neta, actual i útil. Els interessos antics o que ja no són vàlids no haurien de crear falsos matches: per això Wishplace afavoreix sol·licituds i anuncis recents, actualitzats i realment actius.",
 
     howExpirationSteps: [
         {
@@ -357,7 +379,6 @@ const lang_ca = {
 
     howPageCtaTitle: "Comença des del mapa",
 
-    howPageCtaText: "Busca una adreça, un edifici o un carrer, afegeix el teu Wishplace o registra la teva propietat, i descobreix si ja existeix una connexió possible.",
+    howPageCtaText: "Busca una adreça, un edifici o un carrer, afegeix el teu Wishplace o registra el teu anunci de propietat o d’habitació, i descobreix si ja existeix una connexió possible.",
     backToHome: "← Torna a l'Inici"
 };
-
