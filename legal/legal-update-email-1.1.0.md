@@ -1,7 +1,7 @@
 # Wishplace legal update — version 1.1.0
 
-**Effective date:** 7 September 2026  
-**Audience:** Existing registered users  
+**Effective date:** 11 September 2026
+**Audience:** Existing registered users
 **Sending rule:** Send only the section matching the user's selected notification language. Do not send all language versions in one email.
 
 ---
@@ -14,12 +14,12 @@
 
 Hello,
 
-We have updated Wishplace's Terms and Conditions, Privacy Policy and Credits Policy, effective 7 September 2026, to support Rooms and clarify your rights and responsibilities.
+We have updated Wishplace's Terms and Conditions, Privacy Policy and Credits Policy, effective 11 September 2026, to support Rooms and clarify your rights and responsibilities.
 
 The most important changes are:
 
 - Rooms can now be published and searched through Wishplace.
-- Wishplace remains a technical platform for users to discover potential compatibility and contact each other. We are not a real-estate agency, broker, landlord, property manager, payment provider or party to a sale or rental.
+- Wishplace remains a technical platform for users to discover potential compatibility and contact each other. Property and Room Listings are user-generated information, not offers made by Wishplace, and do not create contracts through the Platform. We are not a real-estate agency, broker, landlord, property manager, payment provider or party to a sale or rental.
 - Any viewing, negotiation, deposit, payment, keys, agreement, tax obligation or dispute is handled directly between the relevant users.
 - Room publishers must be entitled to offer the room, provide accurate and lawful information, and must not use Wishplace for tourist accommodation or holiday lets.
 - Our Privacy Policy now explains room, technical, location, map, purchase-verification, diagnostic and usage data, the main providers involved, consent choices and retention.
@@ -51,12 +51,12 @@ Thank you for using Wishplace.
 
 Hola:
 
-Hemos actualizado los Términos y Condiciones, la Política de Privacidad y la Política de Créditos de Wishplace, con efectos desde el 7 de septiembre de 2026, para incorporar Habitaciones y aclarar sus derechos y responsabilidades.
+Hemos actualizado los Términos y Condiciones, la Política de Privacidad y la Política de Créditos de Wishplace, con efectos desde el 11 de septiembre de 2026, para incorporar Habitaciones y aclarar sus derechos y responsabilidades.
 
 Los cambios principales son:
 
 - Ya se pueden publicar y buscar habitaciones en Wishplace.
-- Wishplace sigue siendo una plataforma técnica para identificar posibles coincidencias y poner a usuarios en contacto. No somos agencia inmobiliaria, corredor, arrendador, administrador de fincas, proveedor de pagos ni parte de una compraventa o alquiler.
+- Wishplace sigue siendo una plataforma técnica para identificar posibles coincidencias y poner a usuarios en contacto. Los Anuncios de Propiedades y Habitaciones son información generada por usuarios, no ofertas de Wishplace, y no crean contratos a través de la Plataforma. No somos agencia inmobiliaria, corredor, arrendador, administrador de fincas, proveedor de pagos ni parte de una compraventa o alquiler.
 - Las visitas, negociación, fianzas, pagos, llaves, contratos, impuestos y conflictos se gestionan directamente entre los usuarios implicados.
 - Quien publica una habitación debe tener derecho a ofrecerla, facilitar información exacta y lícita, y no utilizar Wishplace para alojamiento turístico ni alquiler vacacional.
 - La Política de Privacidad explica ahora los datos de habitaciones, técnicos, de ubicación, mapas, verificación de compras, diagnóstico y uso, los principales proveedores, las opciones de consentimiento y la conservación.
@@ -88,12 +88,12 @@ Gracias por utilizar Wishplace.
 
 Hallo,
 
-wir haben die Bedingungen, die Datenschutzerklärung und die Credits-Richtlinie von Wishplace mit Wirkung zum 7. September 2026 aktualisiert, um Zimmer zu unterstützen und Rechte und Pflichten klarzustellen.
+wir haben die Bedingungen, die Datenschutzerklärung und die Credits-Richtlinie von Wishplace mit Wirkung zum 11. September 2026 aktualisiert, um Zimmer zu unterstützen und Rechte und Pflichten klarzustellen.
 
 Die wichtigsten Änderungen:
 
 - Zimmer können jetzt über Wishplace veröffentlicht und gesucht werden.
-- Wishplace bleibt eine technische Plattform zur Erkennung möglicher Übereinstimmungen und Kontaktaufnahme. Wir sind keine Immobilienagentur, kein Makler, Vermieter, Hausverwalter, Zahlungsdienstleister oder Vertragspartei.
+- Wishplace bleibt eine technische Plattform zur Erkennung möglicher Übereinstimmungen und Kontaktaufnahme. Immobilien- und Zimmeranzeigen sind nutzergenerierte Informationen, keine Angebote von Wishplace, und begründen keine Verträge über die Plattform. Wir sind keine Immobilienagentur, kein Makler, Vermieter, Hausverwalter, Zahlungsdienstleister oder Vertragspartei.
 - Besichtigungen, Verhandlungen, Kautionen, Zahlungen, Schlüssel, Verträge, Steuern und Streitigkeiten werden direkt zwischen den betreffenden Nutzern geregelt.
 - Anbieter von Zimmern müssen zur Vermietung berechtigt sein, richtige und rechtmäßige Angaben machen und dürfen Wishplace nicht für Touristenunterkünfte oder Ferienvermietungen verwenden.
 - Die Datenschutzerklärung erläutert nun Zimmer-, Technik-, Standort-, Karten-, Kaufprüfungs-, Diagnose- und Nutzungsdaten, die wichtigsten Anbieter, Einwilligungsoptionen und Aufbewahrung.
@@ -125,12 +125,12 @@ Vielen Dank, dass Sie Wishplace nutzen.
 
 Bonjour,
 
-Nous avons mis à jour les Conditions, la Politique de confidentialité et la Politique de Crédits de Wishplace, applicables à compter du 7 septembre 2026, afin d'intégrer les Chambres et de clarifier vos droits et responsabilités.
+Nous avons mis à jour les Conditions, la Politique de confidentialité et la Politique de Crédits de Wishplace, applicables à compter du 11 septembre 2026, afin d'intégrer les Chambres et de clarifier vos droits et responsabilités.
 
 Principaux changements :
 
 - Il est désormais possible de publier et rechercher des chambres sur Wishplace.
-- Wishplace reste une plateforme technique de mise en relation; nous ne sommes ni agence immobilière, ni courtier, ni bailleur, ni gestionnaire, ni prestataire de paiement, ni partie à une vente ou location.
+- Wishplace reste une plateforme technique de mise en relation. Les Annonces immobilières et de chambres sont des informations générées par les utilisateurs, et non des offres de Wishplace, et ne créent aucun contrat par l'intermédiaire de la Plateforme. Nous ne sommes ni agence immobilière, ni courtier, ni bailleur, ni gestionnaire, ni prestataire de paiement, ni partie à une vente ou location.
 - Visites, négociation, dépôt, paiement, clés, contrat, impôts et litiges sont gérés directement par les utilisateurs concernés.
 - Les personnes publiant une chambre doivent être autorisées à la proposer, fournir des informations exactes et licites, et ne pas l'utiliser pour un hébergement touristique ou une location de vacances.
 - La Politique de confidentialité décrit désormais les données relatives aux chambres, techniques, de localisation, de cartes, de vérification des achats, de diagnostic et d'utilisation, les principaux prestataires, les choix de consentement et la conservation.
@@ -162,12 +162,12 @@ Merci d'utiliser Wishplace.
 
 Ciao,
 
-abbiamo aggiornato i Termini, l'Informativa sulla privacy e la Politica sui Crediti di Wishplace, con efficacia dal 7 settembre 2026, per includere le Stanze e chiarire diritti e responsabilità.
+abbiamo aggiornato i Termini, l'Informativa sulla privacy e la Politica sui Crediti di Wishplace, con efficacia dall'11 settembre 2026, per includere le Stanze e chiarire diritti e responsabilità.
 
 Principali modifiche:
 
 - Ora è possibile pubblicare e cercare stanze su Wishplace.
-- Wishplace resta una piattaforma tecnica per individuare possibili compatibilità e consentire il contatto tra utenti. Non siamo agenzia immobiliare, mediatore, locatore, amministratore, fornitore di pagamenti né parte di una vendita o locazione.
+- Wishplace resta una piattaforma tecnica per individuare possibili compatibilità e consentire il contatto tra utenti. Gli Annunci immobiliari e di stanze sono informazioni generate dagli utenti, non offerte di Wishplace, e non creano contratti tramite la Piattaforma. Non siamo agenzia immobiliare, mediatore, locatore, amministratore, fornitore di pagamenti né parte di una vendita o locazione.
 - Visite, negoziazione, depositi, pagamenti, chiavi, contratti, imposte e controversie sono gestiti direttamente dagli utenti interessati.
 - Chi pubblica una stanza deve avere il diritto di offrirla, fornire informazioni accurate e lecite e non usare Wishplace per strutture turistiche o affitti vacanze.
 - L'Informativa privacy descrive ora i dati relativi a stanze, aspetti tecnici, posizione, mappe, verifica degli acquisti, diagnostica e utilizzo, i principali fornitori, le scelte di consenso e la conservazione.
@@ -199,12 +199,12 @@ Grazie per usare Wishplace.
 
 Olá,
 
-atualizámos os Termos e Condições, a Política de Privacidade e a Política de Créditos da Wishplace, com efeitos a partir de 7 de setembro de 2026, para incluir Quartos e clarificar os seus direitos e responsabilidades.
+atualizámos os Termos e Condições, a Política de Privacidade e a Política de Créditos da Wishplace, com efeitos a partir de 11 de setembro de 2026, para incluir Quartos e clarificar os seus direitos e responsabilidades.
 
 Principais alterações:
 
 - Já é possível publicar e procurar quartos na Wishplace.
-- A Wishplace continua a ser uma plataforma técnica para identificar possíveis compatibilidades e permitir o contacto entre utilizadores. Não somos agência imobiliária, mediadora, senhorio, administradora, prestador de pagamentos nem parte de uma compra e venda ou arrendamento.
+- A Wishplace continua a ser uma plataforma técnica para identificar possíveis compatibilidades e permitir o contacto entre utilizadores. Os Anúncios de imóveis e quartos são informações geradas pelos utilizadores, não ofertas da Wishplace, e não criam contratos através da Plataforma. Não somos agência imobiliária, mediadora, senhorio, administradora, prestador de pagamentos nem parte de uma compra e venda ou arrendamento.
 - Visitas, negociação, cauções, pagamentos, chaves, contratos, impostos e litígios são tratados diretamente entre os utilizadores envolvidos.
 - Quem publica um quarto deve ter o direito de o oferecer, fornecer informação exata e lícita e não utilizar a Wishplace para alojamento turístico ou aluguer de férias.
 - A Política de Privacidade descreve agora os dados de quartos, técnicos, de localização, mapas, verificação de compras, diagnóstico e utilização, os principais fornecedores, as opções de consentimento e a conservação.
