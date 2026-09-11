@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishplace – Account Deletion & Data Policy</title>
+    <title>Wishplace – Account Deletion &amp; Data Policy</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -75,14 +75,24 @@
     <script data-cmp-noblock>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            wait_for_update: 500
+        });
         gtag('js', new Date());
-
         gtag('config', 'G-YLJR19TYZF');
+        window.addEventListener('cmpConsentGranted', function () {
+            gtag('consent', 'update', {
+                analytics_storage: 'granted',
+                ad_storage: 'granted'
+            });
+        });
     </script>
 </head>
 <body>
 <div class="container">
-    <h1>Wishplace: Account Deletion & Data Removal</h1>
+    <h1>Wishplace: Account Deletion &amp; Data Removal</h1>
 
     <p>At Wishplace, we value your privacy and provide a simple, transparent way to manage your account and personal data. This page outlines our deletion process and what happens to your data when you choose to leave the platform.</p>
 
@@ -96,7 +106,7 @@
             <li>Tap on the <strong>"Eliminar Cuenta"</strong> (Delete Account) link.</li>
             <li>Confirm your choice in the pop-up dialogue by tapping <strong>"Eliminar"</strong>.</li>
         </ol>
-        <p>Alternatively, you may request deletion by emailing <strong>alessio[at]wishplace[dot]app</strong> from your registered email address.</p>
+        <p>Alternatively, you may request deletion by emailing <strong>alessio@wishplace.app</strong> from your registered email address.</p>
     </div>
 
     <h2>The Deletion Process</h2>
@@ -109,7 +119,7 @@
     </ul>
 
     <h3>2. Permanent Removal (Hard Delete)</h3>
-    <p><span class="process-tag">MANUAL REVIEW</span> To ensure data integrity and security, the final "hard deletion" of your records is performed manually by our administrative team. During this stage, we permanently purge your personal identifiers and user-generated content from our production systems.</p>
+    <p><span class="process-tag">MANUAL REVIEW</span> To ensure data integrity and security, the final "hard deletion" of your records is performed manually by our administrative team. During this stage, we permanently purge personal identifiers and user-generated content from active production systems, except for limited records that must be retained for a legal obligation, security, fraud prevention, an unresolved report, a dispute, or legal claims.</p>
 
     <h2>Data Types and Handling</h2>
 
@@ -124,12 +134,12 @@
     <h3>What is Retained</h3>
     <p>Specific information is retained only for legal or regulatory requirements:</p>
     <ul>
-        <li><strong>Financial Records:</strong> Transaction identifiers for "Credit" purchases are retained for 10 years to comply with Spanish tax and accounting laws (archived and non-identifiable for marketing).</li>
+        <li><strong>Financial Records:</strong> Credit-purchase and verification records are retained only for the period required by applicable accounting, tax, fraud-prevention and limitation rules. They are not used for marketing.</li>
         <li><strong>Anonymized Data:</strong> Aggregated, non-identifiable usage statistics may be kept for service improvement.</li>
     </ul>
 
     <h2>Timeline for Final Deletion</h2>
-    <p>While access is revoked <strong>immediately</strong>, the manual hard deletion and complete removal from all encrypted server backups is typically finalized within <strong>30 to 60 days</strong>. Once this manual process is complete, the data cannot be recovered.</p>
+    <p>Access is revoked <strong>immediately</strong>. Deletion or anonymisation from active production systems is normally completed within <strong>30 days</strong>, subject to the limited retention grounds above. Residual copies may remain in encrypted backups until overwritten under the applicable backup cycle, normally within <strong>60 days</strong>, and are not restored except for disaster recovery. After deletion or anonymisation and backup expiry, the data cannot be recovered.</p>
 
     <div class="footer">
         <p><strong>Developer:</strong> Alessio Di Salvo<br>

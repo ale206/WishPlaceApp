@@ -72,9 +72,19 @@
     <script data-cmp-noblock>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            wait_for_update: 500
+        });
         gtag('js', new Date());
-
         gtag('config', 'G-YLJR19TYZF');
+        window.addEventListener('cmpConsentGranted', function () {
+            gtag('consent', 'update', {
+                analytics_storage: 'granted',
+                ad_storage: 'granted'
+            });
+        });
     </script>
 </head>
 <body>
@@ -91,10 +101,10 @@
     <h2>1. Purpose of This Policy</h2>
     <p>Wishplace uses a credit-based system to facilitate specific technical operations within its digital venue. These Credits serve as the internal unit required for users to publish real estate requirements, list properties, or initiate contact with other users via the Platform’s matching environment.</p>
 
-    <h2>2. Legal Status & Right of Withdrawal</h2>
-    <p>Credits are digital consumable units purchased exclusively through the Platform. They have no cash value and are non-refundable.</p>
+    <h2>2. Legal Status &amp; Right of Withdrawal</h2>
+    <p>Credits are digital consumable units purchased exclusively through the Platform. They have no cash value and are generally non-refundable after lawful consumption, subject always to mandatory consumer law and the applicable store process.</p>
     <div class="highlight-box">
-        <strong>EU Consumer Law & Withdrawal Waiver:</strong> By purchasing Credits and requesting their immediate allocation to your account, you explicitly consent to the immediate performance of the service and acknowledge that you **waive your statutory 14-day right of withdrawal** once the Credits are added to your account.
+        <strong>EU consumer rights:</strong> Nothing in this Policy waives a statutory withdrawal, refund or conformity right. Where the law permits loss of a withdrawal right for digital content or a digital service supplied immediately, that loss applies only if the legally required prior express consent, acknowledgement and confirmation have been obtained. Otherwise, mandatory rights remain unaffected.
     </div>
     <p>By purchasing or using Credits, you acknowledge that:</p>
     <ul>
@@ -121,11 +131,11 @@
     </ul>
     <p>The required number of Credits for any action will be clearly displayed before you confirm the operation. Wishplace reserves the right to introduce new technical operations or modify the credit requirements for existing ones at any time.</p>
 
-    <h2>5. The Confirmation Window & Reimbursement</h2>
-    <p>In accordance with Section 9 of the Terms and Conditions, specific operations feature a temporary "confirmation window."</p>
+    <h2>5. The Confirmation Window &amp; Reimbursement</h2>
+    <p>In accordance with Section 10 of the Terms and Conditions, specific operations may feature a temporary "confirmation window."</p>
     <ul>
-        <li><strong>Reimbursement:</strong> Credits used for these actions can <strong>only</strong> be reimbursed if you select "Delete" strictly within the time period allowed by the App's interface.</li>
-        <li><strong>Finality:</strong> Once the window closes, Credits are considered consumed. The Operator is not responsible for an inability to cancel due to connectivity issues or device lag.</li>
+        <li><strong>In-App reversal:</strong> Where the App offers a Delete or cancellation option, the confirmation screen explains whether Credits are returned.</li>
+        <li><strong>After the window:</strong> Once the window closes, Credits are considered consumed for the App's internal reversal feature. This does not limit mandatory consumer rights or an applicable store refund process.</li>
     </ul>
 
     <h2>6. Management and Security</h2>
@@ -136,24 +146,25 @@
 
     <h2>7. Refunds and Forfeiture</h2>
     <ul>
-        <li><strong>Used Credits:</strong> Non-refundable once the digital service has been rendered or the confirmation window has passed.</li>
-        <li><strong>Unused Credits:</strong> Generally non-refundable. Because all transactions are processed via In-App Purchases, the Apple App Store and Google Play Store act as the "Merchants of Record." Consequently:
+        <li><strong>Used Credits:</strong> Generally non-refundable once the relevant digital feature has been supplied, except where mandatory law or the applicable store process provides otherwise.</li>
+        <li><strong>Unused Credits:</strong> Generally non-refundable, subject to mandatory law. Transactions are processed through Apple App Store or Google Play. Consequently:
             <ul>
                 <li>Wishplace does not have the technical capacity to issue monetary refunds directly.</li>
-                <li>Any requests for monetary refunds must be submitted to the respective Store (Apple or Google), which retains sole discretion to grant or deny such requests according to their own terms and policies.</li>
+                <li>Refund requests should normally be submitted through the relevant Store process. Nothing here removes any claim or remedy that must legally be available against the Operator.</li>
             </ul>
         </li>
-        <li><strong>Account Deletion:</strong> If you delete your account, any remaining balance is permanently forfeited.</li>
+        <li><strong>Account Deletion:</strong> If you delete your account, remaining Credits cannot be used and are generally forfeited, subject to mandatory consumer law and any applicable store remedy.</li>
+        <li><strong>Conformity remedies:</strong> Consumers retain mandatory remedies for a failure to supply or lack of conformity of the digital content or service, including restoration, proportionate price reduction, termination and reimbursement where applicable.</li>
     </ul>
 
-    <h2>8. Investigation of Issues & Limitation of Liability</h2>
+    <h2>8. Investigation of Issues &amp; Limitation of Liability</h2>
     <p>In the event of technical discrepancies, failed operations, or disputes regarding Credit balances:</p>
     <ul>
         <li><strong>Best Efforts Investigation:</strong> Wishplace will, upon receipt of a documented report, make reasonable efforts to investigate the issue and clarify the status of the technical operation or ledger entry.</li>
-        <li><strong>No Ultimate Responsibility:</strong> Notwithstanding our efforts to assist, the Operator is not responsible for errors, losses, or transaction failures caused by third-party infrastructure, App Store environments, or user-side connectivity issues. Wishplace does not guarantee that every investigation will result in a Credit restoration or monetary reimbursement.</li>
+        <li><strong>Third-party issues:</strong> The Operator is not responsible for a third-party failure to the extent the law permits and the failure is outside the Operator's control. This clause does not exclude liability or consumer remedies that cannot legally be excluded.</li>
     </ul>
 
-    <h2>9. Account Integrity & Illegal Acquisition</h2>
+    <h2>9. Account Integrity &amp; Illegal Acquisition</h2>
     <p>Wishplace reserves the right to suspend access or reset credit balances without compensation in cases of:</p>
     <ul>
         <li><strong>Fraud or Chargebacks:</strong> Reversed payments result in immediate removal of Credits and potential account suspension.</li>
@@ -162,12 +173,12 @@
     </ul>
 
     <h2>10. Governing Law</h2>
-    <p>This Policy is governed by the laws of Spain. Any disputes shall be subject to the exclusive jurisdiction of the courts of Spain. In the event of discrepancy with any translation, the English version shall prevail.</p>
+    <p>This Policy is governed by the laws of Spain, without prejudice to mandatory protection under the law of a consumer's country of habitual residence. Consumers may bring claims before any court having jurisdiction under mandatory law. For non-consumer disputes, the courts of Spain have jurisdiction unless mandatory law provides otherwise. If a translation differs from the English version, English is the reference version except where mandatory law requires otherwise.</p>
 
     <h2>11. Contact</h2>
     <div class="contact-info">
         <p>For support regarding credit balances or technical issues:</p>
-        <p><strong>Email:</strong> alessio[at]wishplace[dot]app</p>
+        <p><strong>Email:</strong> alessio@wishplace.app</p>
     </div>
 </div>
 </body>

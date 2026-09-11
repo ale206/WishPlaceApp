@@ -80,9 +80,19 @@
     <script data-cmp-noblock>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            wait_for_update: 500
+        });
         gtag('js', new Date());
-
         gtag('config', 'G-YLJR19TYZF');
+        window.addEventListener('cmpConsentGranted', function () {
+            gtag('consent', 'update', {
+                analytics_storage: 'granted',
+                ad_storage: 'granted'
+            });
+        });
     </script>
 </head>
 <body>
@@ -95,13 +105,13 @@
     </div>
 
     <h2>1. Introduction</h2>
-    <p>This Privacy Policy describes how Wishplace ("the Platform," "the App") collects, uses, and shares your personal information. Wishplace is owned and operated by Alessio Di Salvo, acting as an individual (natural person) based in Spain ("the Controller," "we," "us," or "our").</p>
-    <p>By using the Platform, you agree to the collection and use of information in accordance with this Privacy Policy. We are committed to protecting your privacy and ensuring that your personal data is processed in compliance with the General Data Protection Regulation (GDPR) and other applicable laws.</p>
+    <p>This Privacy Policy describes how the Wishplace mobile application and wishplace.app website (together, the "Platform") collect, use and share personal data. Wishplace is owned and operated by Alessio Di Salvo, acting as an individual (natural person) based in Spain ("the Controller," "we," "us," or "our").</p>
+    <p>This Policy provides information about our processing; it is not a request for blanket consent. We process personal data only on the legal bases described below and in accordance with the General Data Protection Regulation (GDPR) and other applicable laws.</p>
 
     <h2>2. Data Controller</h2>
     <p><strong>Controller:</strong> Alessio Di Salvo<br>
         <strong>Postal Address:</strong> Avinguda Diagonal, 08019 Barcelona, Spain<br>
-        <strong>Contact Email:</strong> alessio[at]wishplace[dot]app</p>
+        <strong>Contact Email:</strong> alessio@wishplace.app</p>
     <p>For any questions regarding this Privacy Policy or your data, please contact us at the email address provided above.</p>
 
     <h2>3. Personal Data We Collect</h2>
@@ -132,6 +142,7 @@
         <li><strong>Device, network and diagnostic data:</strong> Device type, operating-system and app version, technical identifiers, IP address, access times, crash reports, performance and error data, and hardware or network settings necessary to diagnose and improve the App.</li>
         <li><strong>Location and map data:</strong> Precise or approximate device location when you permit it, and the address, coordinates, map interactions and search queries you provide or select. These data are used to provide location-based searching, maps, address autocomplete and Street View.</li>
         <li><strong>Analytics and advertising-measurement data:</strong> Information about how you interact with the App, such as features used, time spent, app activations, registrations, Credit-store views, purchases, listings, wishes and chats. Where required, advertising measurement and tracking are used only after your consent.</li>
+        <li><strong>Website and consent data:</strong> When you visit wishplace.app, we may process browser, device, IP, page-view, referral and consent-choice information. Non-essential analytics or advertising storage is disabled until consent where required. You can change or withdraw your choice through the website consent controls.</li>
     </ul>
 
     <h3>3.4 Purchase Data</h3>
@@ -145,7 +156,7 @@
     <ul>
         <li><strong>Performance of a Contract (Art. 6(1)(b) GDPR):</strong> To provide the technical features you request, including account management, Credit usage, publishing and managing your Wish Places, Property Listings or Room Listings, matching relevant preferences and listings, and enabling user-to-user communications.</li>
         <li><strong>Consent (Art. 6(1)(a) GDPR):</strong> For optional processing, including analytics and Meta advertising measurement or tracking where consent is required, and for device permissions such as precise location where the operating system requires your permission. You may refuse or withdraw consent without losing access to the core Platform features that do not depend on it.</li>
-        <li><strong>Legitimate Interests (Art. 6(1)(f) GDPR):</strong> To improve our Platform, ensure network and information security, and prevent fraudulent activity or abuse of the service. This includes investigating reports of inappropriate behavior.</li>
+        <li><strong>Legitimate Interests (Art. 6(1)(f) GDPR):</strong> To improve and protect the Platform, ensure network and information security, prevent fraud and abuse, investigate reports, and establish or defend legal claims. We consider the necessity and impact of this processing and do not rely on this basis where your rights and interests override ours.</li>
         <li><strong>Legal Obligation (Art. 6(1)(c) GDPR):</strong> To comply with applicable tax, accounting, or legal requirements.</li>
     </ul>
 
@@ -164,6 +175,7 @@
         <li><strong>Google Maps Platform:</strong> Google Maps, Places and Street View to display maps, provide address autocomplete and geocoding, and display Street View. The relevant address, coordinates, search query, technical data and, where enabled, location data may be sent to Google when you use those features.</li>
         <li><strong>AI and search services:</strong> Google Gemini, Perplexity and SerpApi for automated suggestions, search, news or event features. We limit data sent to what is needed for the relevant request, which may include an area, location, search or listing preferences.</li>
         <li><strong>Analytics, diagnostics and advertising measurement:</strong> Google Analytics for Firebase, Firebase Crashlytics, New Relic, and Meta/Facebook App Events. Meta App Events may receive app-activation, registration, engagement and purchase-conversion events. Where consent is required for analytics, advertising measurement or tracking, these activities are enabled only after consent.</li>
+        <li><strong>Website consent management:</strong> consentmanager records and communicates website consent choices; Google Analytics is used on the website only in accordance with those choices where consent is required.</li>
         <li><strong>App stores:</strong> Apple App Store and Google Play to process and verify Credit purchases and restores. Apple and Google act under their own applicable terms and privacy information for their store services.</li>
         <li><strong>Communications:</strong> Firebase Cloud Messaging and email providers, where enabled, to deliver service messages and notifications.</li>
         <li><strong>Legal Compliance:</strong> Disclosure to authorities if required by law.</li>
@@ -176,7 +188,7 @@
     <h2>7. Data Retention</h2>
     <ul>
         <li><strong>Account Data:</strong> Retained while the account is active. Account deletion deactivates the account and starts our deletion or anonymisation process; information may remain where needed for a legal obligation, an unresolved report, fraud prevention, a dispute or the establishment, exercise or defence of legal claims.</li>
-        <li><strong>UGC & Preferences:</strong> Wishes, search criteria and listing content are retained until you delete them, they expire or the account is closed, subject to the same legal, safety and claims-retention criteria. Stored copies and backups may be retained until overwritten under the applicable backup cycle.</li>
+        <li><strong>UGC &amp; Preferences:</strong> Wishes, search criteria and listing content are retained until you delete them, they expire or the account is closed, subject to the same legal, safety and claims-retention criteria. Stored copies and backups may be retained until overwritten under the applicable backup cycle.</li>
         <li><strong>Room data:</strong> Room Listings, room-search preferences and the associated declaration record are retained until the relevant listing or preference is deleted, expires or your account is closed, unless a longer period is necessary to handle a report, protect legal claims, or comply with a legal obligation.</li>
         <li><strong>Anonymized Data:</strong> We may retain aggregated, anonymized data for statistical purposes indefinitely.</li>
         <li><strong>Purchases and accounting:</strong> Credit-purchase and verification records are retained for the period required by applicable accounting, tax, fraud-prevention and limitation rules.</li>
@@ -194,9 +206,12 @@
         <li><strong>Right to Object:</strong> Object to processing based on legitimate interests.</li>
         <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time where processing is based on consent. Withdrawal does not affect processing already carried out before it was withdrawn.</li>
     </ul>
-    <p>To exercise these rights, please contact us at alessio[at]wishplace[dot]app. You also have the right to lodge a complaint with your local Data Protection Authority (e.g., the AEPD in Spain).</p>
+    <p>To exercise these rights, please contact us at alessio@wishplace.app. You also have the right to lodge a complaint with your local Data Protection Authority (for example, the AEPD in Spain).</p>
 
-    <h3>8.1 Automated matching</h3>
+    <h3>8.1 Required and optional data</h3>
+    <p>Account credentials and data marked as required in the relevant screen are necessary to create an account or provide the requested feature. If you do not provide them, we may be unable to create the account, publish or match a listing, enable a chat, or verify a purchase. Optional profile data, optional device permissions and consent-based analytics or advertising measurement are not required for unrelated core features.</p>
+
+    <h3>8.2 Automated matching</h3>
     <p>Wishplace uses automated matching and recommendation tools to suggest potential compatibility between preferences and listings, including Room Listings. These tools do not make decisions that produce legal effects or similarly significant effects about you. They do not decide whether you may rent, offer, buy or sell a property or room; users make those decisions independently.</p>
 
     <h2>9. Security</h2>
@@ -216,7 +231,7 @@
         <p>If you have any questions or concerns about this Privacy Policy, or if we need to contact you regarding a security issue or investigation of a report, we will use the contact details provided below or your registered email address:</p>
         <p><strong>Alessio Di Salvo</strong><br>
             <strong>Postal Address:</strong> Avinguda Diagonal, 08019 Barcelona, Spain<br>
-            <strong>Email:</strong> alessio[at]wishplace[dot]app</p>
+            <strong>Email:</strong> alessio@wishplace.app</p>
     </div>
 </div>
 </body>

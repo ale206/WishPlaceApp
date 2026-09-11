@@ -75,9 +75,19 @@
     <script data-cmp-noblock>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            wait_for_update: 500
+        });
         gtag('js', new Date());
-
         gtag('config', 'G-YLJR19TYZF');
+        window.addEventListener('cmpConsentGranted', function () {
+            gtag('consent', 'update', {
+                analytics_storage: 'granted',
+                ad_storage: 'granted'
+            });
+        });
     </script>
 </head>
 <body>
@@ -111,7 +121,7 @@
             <li><strong>NO BROKERAGE OR CONTRACTING:</strong> WISHPLACE IS NOT A REAL ESTATE BROKER, AGENT, MEDIATOR, PROPERTY MANAGER, OR LANDLORD. WE DO NOT NEGOTIATE, PREPARE, SIGN, EXECUTE, OR ENFORCE SALES, LEASES, ROOM RENTALS, OR OTHER AGREEMENTS.</li>
             <li><strong>NO PAYMENTS, KEYS, OR POSSESSION:</strong> WISHPLACE DOES NOT PROCESS RENT, DEPOSITS, RESERVATION FEES, OR PROPERTY PURCHASE PAYMENTS BETWEEN USERS, AND DOES NOT HOLD FUNDS, DELIVER KEYS, INSPECT PREMISES, OR TAKE POSSESSION OF A PROPERTY OR ROOM.</li>
             <li><strong>NO GENERAL VERIFICATION DUTY:</strong> TO THE EXTENT PERMITTED BY APPLICABLE LAW, WE DO NOT GENERALLY VERIFY OWNERSHIP, RIGHT TO OFFER, IDENTITY, LICENCES, HABITABILITY, AVAILABILITY, PRICE, LEGAL STATUS, OR THE ACCURACY OF USER DATA, NEWS ARTICLES, EVENT DETAILS, OR SYSTEM SUGGESTIONS. WE MAY REMOVE OR RESTRICT CONTENT OR ACCOUNTS where appropriate, but this does not create a duty to monitor or verify every item.</li>
-            <li><strong>ALGORITHMIC & AI LIMITATIONS:</strong> ALL DATA AND SUGGESTIONS ARE GENERATED AUTOMATICALLY. WE DO NOT GUARANTEE THAT A MATCH WILL RESULT IN A SUCCESSFUL TRANSACTION OR MEET YOUR EXPECTATIONS.</li>
+            <li><strong>ALGORITHMIC &amp; AI LIMITATIONS:</strong> ALL DATA AND SUGGESTIONS ARE GENERATED AUTOMATICALLY. WE DO NOT GUARANTEE THAT A MATCH WILL RESULT IN A SUCCESSFUL TRANSACTION OR MEET YOUR EXPECTATIONS.</li>
             <li><strong>THIRD-PARTY CONTENT:</strong> AGGREGATED CONTENT AND AI SUGGESTIONS ARE NOT CURATED OR ENDORSED BY US.</li>
             <li><strong>NO GUARANTEE OF A TRANSACTION:</strong> A LISTING, MATCH, CHAT, OR SUGGESTION DOES NOT GUARANTEE AVAILABILITY, SUITABILITY, A RESPONSE, A SALE, OR A RENTAL. USERS MUST MAKE THEIR OWN CHECKS AND DECISIONS.</li>
         </ul>
@@ -140,14 +150,22 @@
     <ul>
         <li><strong>Age:</strong> You must be at least 18 years of age.</li>
         <li><strong>Registration:</strong> Registration via Email, Google, or Apple constitutes acceptance of these Terms.</li>
+        <li><strong>Accurate information and account security:</strong> You must provide accurate, current information, keep your login credentials secure, and promptly notify us of suspected unauthorised access. You are responsible for activity carried out through your account unless it results from circumstances for which you are not legally responsible.</li>
         <li><strong>Account Deletion:</strong> You may delete your account and data at any time through the App settings.</li>
+    </ul>
+
+    <h3>3.1 Additional terms for professional users</h3>
+    <ul>
+        <li><strong>Ranking and data:</strong> The main parameters are location and radius, type, sale or rental intention, price, characteristics and availability. Required criteria carry more weight than optional preferences. Credits enable an action but do not improve ranking. Professional users access their own data and information shared through a match or chat, not undisclosed data; after closure, the Privacy Policy governs retention and anonymisation.</li>
+        <li><strong>Changes and termination:</strong> Where the EU Platform-to-Business Regulation applies, notice will be given on a durable medium at least 15 days in advance, or longer if technical adaptation is needed; changes are not retroactive unless legally required or beneficial. Restrictions or suspensions will include the reasons required by law and entire-service termination will have 30 days' notice where required, subject to applicable statutory exceptions.</li>
+        <li><strong>Complaints:</strong> Professional users may complain to alessio@wishplace.app. Any internal complaint or mediation mechanism required by law will be available; statutory small-enterprise exemptions remain unaffected.</li>
     </ul>
 
     <h2>4. Service Mechanics and Third-Party Dependencies</h2>
     <p>The Platform functions through the integration of various third-party systems and external services.</p>
     <ul>
         <li><strong>Service Availability:</strong> The Platform is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis. We do not guarantee that the Platform will always be secure, error-free, or function without disruptions.</li>
-        <li><strong>Infrastructure & APIs:</strong> The Platform relies on external infrastructure and feature providers, including Google Cloud/Firebase, Google Maps Platform, Google Gemini, Perplexity, SerpApi, Apple App Store and Google Play. Their services and terms may affect the availability of the relevant feature.</li>
+        <li><strong>Infrastructure &amp; APIs:</strong> The Platform relies on external infrastructure and feature providers, including Google Cloud/Firebase, Google Maps Platform, Google Gemini, Perplexity, SerpApi, Apple App Store and Google Play. Their services and terms may affect the availability of the relevant feature.</li>
         <li><strong>Liability Limitation:</strong> The Operator is not liable for service interruptions, technical failures, or data errors caused by these third parties. We reserve the right to migrate providers without prior notice.</li>
     </ul>
 
@@ -170,9 +188,14 @@
     <h2>7. User Content, Conduct, and Sanctions</h2>
     <ul>
         <li><strong>User Responsibilities:</strong> You are responsible for the legality, accuracy and consequences of the properties or rooms you list, your search preferences, images, descriptions and messages. You must have all rights, permissions and consents needed to publish them.</li>
+        <li><strong>Your ownership and licence to us:</strong> You retain ownership of your content. By submitting it, you grant the Operator a non-exclusive, worldwide, royalty-free licence to host, store, reproduce, technically adapt, transmit and display that content only as needed to operate, secure and improve the Platform and provide the features you request. The licence ends when the content is deleted, except for copies that must temporarily remain in backups or be retained for legal, safety or claims purposes.</li>
         <li><strong>No unlawful listings:</strong> You must not use the Platform to offer an unlawful sale, rental, sublease, tourist accommodation or holiday rental, to evade housing or tax rules, or to discriminate unlawfully.</li>
+        <li><strong>Other prohibited use:</strong> You must not impersonate another person; infringe intellectual-property, privacy or other rights; publish scams, malware or unlawful, threatening or sexually exploitative content; scrape or access the Platform by unauthorised automated means; circumvent security or Credit controls; or use another person's data for spam or unrelated purposes.</li>
         <li><strong>Reporting System:</strong> Users may be reported for Inappropriate Behavior, Spam, Harassment, Fake Profiles, or Offensive Content.</li>
-        <li><strong>Sanctions:</strong> Following a report or detected violation, the Operator reserves the right to limit functionality, suspend, or permanently delete an account without prior notice. No refunds for unused Credits will be provided in the event of an account ban due to conduct violations.</li>
+        <li><strong>Illegal-content notices:</strong> Anyone may report a specific item believed to be illegal through the in-App reporting feature or by emailing alessio@wishplace.app. A notice should identify the content and its location, explain why it is believed to be illegal, include the notifier's name and email except where the law permits otherwise, and contain a good-faith statement that the information is accurate and complete. We will acknowledge and process sufficiently precise notices in a timely, diligent, objective and non-arbitrary manner.</li>
+        <li><strong>Moderation and sanctions:</strong> We may leave content in place, reduce its visibility, remove it, restrict features, suspend or terminate an account, or refer a matter to authorities, taking account of the nature, gravity, frequency and consequences of the issue. Where required by law, we will provide the affected user with a clear statement of reasons and available redress. Urgent action may be taken without advance notice where reasonably necessary for legal, security or user-safety reasons.</li>
+        <li><strong>Challenges:</strong> An affected user may challenge a moderation decision by replying to the decision notice or emailing alessio@wishplace.app. This does not restrict any right to seek judicial or other legally available redress.</li>
+        <li><strong>Credits after enforcement:</strong> Credits used before enforcement are not restored merely because access is restricted. Any treatment of unused purchased Credits remains subject to mandatory consumer law and applicable store processes.</li>
     </ul>
 
     <h2>8. Communication and Conduct</h2>
@@ -183,7 +206,7 @@
                 <li><strong>Not E2EE:</strong> Chats are <strong>not</strong> end-to-end encrypted. The Operator maintains technical access to reported chats to investigate violations and comply with legal requests.</li>
             </ul>
         </li>
-        <li><strong>No Responsibility for Communication:</strong> The Operator acts as a mere technical conduit. We do not screen messages and are not liable for claims arising from user conversations.</li>
+        <li><strong>Communication responsibility:</strong> The Operator does not generally pre-screen messages. Responsibility for user communications and any action after receiving a sufficiently precise notice is determined by applicable law; nothing here excludes duties or liability that cannot legally be excluded.</li>
         <li><strong>Prohibited Conduct:</strong> Phishing, sharing sensitive financial data in chat, or spamming is strictly prohibited.</li>
     </ul>
 
@@ -195,7 +218,7 @@
     <ul>
         <li><strong>Acquisition:</strong> Credits are purchased using real currency. The price, currency and Credits supplied are displayed in the App Store or Google Play purchase flow before the order is placed. Credits are an in-App digital feature and are not a fee, commission, deposit, reservation, payment or consideration for a sale, rental, room rental or introduction between users.</li>
         <li><strong>Usage:</strong> Credits are consumed to perform specific operations on the Platform, including but not limited to adding a "Wish Place," adding a "Property Listing," or initiating a chat.</li>
-        <li><strong>Price Confirmation & Reimbursement Policy:</strong>
+        <li><strong>Price Confirmation &amp; Reimbursement Policy:</strong>
             <ul>
                 <li>The specific Credit cost for each operation will be clearly indicated before confirmation.</li>
                 <li>When adding a Wish Place or Property, the App provides a temporary "confirmation window" (indicated by a timer and/or "OK" and "Delete" options).</li>
@@ -205,6 +228,7 @@
         <li><strong>Payment Methods and store terms:</strong> Purchases are processed through the Apple App Store or Google Play. The store's applicable terms, billing, refund and support processes may apply in addition to these Terms.</li>
         <li><strong>Nature:</strong> Credits are digital consumables with no cash value and cannot be transferred or exchanged for money, subject always to mandatory law and any applicable store refund process.</li>
         <li><strong>Withdrawal rights:</strong> Nothing in these Terms waives a statutory withdrawal, refund or consumer right. Where applicable law permits loss of a withdrawal right for digital content or a digital service supplied immediately, that loss applies only if Wishplace has obtained the legally required prior express consent and acknowledgement and has provided the legally required confirmation. Otherwise, the user's mandatory rights remain unaffected.</li>
+        <li><strong>Digital-service conformity:</strong> Consumers retain all mandatory remedies for a failure to supply or lack of conformity of the digital content or service, including repair or restoration, proportionate price reduction, termination and reimbursement where applicable.</li>
     </ul>
 
     <h2>11. User Responsibility for Legal/Tax Compliance</h2>
@@ -219,7 +243,7 @@
     </ul>
 
     <h2>12. Notifications</h2>
-    <p>By using the Platform, you consent to receive push notifications related to matches, chat messages, and service updates.</p>
+    <p>We may send transactional push notifications necessary for features you request, such as matches, chat messages, security alerts and important service updates. Marketing notifications, if introduced, will be handled separately where consent is required.</p>
     <ul>
         <li><strong>Preference Management:</strong> You can enable or disable these notifications at any time through your device settings.</li>
         <li><strong>No Guarantee of Delivery:</strong> The Operator does not guarantee that every notification will be successfully delivered to your device. Notification delivery is subject to third-party services, network availability, and device-specific configurations.</li>
@@ -248,7 +272,7 @@
     <div class="contact-info">
         <p><strong>Operator:</strong> Alessio Di Salvo</p>
         <p><strong>Postal Address:</strong> Avinguda Diagonal, 08019 Barcelona, Spain</p>
-        <p><strong>Email:</strong> alessio[at]wishplace[dot]app</p>
+        <p><strong>General and legal notices:</strong> alessio@wishplace.app</p>
     </div>
 </div>
 </body>
