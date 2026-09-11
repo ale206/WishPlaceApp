@@ -29,6 +29,10 @@ The most important changes are:
 - Credits remain App digital features rather than property payments or commissions. Store processes and mandatory withdrawal, refund and digital-service conformity rights remain unaffected.
 - Automated matching only suggests potential compatibility; it does not decide whether a user may offer, rent, buy or sell.
 
+Please read the updated Terms carefully. If you agree, you may continue using Wishplace. By continuing to use Wishplace on or after the effective date, you accept the updated Terms to the extent permitted by applicable law. Where express acceptance is legally required, we may request it separately in the App. If you do not agree, you must stop using Wishplace and may delete your account at any time through the App's Profile settings or by emailing alessio@wishplace.app. Limited information may still be retained where required by law or as explained in the Privacy Policy, and deletion does not limit any mandatory store, refund or consumer rights.
+
+Acceptance of the Terms does not constitute consent to optional analytics, advertising measurement or other consent-based processing. Any such consent is requested and can be withdrawn separately.
+
 Please review the updated documents:
 
 - [Terms and Conditions](https://wishplace.app/legal/terms-enGB.html)
@@ -61,6 +65,10 @@ Los cambios principales son:
 - Las condiciones para usuarios profesionales explican los parámetros principales de clasificación, el acceso a datos, los cambios, las restricciones y la terminación.
 - Los Créditos siguen siendo funciones digitales de la App, no pagos ni comisiones inmobiliarias. Se mantienen los procesos de la tienda y los derechos imperativos de desistimiento, reembolso y conformidad digital.
 - El emparejamiento automático solo sugiere una posible compatibilidad; no decide quién puede ofrecer, alquilar, comprar o vender.
+
+Lea atentamente los Términos actualizados. Si está de acuerdo, puede seguir utilizando Wishplace. Al continuar utilizando Wishplace en la fecha de entrada en vigor o después de ella, acepta los Términos actualizados en la medida permitida por la legislación aplicable. Cuando la ley exija una aceptación expresa, podremos solicitarla por separado en la App. Si no está de acuerdo, debe dejar de utilizar Wishplace y puede eliminar su cuenta en cualquier momento desde los ajustes de Perfil de la App o escribiendo a alessio@wishplace.app. Podrá conservarse información limitada cuando lo exija la ley o según la Política de Privacidad, y la eliminación no limita ningún derecho imperativo frente a la tienda, de reembolso o de consumo.
+
+La aceptación de los Términos no constituye consentimiento para analítica opcional, medición publicitaria u otros tratamientos basados en el consentimiento. Dicho consentimiento se solicita y puede retirarse por separado.
 
 Lea los documentos actualizados:
 
@@ -95,6 +103,10 @@ Die wichtigsten Änderungen:
 - Credits bleiben digitale App-Funktionen und sind keine Immobilienzahlung oder Provision. Store-Verfahren und zwingende Widerrufs-, Erstattungs- und Konformitätsrechte bleiben unberührt.
 - Automatisches Matching schlägt nur mögliche Kompatibilität vor und entscheidet nicht über Angebot, Miete, Kauf oder Verkauf.
 
+Bitte lesen Sie die aktualisierten Bedingungen sorgfältig. Wenn Sie zustimmen, können Sie Wishplace weiterhin nutzen. Indem Sie Wishplace am oder nach dem Geltungsdatum weiter nutzen, akzeptieren Sie die aktualisierten Bedingungen, soweit dies nach geltendem Recht zulässig ist. Soweit eine ausdrückliche Zustimmung gesetzlich erforderlich ist, können wir diese gesondert in der App einholen. Wenn Sie nicht zustimmen, müssen Sie die Nutzung von Wishplace einstellen und können Ihr Konto jederzeit in den Profileinstellungen der App oder per E-Mail an alessio@wishplace.app löschen. Begrenzte Informationen können aufgrund gesetzlicher Pflichten oder gemäß der Datenschutzerklärung aufbewahrt werden; die Löschung beschränkt keine zwingenden Store-, Erstattungs- oder Verbraucherrechte.
+
+Die Annahme der Bedingungen ist keine Einwilligung in optionale Analysen, Werbemessung oder andere einwilligungsbasierte Verarbeitung. Eine solche Einwilligung wird separat eingeholt und kann separat widerrufen werden.
+
 Bitte lesen Sie die aktualisierten Dokumente:
 
 - [Bedingungen](https://wishplace.app/legal/terms-deDE.html)
@@ -127,6 +139,10 @@ Principaux changements :
 - Les conditions applicables aux professionnels précisent les principaux paramètres de classement, l'accès aux données, les modifications, les restrictions et la résiliation.
 - Les Crédits restent des fonctionnalités numériques de l'App, et non des paiements ou commissions immobilières. Les procédures des boutiques et les droits impératifs de rétractation, remboursement et conformité restent applicables.
 - La mise en relation automatisée suggère seulement une compatibilité possible; elle ne décide pas qui peut offrir, louer, acheter ou vendre.
+
+Veuillez lire attentivement les Conditions mises à jour. Si vous les acceptez, vous pouvez continuer à utiliser Wishplace. En continuant à utiliser Wishplace à compter de la date d'entrée en vigueur, vous acceptez les Conditions mises à jour dans la mesure permise par le droit applicable. Lorsqu'une acceptation expresse est légalement requise, nous pouvons la demander séparément dans l'App. Si vous n'acceptez pas, vous devez cesser d'utiliser Wishplace et pouvez supprimer votre compte à tout moment dans les paramètres du Profil de l'App ou en écrivant à alessio@wishplace.app. Certaines informations limitées peuvent être conservées lorsque la loi l'exige ou conformément à la Politique de confidentialité, et la suppression ne limite aucun droit impératif relatif aux boutiques, au remboursement ou à la protection des consommateurs.
+
+L'acceptation des Conditions ne constitue pas un consentement aux analyses facultatives, à la mesure publicitaire ou à tout autre traitement fondé sur le consentement. Ce consentement est demandé séparément et peut être retiré séparément.
 
 Veuillez consulter les documents mis à jour :
 
@@ -161,6 +177,10 @@ Principali modifiche:
 - I Crediti restano funzionalità digitali dell'App, non pagamenti o commissioni immobiliari. Restano applicabili le procedure dello store e i diritti inderogabili di recesso, rimborso e conformità digitale.
 - L'abbinamento automatico suggerisce solo una possibile compatibilità; non decide chi può offrire, affittare, comprare o vendere.
 
+Leggi attentamente i Termini aggiornati. Se li accetti, puoi continuare a utilizzare Wishplace. Continuando a utilizzare Wishplace alla data di efficacia o successivamente, accetti i Termini aggiornati nella misura consentita dalla legge applicabile. Ove sia legalmente richiesta un'accettazione espressa, potremo richiederla separatamente nell'App. Se non accetti, devi interrompere l'utilizzo di Wishplace e puoi eliminare il tuo account in qualsiasi momento dalle impostazioni del Profilo dell'App o scrivendo a alessio@wishplace.app. Informazioni limitate possono essere conservate quando richiesto dalla legge o come spiegato nell'Informativa privacy, e l'eliminazione non limita eventuali diritti inderogabili relativi allo store, al rimborso o alla tutela dei consumatori.
+
+L'accettazione dei Termini non costituisce consenso ad analisi facoltative, misurazione pubblicitaria o altri trattamenti basati sul consenso. Tale consenso viene richiesto separatamente e può essere revocato separatamente.
+
 Consulta i documenti aggiornati:
 
 - [Termini e Condizioni](https://wishplace.app/legal/terms-itIT.html)
@@ -193,6 +213,10 @@ Principais alterações:
 - As condições para utilizadores profissionais explicam os principais parâmetros de classificação, o acesso a dados, as alterações, as restrições e a cessação.
 - Os Créditos continuam a ser funcionalidades digitais da App, não pagamentos nem comissões imobiliárias. Mantêm-se os procedimentos da loja e os direitos imperativos de desistimento, reembolso e conformidade digital.
 - A correspondência automática apenas sugere uma possível compatibilidade; não decide quem pode oferecer, arrendar, comprar ou vender.
+
+Leia atentamente os Termos atualizados. Se concordar, pode continuar a utilizar a Wishplace. Ao continuar a utilizar a Wishplace na data de entrada em vigor ou posteriormente, aceita os Termos atualizados na medida permitida pela lei aplicável. Quando a aceitação expressa for legalmente exigida, poderemos solicitá-la separadamente na App. Se não concordar, deve deixar de utilizar a Wishplace e pode eliminar a sua conta a qualquer momento nas definições do Perfil da App ou escrevendo para alessio@wishplace.app. Podem ser conservadas informações limitadas quando exigido por lei ou conforme explicado na Política de Privacidade, e a eliminação não limita quaisquer direitos imperativos relativos à loja, ao reembolso ou à defesa do consumidor.
+
+A aceitação dos Termos não constitui consentimento para análises opcionais, medição publicitária ou outros tratamentos baseados no consentimento. Esse consentimento é solicitado separadamente e pode ser retirado separadamente.
 
 Consulte os documentos atualizados:
 
