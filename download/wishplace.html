@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wishplace | Download</title>
-    <meta name="description" content="Download Wishplace for iOS and Android, or continue to the website.">
+    <meta id="page-description" name="description" content="Download Wishplace for iOS and Android, or continue to the website.">
     <meta name="robots" content="noindex,follow">
     <link rel="canonical" href="https://wishplace.app/download/wishplace.html">
     <style>
@@ -26,44 +26,58 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 24px;
+            padding: 32px 24px;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 100%);
             color: var(--text);
         }
 
         main {
-            width: min(100%, 640px);
+            width: min(100%, 980px);
             background: var(--card);
             border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 32px;
+            border-radius: 28px;
+            padding: clamp(28px, 5vw, 56px);
             box-shadow: 0 20px 60px rgba(21, 32, 51, 0.08);
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(260px, 0.8fr);
+            align-items: center;
+            gap: clamp(32px, 7vw, 72px);
         }
 
         h1 {
             margin: 0;
             font-size: clamp(2rem, 4vw, 2.75rem);
             line-height: 1.05;
-            text-align: center;
+            letter-spacing: -0.04em;
         }
 
         .brand {
             display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
+            margin-bottom: 28px;
         }
 
         .brand img {
-            width: min(240px, 70vw);
+            width: min(210px, 60vw);
             height: auto;
+        }
+
+        .intro {
+            margin: 16px 0 0;
+            max-width: 31rem;
+            color: var(--muted);
+            font-size: 1.05rem;
+            line-height: 1.5;
         }
 
         .actions {
             display: grid;
             gap: 12px;
-            margin-top: 28px;
-            justify-items: center;
+            margin-top: 30px;
+            justify-items: start;
         }
 
         .button {
@@ -84,9 +98,100 @@
 
         .store-badge img {
             display: block;
-            width: 200px;
+            width: 210px;
             max-width: 100%;
             height: auto;
+        }
+
+        .store-badge,
+        .button {
+            transition: transform 160ms ease, box-shadow 160ms ease;
+        }
+
+        .store-badge:hover,
+        .store-badge:focus-visible,
+        .button:hover,
+        .button:focus-visible {
+            transform: translateY(-2px);
+        }
+
+        .store-badge:focus-visible,
+        .button:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 4px;
+        }
+
+        .button {
+            width: 210px;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        .phone-preview {
+            position: relative;
+            height: 470px;
+            overflow: hidden;
+            border-radius: 24px;
+            background: linear-gradient(145deg, #e2edff 0%, #f7faff 100%);
+            border: 1px solid #dce7fb;
+        }
+
+        .phone-preview::after {
+            content: "";
+            position: absolute;
+            inset: auto 12% 4% 12%;
+            height: 18px;
+            background: rgba(34, 77, 146, 0.18);
+            filter: blur(13px);
+            border-radius: 50%;
+        }
+
+        .phone {
+            position: absolute;
+            width: 220px;
+            height: auto;
+            filter: drop-shadow(0 20px 18px rgba(31, 70, 130, 0.18));
+        }
+
+        .phone-back {
+            width: 180px;
+            top: 84px;
+            right: -18px;
+            transform: rotate(10deg);
+            opacity: 0.82;
+        }
+
+        .phone-front {
+            z-index: 1;
+            top: 44px;
+            left: 50%;
+            transform: translateX(-59%) rotate(-5deg);
+        }
+
+        @media (max-width: 720px) {
+            body { align-items: flex-start; }
+
+            main { padding: 28px 24px; }
+
+            .content {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .phone-preview {
+                order: 2;
+                height: 300px;
+            }
+
+            .phone { width: 160px; }
+
+            .phone-front { top: 26px; }
+
+            .phone-back {
+                width: 132px;
+                top: 55px;
+                right: 12%;
+            }
         }
 
     </style>
@@ -109,20 +214,99 @@
 </head>
 <body>
 <main>
-    <div class="brand">
-        <img src="../assets/img/wishplace-logo-text.png" alt="Wishplace">
-    </div>
-    <h1>Download Wishplace</h1>
+    <div class="content">
+        <section aria-labelledby="download-title">
+            <div class="brand">
+                <img src="../assets/img/wishplace-logo-text.png" alt="Wishplace">
+            </div>
+            <h1 id="download-title">Find the places you’ll love.</h1>
+            <p id="download-intro" class="intro">Keep your property search, saved places, and conversations together with Wishplace.</p>
 
-    <div class="actions">
-        <a class="store-badge" href="https://apps.apple.com/us/app/wishplace/id6755880713" onclick="trackStoreClick('app_store')">
-            <img src="../assets/img/download-appstore-black.svg" alt="Download on the App Store">
-        </a>
-        <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.wishplace.wishplace" onclick="trackStoreClick('google_play')">
-            <img src="../assets/img/download-google-play-black.svg" alt="Get it on Google Play">
-        </a>
-        <a class="button" href="https://wishplace.app" onclick="trackStoreClick('website')">Visit wishplace.app</a>
+            <div class="actions">
+                <a class="store-badge" href="https://apps.apple.com/us/app/wishplace/id6755880713" onclick="trackStoreClick('app_store')">
+                    <img src="../assets/img/download-appstore-black.svg" alt="Download on the App Store">
+                </a>
+                <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.wishplace.wishplace" onclick="trackStoreClick('google_play')">
+                    <img src="../assets/img/download-google-play-black.svg" alt="Get it on Google Play">
+                </a>
+                <a id="website-link" class="button" href="https://wishplace.app" onclick="trackStoreClick('website')">Or continue on the web</a>
+            </div>
+        </section>
+        <div class="phone-preview" aria-hidden="true">
+            <img class="phone phone-back" src="../assets/img/iphone-en-chat-portrait.png" alt="">
+            <img class="phone phone-front" src="../assets/img/iphone-en-wished-with-ai-suggestion-portrait.png" alt="">
+        </div>
     </div>
 </main>
+<script>
+    (function () {
+        const copy = {
+            en: {
+                pageTitle: 'Wishplace | Download',
+                description: 'Download Wishplace for iOS and Android, or continue to the website.',
+                title: 'Find the places you’ll love.',
+                intro: 'Keep your property search, saved places, and conversations together with Wishplace.',
+                website: 'Or continue on the web'
+            },
+            es: {
+                pageTitle: 'Wishplace | Descargar',
+                description: 'Descarga Wishplace para iOS y Android, o continúa en la web.',
+                title: 'Encuentra los lugares que te encantarán.',
+                intro: 'Reúne tu búsqueda de vivienda, lugares guardados y conversaciones en Wishplace.',
+                website: 'O continúa en la web'
+            },
+            it: {
+                pageTitle: 'Wishplace | Scarica',
+                description: 'Scarica Wishplace per iOS e Android, oppure continua sul sito web.',
+                title: 'Trova i luoghi che amerai.',
+                intro: 'Tieni insieme la tua ricerca immobiliare, i luoghi salvati e le conversazioni con Wishplace.',
+                website: 'Oppure continua sul web'
+            },
+            fr: {
+                pageTitle: 'Wishplace | Télécharger',
+                description: 'Téléchargez Wishplace pour iOS et Android, ou continuez sur le site web.',
+                title: 'Trouvez les lieux que vous aimerez.',
+                intro: 'Rassemblez votre recherche immobilière, vos lieux enregistrés et vos conversations dans Wishplace.',
+                website: 'Ou continuez sur le web'
+            },
+            ca: {
+                pageTitle: 'Wishplace | Descarrega',
+                description: 'Descarrega Wishplace per a iOS i Android, o continua al web.',
+                title: 'Troba els llocs que t’encantaran.',
+                intro: 'Reuneix la cerca d’habitatge, els llocs desats i les converses a Wishplace.',
+                website: 'O continua al web'
+            },
+            de: {
+                pageTitle: 'Wishplace | Herunterladen',
+                description: 'Lade Wishplace für iOS und Android herunter oder nutze die Website weiter.',
+                title: 'Finde Orte, die du lieben wirst.',
+                intro: 'Behalte deine Immobiliensuche, gespeicherten Orte und Unterhaltungen in Wishplace zusammen.',
+                website: 'Oder im Web fortfahren'
+            },
+            pt: {
+                pageTitle: 'Wishplace | Transferir',
+                description: 'Transfira o Wishplace para iOS e Android ou continue no site.',
+                title: 'Encontre os lugares de que vai gostar.',
+                intro: 'Mantenha a sua pesquisa de imóveis, locais guardados e conversas reunidos no Wishplace.',
+                website: 'Ou continue na web'
+            }
+        };
+        const supported = Object.keys(copy);
+        const browserLanguages = navigator.languages && navigator.languages.length
+            ? navigator.languages
+            : [navigator.language || 'en'];
+        const language = browserLanguages
+            .map(locale => locale.toLowerCase().split('-')[0])
+            .find(locale => supported.includes(locale)) || 'en';
+        const strings = copy[language];
+
+        document.documentElement.lang = language;
+        document.title = strings.pageTitle;
+        document.getElementById('page-description').content = strings.description;
+        document.getElementById('download-title').textContent = strings.title;
+        document.getElementById('download-intro').textContent = strings.intro;
+        document.getElementById('website-link').textContent = strings.website;
+    }());
+</script>
 </body>
 </html>
