@@ -68,26 +68,29 @@
     </style>
 
     <!-- Consent Manager -->
-    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/96e0b57bc2161.js" data-cmp-host="b.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
 
     <!-- Google tag (gtag.js) -->
-    <script async data-cmp-noblock src="https://www.googletagmanager.com/gtag/js?id=G-YLJR19TYZF"></script>
-    <script data-cmp-noblock>
+    <!-- Google Consent Mode v2 (default: denied until user accepts) -->
+    <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+
+        var consentChoice = localStorage.getItem('wp_consent');
+        var consentGranted = consentChoice === 'granted';
+
         gtag('consent', 'default', {
-            analytics_storage: 'denied',
-            ad_storage: 'denied',
+            analytics_storage: consentGranted ? 'granted' : 'denied',
+            ad_storage:         consentGranted ? 'granted' : 'denied',
+            ad_user_data:       consentGranted ? 'granted' : 'denied',
+            ad_personalization: consentGranted ? 'granted' : 'denied',
             wait_for_update: 500
         });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLJR19TYZF"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-YLJR19TYZF');
-        window.addEventListener('cmpConsentGranted', function () {
-            gtag('consent', 'update', {
-                analytics_storage: 'granted',
-                ad_storage: 'granted'
-            });
-        });
+        gtag('config', 'AW-986680353');
     </script>
 </head>
 <body>
@@ -160,5 +163,34 @@
         <p>Para suporte relacionado a saldos de crédito ou problemas técnicos:</p>
         <p><strong>E-mail:</strong> alessio@wishplace.app</p>
     </div></div>
+
+<!-- Cookie Consent Banner -->
+<div id="wp-consent" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#fff;border-top:1px solid #dbe2ef;padding:16px 24px;box-shadow:0 -4px 20px rgba(0,0,0,.08);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px;color:#333">
+    <div style="max-width:960px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+        <p style="margin:0;flex:1;min-width:200px">
+            Usamos cookies para analítica y publicidad.
+            <a href="/legal/privacy-esES.html" style="color:#1769ff;text-decoration:underline">Política de privacidad</a>
+        </p>
+        <div style="display:flex;gap:8px;flex-shrink:0">
+            <button onclick="wpConsent('denied')" style="padding:8px 16px;border:1px solid #ccc;border-radius:8px;background:#fff;cursor:pointer;font-size:14px">Rechazar</button>
+            <button onclick="wpConsent('granted')" style="padding:8px 16px;border:none;border-radius:8px;background:#1769ff;color:#fff;cursor:pointer;font-size:14px">Aceptar</button>
+        </div>
+    </div>
+</div>
+<script>
+    function wpConsent(choice) {
+        localStorage.setItem('wp_consent', choice);
+        document.getElementById('wp-consent').style.display = 'none';
+        gtag('consent', 'update', {
+            analytics_storage: choice,
+            ad_storage: choice,
+            ad_user_data: choice,
+            ad_personalization: choice
+        });
+    }
+    if (!localStorage.getItem('wp_consent')) {
+        document.getElementById('wp-consent').style.display = 'block';
+    }
+</script>
 </body>
 </html>
