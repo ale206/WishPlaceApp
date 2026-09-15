@@ -169,7 +169,7 @@
         <li><strong>Google/Firebase :</strong> services Google Cloud et Firebase pour l'hébergement, l'authentification, le stockage de bases de données ou de fichiers, les notifications push, les analyses et les diagnostics de panne.</li>
         <li><strong>Google Maps Platform</strong> : Google Maps, Places et Street View pour afficher des cartes, fournir la saisie semi-automatique et le géocodage des adresses, et afficher Street View. L'adresse, les coordonnées, la requête de recherche, les données techniques et, si elles sont activées, les données de localisation peuvent être envoyées à Google lorsque vous utilisez ces fonctionnalités.</li>
         <li><strong>Services d'IA et de recherche</strong> : Google Gemini, Perplexity et SerpApi pour des suggestions automatisées, des fonctionnalités de recherche, d'actualités ou d'événements. Nous limitons les données envoyées à ce qui est nécessaire pour la demande concernée, qui peut inclure une zone, un emplacement, des préférences de recherche ou d'annonce.</li>
-        <li><strong>Analyses, diagnostics et mesures publicitaires</strong> : Google Analytics pour Firebase, Firebase Crashlytics, New Relic et les événements d'application Meta/Facebook. Les événements Meta App peuvent recevoir des événements d’activation d’application, d’inscription, d’engagement et de conversion d’achat. Lorsque le consentement est requis pour l'analyse, la mesure publicitaire ou le suivi, ces activités ne sont activées qu'après consentement.</li>
+        <li><strong>Analyses, diagnostics et mesures publicitaires</strong> : Google Analytics pour Firebase, Firebase Crashlytics, New Relic et les événements d'application Meta/Facebook. Les événements Meta App peuvent recevoir des événements d’activation d’application, d’inscription, d’engagement et de conversion d’achat. Lorsque le consentement est requis pour l\'analyse, la mesure publicitaire ou le suivi, ces activités ne sont activées qu'après consentement.</li>
         <li><strong>Gestion du consentement du site Web</strong> : consentementmanager enregistre et communique les choix de consentement du site Web ; Google Analytics est utilisé sur le site Web uniquement conformément aux choix pour lesquels le consentement est requis.</li>
         <li><strong>App Stores</strong> : Apple App Store et Google Play pour traiter et vérifier les achats et les restaurations de crédits. Apple et Google agissent selon leurs propres conditions applicables et informations de confidentialité pour les services de leur boutique.</li>
         <li><strong>Communications</strong> : fournisseurs de messagerie et de messagerie Firebase Cloud, lorsqu'ils sont activés, pour transmettre des messages et des notifications de service.</li>
@@ -239,14 +239,27 @@
     }
     if (!localStorage.getItem('wp_consent')) {
         var lang = localStorage.getItem('language') || navigator.language || 'en';
-        var isEs = lang.toLowerCase().startsWith('es');
-        if (isEs) {
-            document.getElementById('wp-consent-text').innerText = 'Usamos cookies para analítica y publicidad.';
-            document.getElementById('wp-consent-link').innerText = 'Política de privacidad';
-            document.getElementById('wp-consent-link').href = '/legal/privacy-esES.html';
-            document.getElementById('wp-consent-btn-deny').innerText = 'Rechazar';
-            document.getElementById('wp-consent-btn-accept').innerText = 'Aceptar';
-        }
+        lang = lang.substring(0, 2).toLowerCase();
+        
+        var translations = {
+            'es': { text: 'Usamos cookies para analítica y publicidad.', link: 'Política de privacidad', href: '/legal/privacy-esES.html', deny: 'Rechazar', accept: 'Aceptar' },
+            'ca': { text: 'Utilitzem galetes per a analítica i publicitat.', link: 'Política de privacitat', href: '/legal/privacy-esES.html', deny: 'Rebutjar', accept: 'Acceptar' },
+            'it': { text: 'Utilizziamo i cookie per analisi e pubblicità.', link: 'Informativa sulla privacy', href: '/legal/privacy-itIT.html', deny: 'Rifiuta', accept: 'Accetta' },
+            'fr': { text: 'Nous utilisons des cookies pour l\'analyse et la publicité.', link: 'Politique de confidentialité', href: '/legal/privacy-frFR.html', deny: 'Refuser', accept: 'Accepter' },
+            'de': { text: 'Wir verwenden Cookies für Analyse und Werbung.', link: 'Datenschutzrichtlinie', href: '/legal/privacy-deDE.html', deny: 'Ablehnen', accept: 'Akzeptieren' },
+            'pt': { text: 'Usamos cookies para análise e publicidade.', link: 'Política de privacidade', href: '/legal/privacy-ptPT.html', deny: 'Recusar', accept: 'Aceitar' },
+            'en': { text: 'We use cookies for analytics and advertising.', link: 'Privacy Policy', href: '/legal/privacy-enGB.html', deny: 'Decline', accept: 'Accept' }
+        };
+        
+        var t = translations[lang] || translations['en'];
+        
+        document.getElementById('wp-consent-text').innerText = t.text;
+        var linkEl = document.getElementById('wp-consent-link');
+        linkEl.innerText = t.link;
+        linkEl.href = t.href;
+        document.getElementById('wp-consent-btn-deny').innerText = t.deny;
+        document.getElementById('wp-consent-btn-accept').innerText = t.accept;
+
         document.getElementById('wp-consent').style.display = 'block';
     }
 </script>

@@ -820,14 +820,27 @@
     }
     if (!localStorage.getItem('wp_consent')) {
         var lang = localStorage.getItem('language') || navigator.language || 'en';
-        var isEs = lang.toLowerCase().startsWith('es');
-        if (isEs) {
-            document.getElementById('wp-consent-text').innerText = 'Usamos cookies para analítica y publicidad.';
-            document.getElementById('wp-consent-link').innerText = 'Política de privacidad';
-            document.getElementById('wp-consent-link').href = '/legal/privacy-esES.html';
-            document.getElementById('wp-consent-btn-deny').innerText = 'Rechazar';
-            document.getElementById('wp-consent-btn-accept').innerText = 'Aceptar';
-        }
+        lang = lang.substring(0, 2).toLowerCase();
+        
+        var translations = {
+            'es': { text: 'Usamos cookies para analítica y publicidad.', link: 'Política de privacidad', href: '/legal/privacy-esES.html', deny: 'Rechazar', accept: 'Aceptar' },
+            'ca': { text: 'Utilitzem galetes per a analítica i publicitat.', link: 'Política de privacitat', href: '/legal/privacy-esES.html', deny: 'Rebutjar', accept: 'Acceptar' },
+            'it': { text: 'Utilizziamo i cookie per analisi e pubblicità.', link: 'Informativa sulla privacy', href: '/legal/privacy-itIT.html', deny: 'Rifiuta', accept: 'Accetta' },
+            'fr': { text: 'Nous utilisons des cookies pour l\'analyse et la publicité.', link: 'Politique de confidentialité', href: '/legal/privacy-frFR.html', deny: 'Refuser', accept: 'Accepter' },
+            'de': { text: 'Wir verwenden Cookies für Analyse und Werbung.', link: 'Datenschutzrichtlinie', href: '/legal/privacy-deDE.html', deny: 'Ablehnen', accept: 'Akzeptieren' },
+            'pt': { text: 'Usamos cookies para análise e publicidade.', link: 'Política de privacidade', href: '/legal/privacy-ptPT.html', deny: 'Recusar', accept: 'Aceitar' },
+            'en': { text: 'We use cookies for analytics and advertising.', link: 'Privacy Policy', href: '/legal/privacy-enGB.html', deny: 'Decline', accept: 'Accept' }
+        };
+        
+        var t = translations[lang] || translations['en'];
+        
+        document.getElementById('wp-consent-text').innerText = t.text;
+        var linkEl = document.getElementById('wp-consent-link');
+        linkEl.innerText = t.link;
+        linkEl.href = t.href;
+        document.getElementById('wp-consent-btn-deny').innerText = t.deny;
+        document.getElementById('wp-consent-btn-accept').innerText = t.accept;
+
         document.getElementById('wp-consent').style.display = 'block';
     }
 </script>
